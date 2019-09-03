@@ -1,3 +1,55 @@
 body {
   background-color: lightgrey;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 300;
+}
+nav {
+  background-color:#242424;
+  color: white;
+  width: 80vw;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-left: 10vw;
+  padding-right: 10vw;
+}
+#logo {
+  background: url(./images/Logo-Simple-70.png) no-repeat;
+  height: 70px;
+  width: 80px;
+}
+nav ul {
+  margin: 0;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-inline-start: 0;
+}
+nav ul li:first-child {
+  justify-self: flex-start;
+}
+nav ul li {
+  list-style-type: none;
+  margin: 0 0 0 30px;
+}
+.nav-link {
+  text-transform: uppercase;
+  font-size: 1.1em;
+  letter-spacing: .1em;
+  padding: 8px 0 8px 0;
+}
+.nav-link:link,
+.nav-link:visited {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.2s;
+}
+.nav-link:hover,
+.nav-link:active {
+  border-bottom: 2px solid white;
 }
