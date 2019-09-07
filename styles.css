@@ -85,8 +85,8 @@ footer {
 }
 #footer-logo {
   position: relative;
-  left: 44%;
-  /* left: 40%; */
+  left: 50%;
+  transform: translateX(-50%);
   top: -45px;
   background: url(./images/Logo-90.png) no-repeat;
   height: 90px;
