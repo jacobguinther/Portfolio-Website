@@ -20,7 +20,7 @@ nav {
   padding-right: 10vw;
 }
 #logo {
-  background: url(./images/Logo-Simple-70.png) no-repeat;
+  background: url(./images/new-logo-70.png) no-repeat;
   height: 70px;
   width: 80px;
 }
@@ -88,7 +88,7 @@ footer {
   left: 50%;
   transform: translateX(-50%);
   top: -45px;
-  background: url(./images/Logo-90.png) no-repeat;
+  background: url(./images/new-logo-bordered-90.png) no-repeat;
   height: 90px;
   width: 90px;
 }
