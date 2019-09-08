@@ -9,6 +9,12 @@ body {
   display: grid;
   grid-template-rows: 100px auto auto auto 400px;
 }
+h1 {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 2.5em;
+  margin: 0;
+}
 nav {
   background-color: #242424;
   color: white;
@@ -72,6 +78,41 @@ nav ul li {
 .container:nth-child(2n) {
   background-color: white;
 }
+.section-aboutme {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+.section-aboutme h1 {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.section-skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.no-bottom-padding {
+  padding-bottom: 0;
+}
+.section-skills h2 {
+  margin-bottom: 100px;
+  color: #767676;
+  font-weight: 400;
+  font-size: 1.7em;
+  /* letter-spacing: .1em; */
+}
+.sills-bubbles{
+  /* height: 334px;
+  width: 552px; */
+  width: 700px;
+  height: 423.5px;
+  /* overflow: hidden; */
+}
+.monitor {
+  height: 250px;
+  width: 250px;
+}
 footer {
   display: grid;
   grid-template-rows: 1fr 1fr 1fr 1fr;
@@ -97,12 +138,6 @@ footer {
   justify-content: center;
   align-items: center;
   align-items: flex-start;
-}
-.footer-tagline h1 {
-  text-transform: uppercase;
-  font-size: 2.5em;
-  letter-spacing: 0.1em;
-  margin: 0;
 }
 .social-icons-container {
   display: flex;
