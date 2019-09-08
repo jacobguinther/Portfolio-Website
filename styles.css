@@ -15,6 +15,13 @@ h1 {
   font-size: 2.5em;
   margin: 0;
 }
+h2 {
+  /* margin-bottom: 100px; */
+  color: #767676;
+  font-weight: 400;
+  font-size: 1.7em;
+  /* letter-spacing: .1em; */
+}
 nav {
   background-color: #242424;
   color: white;
@@ -65,8 +72,8 @@ nav ul li {
   border-bottom: 2px solid white;
 }
 .section {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  /* padding-top: 100px;
+  padding-bottom: 100px; */
 }
 .container {
   box-sizing: border-box;
@@ -77,15 +84,33 @@ nav ul li {
 }
 .container:nth-child(2n) {
   background-color: white;
+  border-top: 1px solid lightgrey;
+  border-bottom: 1px solid lightgrey;
+}
+.flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  /* justify-content: center; */
 }
 .section-aboutme {
   display: flex;
   justify-content: center;
-  margin-bottom: 100px;
+  /* margin-bottom: 100px; */
 }
 .section-aboutme h1 {
   padding-right: 20px;
   padding-left: 20px;
+}
+p {
+  text-align: center;
+  line-height: 1.8em;
+}
+.header-tagline {
+  width: 500px;
+  text-align: center;
 }
 .section-skills {
   display: flex;
@@ -95,14 +120,7 @@ nav ul li {
 .no-bottom-padding {
   padding-bottom: 0;
 }
-.section-skills h2 {
-  margin-bottom: 100px;
-  color: #767676;
-  font-weight: 400;
-  font-size: 1.7em;
-  /* letter-spacing: .1em; */
-}
-.sills-bubbles{
+.sills-bubbles {
   /* height: 334px;
   width: 552px; */
   width: 700px;
@@ -110,8 +128,8 @@ nav ul li {
   /* overflow: hidden; */
 }
 .monitor {
-  height: 250px;
   width: 250px;
+  height: 216px;
 }
 footer {
   display: grid;
