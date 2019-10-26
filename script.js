@@ -13,5 +13,4 @@ menu.addEventListener("click", () => {
 });
 hamburgerContainer.addEventListener("click", () => {
 	document.querySelector(".menu").classList.toggle("menu-visible");
-	console.log("You clicked hamburgerContainer")
 })
