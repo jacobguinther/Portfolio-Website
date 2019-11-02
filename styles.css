@@ -137,7 +137,7 @@ nav ul li {
 .no-bottom-padding {
   padding-bottom: 0;
 }
-.sills-bubbles {
+.skills-bubbles {
   width: 700px;
   height: 423.5px;
 }
@@ -358,7 +358,9 @@ footer {
 /*MEDIA QUERIES  MEDIA QUERIES  MEDIA QUERIES  MEDIA QUERIES  MEDIA QUERIES*/
 /*MEDIA QUERIES  MEDIA QUERIES  MEDIA QUERIES  MEDIA QUERIES  MEDIA QUERIES*/
 
-@media only screen and (max-width: 750px) {
+
+
+@media screen and (max-width: 750px) {
   body {
     font-size: .8em;
   }
@@ -397,9 +399,13 @@ footer {
     display: unset;
     width: 40px;
   }
-
-  .sills-bubbles {
-    display: none;
+  .skills-bubbles {
+    width: 420px;
+    height: 254.1px;
+  }
+  .monitor {
+    width: 150px;
+    height: 129.6px;
   }
   .line-fancy {
     display: none;
@@ -433,6 +439,18 @@ footer {
   /* FOOTER */
   .tagline-footer {
     font-size: .8em;
+  }
+}
+
+@media screen and (max-width: 450px) {
+
+  .skills-bubbles {
+    width: 280px;
+    height: 169.4px;
+  }
+  .monitor {
+    width: 100px;
+    height: 86.4px;
   }
 }
 
