@@ -1,5 +1,6 @@
 html {
   height: 100%;
+  box-sizing: border-box;
 }
 body {
   background-color: #f4f4f4;
@@ -268,6 +269,89 @@ footer {
   color: white;
   font-size: 1.5em;
 }
+.container-portfolio {
+  padding-top: 100px;
+  padding-bottom: 145px;
+  box-sizing: border-box;
+  width: 100vw;
+  padding-left: 10vw;
+  padding-right: 10vw;
+}
+/* ============================================================= */
+.band {
+  width: auto;
+  max-width: 1240px;
+  margin: 65px auto 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 20px;
+}
+@media (min-width: 30em) {
+  .band {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+/* @media (min-width: 60em) {
+  .band {
+    grid-template-columns: repeat(4, 1fr);
+  }
+} */
+
+.card {
+  border: 1px solid lightgrey;
+  background: white;
+  text-decoration: none;
+  color: #444;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  position: relative;
+  top: 0;
+  transition: all .1s ease-in;
+}
+.card:hover {
+  top: -2px;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+}
+.card article {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card h1 {
+  font-size: 20px;
+  margin: 0;
+  color: #333;
+}
+.card p {
+  font-weight: 400;
+  font-size: .8em;
+  flex: 1;
+  line-height: 1.4;
+  text-align: left;
+  margin-bottom: 0;
+}
+.card span {
+  font-size: .8em;
+  font-weight: bold;
+  color: #8c8c8c;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  margin: 2em 0 0 0;
+}
+.card .thumb {
+  padding-bottom: 60%;
+  background-size: cover;
+  background-position: center center;
+}
+
+/* ============================================================= */
+
+
 
 /*MEDIA QUERIES  MEDIA QUERIES  MEDIA QUERIES  MEDIA QUERIES  MEDIA QUERIES*/
 /*MEDIA QUERIES  MEDIA QUERIES  MEDIA QUERIES  MEDIA QUERIES  MEDIA QUERIES*/
@@ -320,6 +404,10 @@ footer {
   .line-fancy {
     display: none;
   }
+  /* PORTFOLIO PAGE */
+  .band {
+    grid-template-columns: 1fr;
+  }
   /* CONTACT PAGE */
   form {
     width: 100%;
@@ -347,6 +435,8 @@ footer {
     font-size: .8em;
   }
 }
+
+
 
 /* FOR HAMBURGER MENU */
 .no-animation {
