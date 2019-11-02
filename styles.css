@@ -404,6 +404,10 @@ footer {
   .line-fancy {
     display: none;
   }
+  /* PORTFOLIO PAGE */
+  .band {
+    grid-template-columns: 1fr;
+  }
   /* CONTACT PAGE */
   form {
     width: 100%;
@@ -431,6 +435,8 @@ footer {
     font-size: .8em;
   }
 }
+
+
 
 /* FOR HAMBURGER MENU */
 .no-animation {
