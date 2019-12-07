@@ -43,10 +43,39 @@ nav {
   display: none;
 }
 #logo {
+  /* transition: 1.5s;
+  -webkit-transition: 1.5s;
+  -moz-transition: 1.5s;
+  -ms-transition: 1.5s;
+  -o-transition: 1.5s; */
   background: url(./images/new-logo-70.png) no-repeat;
   height: 70px;
-  width: 80px;
+  width: 70px;
 }
+.rotate{
+  transition: 1.5s;
+  -webkit-transition: 1.5s;
+  -moz-transition: 1.5s;
+  -ms-transition: 1.5s;
+  -o-transition: 1.5s;
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+/* #logo:hover{
+    transition: 1.5s;
+    -webkit-transition: 1.5s;
+    -moz-transition: 1.5s;
+    -ms-transition: 1.5s;
+    -o-transition: 1.5s;
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+} */
 nav ul {
   margin: 0;
   width: 80%;
@@ -152,7 +181,7 @@ nav ul li {
   background: white;
   text-decoration: none;
   color: #444;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgba(6, 5, 5, 0.1);
   display: flex;
   flex-direction: column;
   min-height: 100%;
