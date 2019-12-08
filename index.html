@@ -74,12 +74,14 @@
 
     <canvas id="myChart"></canvas>
     <div style="font-size: .6em; ">
-        <p style="text-align: left; margin-top: 10px; margin-bottom: 0px;">&nbsp;&nbsp;0 - 100 Novice</p>
-        <p style="text-align: left; margin: 0;">100 - 200 Proficient</p>
-        <p style="text-align: left; margin: 0;">200 - 300 Expert</p>
+      <p style="text-align: left; margin-top: 10px; margin-bottom: 0px;">
+        &nbsp;&nbsp;0 - 100 Novice</p>
+      <p style="text-align: left; margin: 0;">100 - 200 Proficient</p>
+      <p style="text-align: left; margin: 0;">200 - 300 Expert</p>
     </div>
-    <p style="font-size: .8em">* This is based on pluralsights skills IQ tests.</p>
-    
+    <p style="font-size: .8em">* This is based on pluralsights skills IQ tests.
+    </p>
+
     <!-- <div id=myChart></div> -->
     <!-- <p><i data-feather="circle"></i>Doggo ipsum borkf ruff long bois you are
         doing me the shock, adorable doggo wrinkler
@@ -149,14 +151,16 @@
     src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
   <script type="text/javascript" src="script.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
   <script>
     AOS.init({
       duration: 1000,
       once: true
     });
   </script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/chartjs-plugin-deferred@1"></script>
   <script>
     var ctx = document.getElementById('myChart').getContext('2d');
     var chart = new Chart(ctx, {
@@ -177,15 +181,15 @@
       // Configuration options go here
       options: {
         legend: {
-        display: false
-    },
-    // tooltips: {
-    //     callbacks: {
-    //        label: function(tooltipItem) {
-    //               return tooltipItem.yLabel;
-    //        }
-    //     }
-    // },
+          display: false
+        },
+        // tooltips: {
+        //     callbacks: {
+        //        label: function(tooltipItem) {
+        //               return tooltipItem.yLabel;
+        //        }
+        //     }
+        // },
         scales: {
           xAxes: [{
             type: 'linear',
@@ -202,6 +206,13 @@
               fontSize: 15,
             }
           }]
+        },
+        plugins: {
+          deferred: {
+            xOffset: 150,   // defer until 150px of the canvas width are inside the viewport
+            yOffset: '50%', // defer until 50% of the canvas height are inside the viewport
+            delay: 500      // delay of 500 ms after the canvas is considered inside the viewport
+          }
         }
       },
     });
