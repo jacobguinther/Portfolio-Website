@@ -63,15 +63,25 @@
         <img class="skills-bubbles" src="images/skills-bubbles.png" alt="">
       </div>
       <div data-aos="fade-left">
-          <img class="monitor" src="images/monitor.png" alt="computer-icon">
+        <img class="monitor" src="images/monitor.png" alt="computer-icon">
 
       </div>
     </div>
   </div>
   <div class="container flex-center">
+    <h2 style="color:#242424;">Here is where im at</h2>
 
-    <div data-aos="fade-right">
-      <p><i data-feather="circle"></i>Doggo ipsum borkf ruff long bois you are
+
+    <canvas id="myChart"></canvas>
+    <div style="font-size: .6em; ">
+        <p style="text-align: left; margin-top: 10px; margin-bottom: 0px;">&nbsp;&nbsp;0 - 100 Novice</p>
+        <p style="text-align: left; margin: 0;">100 - 200 Proficient</p>
+        <p style="text-align: left; margin: 0;">200 - 300 Expert</p>
+    </div>
+    <p style="font-size: .8em">* This is based on pluralsights skills IQ tests.</p>
+    
+    <!-- <div id=myChart></div> -->
+    <!-- <p><i data-feather="circle"></i>Doggo ipsum borkf ruff long bois you are
         doing me the shock, adorable doggo wrinkler
         borking doggo pupper, corgo fluffer. Extremely cuuuuuute smol blep very
         good spot stop it fren, extremely
@@ -88,8 +98,8 @@
         borkdrive heckin good boys much ruin diet boof aqua doggo. Blep woofer
         long water shoob h*ck blep, mlem maximum
         borkdriv.
-      </p>
-    </div>
+      </p> -->
+  </div>
 
   </div>
   <footer>
@@ -139,11 +149,62 @@
     src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
   <script type="text/javascript" src="script.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
   <script>
-    AOS.init({ 
+    AOS.init({
       duration: 1000,
       once: true
-     });
+    });
+  </script>
+  <script>
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var chart = new Chart(ctx, {
+      // The type of chart we want to create
+      type: 'horizontalBar',
+
+      // The data for our dataset
+      data: {
+        labels: ['CSS', 'HTML', 'Javascript', 'React', 'MySQL'],
+        datasets: [{
+          label: 'Pluralsight SkillsIQ',
+          backgroundColor: '#767676',
+          // borderColor: 'black,
+          data: [212, 168, 197, 150, 156],
+        },
+        ]
+      },
+      // Configuration options go here
+      options: {
+        legend: {
+        display: false
+    },
+    // tooltips: {
+    //     callbacks: {
+    //        label: function(tooltipItem) {
+    //               return tooltipItem.yLabel;
+    //        }
+    //     }
+    // },
+        scales: {
+          xAxes: [{
+            type: 'linear',
+            ticks: {
+              min: 0,
+              max: 300,
+              fontColor: "#242424",
+              fontSize: 15,
+            }
+          }],
+          yAxes: [{
+            ticks: {
+              fontColor: "#242424",
+              fontSize: 15,
+            }
+          }]
+        }
+      },
+    });
   </script>
 </body>
 
