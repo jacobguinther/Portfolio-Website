@@ -1,0 +1,24 @@
+{
+  "name": "jg-portfolio-site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jacobguinther/Portfolio-Website.git"
+  },
+  "author": "Jacob Guinther",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jacobguinther/Portfolio-Website/issues"
+  },
+  "homepage": "https://github.com/jacobguinther/Portfolio-Website#readme",
+  "dependencies": {
+    "aos": "2.3.4",
+    "chart.js": "2.9.3",
+    "chartjs-plugin-deferred": "1.0.1"
+  }
+}
