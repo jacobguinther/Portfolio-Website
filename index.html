@@ -5,24 +5,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <script src="nunjucks.js"></script>
-  <link rel="shortcut icon" type="image/png"
-    href="/images/favicon-logo-32.png" />
   <link rel="preload" as="font" type="font/woff2"
     href="./fonts/roboto-mono-v7-latin-300.woff2" crossorigin>
   <link rel="preload" as="font" type="font/woff2"
     href="./fonts/roboto-mono-v7-latin-regular.woff2" crossorigin>
-  <script src="https://unpkg.com/feather-icons"></script>
-  <link rel="stylesheet"
-    href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
-    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
-    crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="./normalize.css" />
   <link rel="stylesheet" type="text/css" href="./styles.css" />
   <link href="/node_modules/aos/dist/aos.css" rel="stylesheet">
   <title>Portfolio</title>
 </head>
-
 <body>
   <nav>
     <input type="checkbox" id="nav-check">
@@ -147,21 +138,16 @@
       <p>Built by me copyright 2019</p>
     </div>
   </footer>
-  <script src="https://unpkg.com/feather-icons"></script>
-  <script
-    src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
   <script type="text/javascript" src="script.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-deferred@1"></script>
   <script>
     AOS.init({
       duration: 1000,
       once: true
     });
-  </script>
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-deferred@1"></script>
-  <script>
     var ctx = document.getElementById('myChart').getContext('2d');
     var chart = new Chart(ctx, {
       // The type of chart we want to create
