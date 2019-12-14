@@ -4,6 +4,7 @@ const menuBars = document.querySelectorAll('.menu-bar');
 const hamburgerContainer = document.querySelector('.hamburger-container');
 const nav = document.querySelector('nav')
 
+
 menu.addEventListener('click', () => {
   menuBars.forEach((bar) => bar.classList.remove('no-animation'));
   if (menu.classList.contains('active')) {
