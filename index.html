@@ -14,6 +14,7 @@
   <link href="/node_modules/aos/dist/aos.css" rel="stylesheet">
   <title>Portfolio</title>
 </head>
+
 <body>
   <nav>
     <input type="checkbox" id="nav-check">
@@ -73,26 +74,6 @@
     </div>
     <p style="font-size: .8em">* This is based on pluralsights skills IQ tests.
     </p>
-
-    <!-- <div id=myChart></div> -->
-    <!-- <p><i data-feather="circle"></i>Doggo ipsum borkf ruff long bois you are
-        doing me the shock, adorable doggo wrinkler
-        borking doggo pupper, corgo fluffer. Extremely cuuuuuute smol blep very
-        good spot stop it fren, extremely
-        cuuuuuute big ol. Dat tungg tho most angery pupper I have ever seen I am
-        bekom fat porgo shooberino, lotsa pats
-        you are doin me a concern wow such tempt. Wow very biscit thicc fat boi,
-        puggo. Very jealous pupper doggorino I am
-        bekom fat tungg lotsa pats shoob, heckin super chub woofer shibe. Such
-        treat noodle horse the neighborhood pupper
-        woofer, wow such tempt long woofer shooberino smol borking doggo with a
-        long snoot for pats, sub woofer snoot. Dat
-        tungg tho such treat sub woofer vvv you are doing me the shock dat tungg
-        tho very good spot smol, maximum
-        borkdrive heckin good boys much ruin diet boof aqua doggo. Blep woofer
-        long water shoob h*ck blep, mlem maximum
-        borkdriv.
-      </p> -->
   </div>
 
   </div>
@@ -139,70 +120,11 @@
     </div>
   </footer>
   <script type="text/javascript" src="script.js"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="node_modules/aos/dist/aos.js"></script>
   <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-deferred@1"></script>
-  <script>
-    AOS.init({
-      duration: 1000,
-      once: true
-    });
-    var ctx = document.getElementById('myChart').getContext('2d');
-    var chart = new Chart(ctx, {
-      // The type of chart we want to create
-      type: 'horizontalBar',
+    src="node_modules/chart.js/dist/Chart.bundle.min.js"></script>
+  <script src="node_modules/chartjs-plugin-deferred/dist/chartjs-plugin-deferred.min.js"></script>
 
-      // The data for our dataset
-      data: {
-        labels: ['CSS', 'HTML', 'Javascript', 'React', 'MySQL'],
-        datasets: [{
-          label: 'Pluralsight SkillsIQ',
-          backgroundColor: '#767676',
-          // borderColor: '#000',
-          data: [212, 168, 197, 150, 156],
-        },
-        ]
-      },
-      // Configuration options go here
-      options: {
-        legend: {
-          display: false
-        },
-        // tooltips: {
-        //     callbacks: {
-        //        label: function(tooltipItem) {
-        //               return tooltipItem.yLabel;
-        //        }
-        //     }
-        // },
-        scales: {
-          xAxes: [{
-            type: 'linear',
-            ticks: {
-              min: 0,
-              max: 300,
-              fontColor: "#242424",
-              fontSize: 15,
-            }
-          }],
-          yAxes: [{
-            ticks: {
-              fontColor: "#242424",
-              fontSize: 15,
-            }
-          }]
-        },
-        plugins: {
-          deferred: {
-            xOffset: 150,   // defer until 150px of the canvas width are inside the viewport
-            yOffset: '50%', // defer until 50% of the canvas height are inside the viewport
-            delay: 500      // delay of 500 ms after the canvas is considered inside the viewport
-          }
-        }
-      },
-    });
-  </script>
 </body>
 
 </html>
