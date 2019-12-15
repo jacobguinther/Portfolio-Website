@@ -288,6 +288,7 @@ form .input-container textarea {
   margin: 0;
   max-width: 100%;
   min-width: 100%;
+  min-height: 60px;
 }
 .form-item-left {
   width: 50%;
@@ -314,6 +315,22 @@ textarea {
   border: 1px solid lightgrey;
   border-radius: 5px;
   line-height: 1.5;
+}
+.container-input-submit{
+  display: flex;
+  padding-top: 50px;
+  width: 100%;
+  overflow: none;
+  justify-content: center;
+}
+.input-submit{
+  background-color: #444;
+  color: white;
+  width: 25%;
+  height: 60px;
+  padding: 6px 10px;
+  font-size: 1.2em;
+  border-radius: 30px;
 }
 /* FOOTER */
 footer {
