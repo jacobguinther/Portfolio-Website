@@ -19,8 +19,8 @@ document.addEventListener('DOMContentLoaded', function(){
 
   logo.addEventListener('mouseenter', (e) => {
     var rect = logo.getBoundingClientRect();
-    var x = event.clientX; // Get the horizontal coordinate
-    var y = event.clientY;
+    var x = e.clientX; // Get the horizontal coordinate
+    var y = e.clientY;
     rightOrLeft = x > (rect.left + rect.right) / 2 ? 'Right' : 'Left';
     topOrBottom = y > (rect.top + rect.bottom) / 2 ? 'Bottom' : 'Top';
     // console.log(rightOrLeft,topOrBottom)
@@ -100,63 +100,65 @@ document.addEventListener('DOMContentLoaded', function(){
     duration: 1000,
     once: true,
   });
-  var ctx = document.getElementById('myChart').getContext('2d');
-  var chart = new Chart(ctx, {
-    // The type of chart we want to create
-    type: 'horizontalBar',
+  if (document.getElementById('myChart')) {
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var chart = new Chart(ctx, {
+      // The type of chart we want to create
+      type: 'horizontalBar',
 
-    // The data for our dataset
-    data: {
-      labels: [ 'CSS', 'HTML', 'Javascript', 'React', 'MySQL' ],
-      datasets: [
-        {
-          label: 'Pluralsight SkillsIQ',
-          backgroundColor: '#767676',
-          // borderColor: '#000',
-          data: [ 212, 168, 197, 150, 156 ],
-        },
-      ],
-    },
-    // Configuration options go here
-    options: {
-      legend: {
-        display: false,
-      },
-      // tooltips: {
-      //     callbacks: {
-      //        label: function(tooltipItem) {
-      //               return tooltipItem.yLabel;
-      //        }
-      //     }
-      // },
-      scales: {
-        xAxes: [
+      // The data for our dataset
+      data: {
+        labels: [ 'CSS', 'HTML', 'Javascript', 'React', 'MySQL' ],
+        datasets: [
           {
-            type: 'linear',
-            ticks: {
-              min: 0,
-              max: 300,
-              fontColor: '#242424',
-              fontSize: 15,
-            },
-          },
-        ],
-        yAxes: [
-          {
-            ticks: {
-              fontColor: '#242424',
-              fontSize: 15,
-            },
+            label: 'Pluralsight SkillsIQ',
+            backgroundColor: '#767676',
+            // borderColor: '#000',
+            data: [ 212, 168, 197, 150, 156 ],
           },
         ],
       },
-      plugins: {
-        deferred: {
-          xOffset: 150, // defer until 150px of the canvas width are inside the viewport
-          yOffset: '50%', // defer until 50% of the canvas height are inside the viewport
-          delay: 500, // delay of 500 ms after the canvas is considered inside the viewport
+      // Configuration options go here
+      options: {
+        legend: {
+          display: false,
+        },
+        // tooltips: {
+        //     callbacks: {
+        //        label: function(tooltipItem) {
+        //               return tooltipItem.yLabel;
+        //        }
+        //     }
+        // },
+        scales: {
+          xAxes: [
+            {
+              type: 'linear',
+              ticks: {
+                min: 0,
+                max: 300,
+                fontColor: '#242424',
+                fontSize: 15,
+              },
+            },
+          ],
+          yAxes: [
+            {
+              ticks: {
+                fontColor: '#242424',
+                fontSize: 15,
+              },
+            },
+          ],
+        },
+        plugins: {
+          deferred: {
+            xOffset: 150, // defer until 150px of the canvas width are inside the viewport
+            yOffset: '50%', // defer until 50% of the canvas height are inside the viewport
+            delay: 500, // delay of 500 ms after the canvas is considered inside the viewport
+          },
         },
       },
-    },
-  });
+    });
+  }
 });
