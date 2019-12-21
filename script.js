@@ -201,9 +201,10 @@ document.addEventListener('DOMContentLoaded', function(){
       if (xhr.readyState === DONE) {
         if (xhr.status === OK) {
           console.log(xhr.responseText); // 'This is the returned text.'
-          alert('Your message has been sent successfully!');
-          document.getElementById('contact-form').reset();
-          location.reload();
+          // alert('Your message has been sent successfully!');
+          // document.getElementById('contact-form').reset();
+          // location.reload();
+          window.location.href = '../success.html'
         } else {
           console.log('Error: ' + xhr.status); // An error occurred during the request.
           alert('Sorry, Form Submission Failed');
