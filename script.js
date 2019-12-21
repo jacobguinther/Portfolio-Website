@@ -201,12 +201,12 @@ document.addEventListener('DOMContentLoaded', function(){
       if (xhr.readyState === DONE) {
         if (xhr.status === OK) {
           console.log(xhr.responseText); // 'This is the returned text.'
-          alert('Successfull');
+          alert('Your message has been sent successfully!');
           document.getElementById('contact-form').reset();
           location.reload();
         } else {
           console.log('Error: ' + xhr.status); // An error occurred during the request.
-          alert('UnSuccessfull');
+          alert('Sorry, Form Submission Failed');
         }
       }
     };
