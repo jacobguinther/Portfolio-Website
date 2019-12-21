@@ -89,12 +89,89 @@ document.addEventListener('DOMContentLoaded', function(){
       direction = 'West';
       // console.log(direction);
     }
-
     // document.body.innerHTML = direction;
-
     oldx = e.pageX;
     oldy = e.pageY;
   };
+
+  // Form
+  var form = document.getElementById('contact-form');
+  var submit = document.querySelector('.input-submit');
+  submit.addEventListener('click', submitToAPI);
+  function submitToAPI(e){
+    e.preventDefault();
+    if(!form.checkValidity()){
+      return form.reportValidity();
+    }
+    var URL =
+      'https://sa6nwuo697.execute-api.us-west-2.amazonaws.com/dev/contact';
+
+    // var Namere = /[A-Za-z]{1}[A-Za-z]/;
+    // if (!Namere.test(document.querySelector('#name-input').value)) {
+    //   alert('Name can not less than 2 char');
+    //   return;
+    // }
+    // if (document.querySelector('#email-input').value == '') {
+    //   alert('Please enter your email id');
+    //   return;
+    // }
+
+    // var reeamil = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,6})?$/;
+    // if (!reeamil.test(document.querySelector('#email-input').value)) {
+    //   alert('Please enter valid email address');
+    //   return;
+    // }
+
+    var name = document.querySelector('#name-input').value;
+    var email = document.querySelector('#email-input').value;
+    var desc = document.querySelector('#description-input').value;
+    var data = {
+      name: name,
+      email: email,
+      desc: desc,
+    };
+
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', URL);
+    xhr.send(JSON.stringify(data));
+
+    xhr.onreadystatechange = function(){
+      var DONE = 4; // readyState 4 means the request is done.
+      var OK = 200; // status 200 is a successful return.
+      if (xhr.readyState === DONE) {
+        if (xhr.status === OK) {
+          console.log(xhr.responseText); // 'This is the returned text.'
+          alert('Successfull');
+          document.getElementById('contact-form').reset();
+          location.reload();
+        } else {
+          console.log('Error: ' + xhr.status); // An error occurred during the request.
+          alert('UnSuccessfull');
+        }
+      }
+    };
+
+    //   $.ajax({
+    //     type: 'POST',
+    //     url: 'https://abc1234.execute-api.us-east-1.amazonaws.com/01/contact',
+    //     dataType: 'json',
+    //     crossDomain: 'true',
+    //     contentType: 'application/json; charset=utf-8',
+    //     data: JSON.stringify(data),
+
+    //     success: function(){
+    //       // clear form and show a success message
+    //       alert('Successfull');
+    //       document.getElementById('contact-form').reset();
+    //       location.reload();
+    //     },
+    //     error: function(){
+    //       // show an error message
+    //       alert('UnSuccessfull');
+    //     },
+    //   });
+  }
+
   // AOS AND ChartJS
   AOS.init({
     duration: 1000,
@@ -113,7 +190,6 @@ document.addEventListener('DOMContentLoaded', function(){
           {
             label: 'Pluralsight SkillsIQ',
             backgroundColor: '#767676',
-            // borderColor: '#000',
             data: [ 212, 168, 197, 150, 156 ],
           },
         ],
@@ -123,13 +199,6 @@ document.addEventListener('DOMContentLoaded', function(){
         legend: {
           display: false,
         },
-        // tooltips: {
-        //     callbacks: {
-        //        label: function(tooltipItem) {
-        //               return tooltipItem.yLabel;
-        //        }
-        //     }
-        // },
         scales: {
           xAxes: [
             {
