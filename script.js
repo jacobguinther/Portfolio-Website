@@ -94,6 +94,66 @@ document.addEventListener('DOMContentLoaded', function(){
     oldy = e.pageY;
   };
 
+  
+  // AOS AND ChartJS
+  AOS.init({
+    duration: 1000,
+    once: true,
+  });
+  if (document.getElementById('myChart')) {
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var chart = new Chart(ctx, {
+      // The type of chart we want to create
+      type: 'horizontalBar',
+
+      // The data for our dataset
+      data: {
+        labels: [ 'CSS', 'HTML', 'Javascript', 'React', 'MySQL' ],
+        datasets: [
+          {
+            label: 'Pluralsight SkillsIQ',
+            backgroundColor: '#767676',
+            data: [ 212, 168, 197, 150, 156 ],
+          },
+        ],
+      },
+      // Configuration options go here
+      options: {
+        legend: {
+          display: false,
+        },
+        scales: {
+          xAxes: [
+            {
+              type: 'linear',
+              ticks: {
+                min: 0,
+                max: 300,
+                fontColor: '#242424',
+                fontSize: 15,
+              },
+            },
+          ],
+          yAxes: [
+            {
+              ticks: {
+                fontColor: '#242424',
+                fontSize: 15,
+              },
+            },
+          ],
+        },
+        plugins: {
+          deferred: {
+            xOffset: 150, // defer until 150px of the canvas width are inside the viewport
+            yOffset: '50%', // defer until 50% of the canvas height are inside the viewport
+            delay: 500, // delay of 500 ms after the canvas is considered inside the viewport
+          },
+        },
+      },
+    });
+  }
+
   // Form
   var form = document.getElementById('contact-form');
   var submit = document.querySelector('.input-submit');
@@ -172,62 +232,4 @@ document.addEventListener('DOMContentLoaded', function(){
     //   });
   }
 
-  // AOS AND ChartJS
-  AOS.init({
-    duration: 1000,
-    once: true,
-  });
-  if (document.getElementById('myChart')) {
-    var ctx = document.getElementById('myChart').getContext('2d');
-    var chart = new Chart(ctx, {
-      // The type of chart we want to create
-      type: 'horizontalBar',
-
-      // The data for our dataset
-      data: {
-        labels: [ 'CSS', 'HTML', 'Javascript', 'React', 'MySQL' ],
-        datasets: [
-          {
-            label: 'Pluralsight SkillsIQ',
-            backgroundColor: '#767676',
-            data: [ 212, 168, 197, 150, 156 ],
-          },
-        ],
-      },
-      // Configuration options go here
-      options: {
-        legend: {
-          display: false,
-        },
-        scales: {
-          xAxes: [
-            {
-              type: 'linear',
-              ticks: {
-                min: 0,
-                max: 300,
-                fontColor: '#242424',
-                fontSize: 15,
-              },
-            },
-          ],
-          yAxes: [
-            {
-              ticks: {
-                fontColor: '#242424',
-                fontSize: 15,
-              },
-            },
-          ],
-        },
-        plugins: {
-          deferred: {
-            xOffset: 150, // defer until 150px of the canvas width are inside the viewport
-            yOffset: '50%', // defer until 50% of the canvas height are inside the viewport
-            delay: 500, // delay of 500 ms after the canvas is considered inside the viewport
-          },
-        },
-      },
-    });
-  }
 });
