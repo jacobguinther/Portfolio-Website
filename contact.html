@@ -45,21 +45,21 @@
       <h2 class="tagline">Thanks for taking the time to reach
         out. How can I help you today?</h2>
     </div>
-    <form method="POST" action="https://formspree.io/jgguinther09@gmail.com">
+    <form id="contact-form">
       <div class="form-section-1">
         <div class="input-container form-item-left">
-          <label>Name</label>
-          <input type="text">
+          <label for="name-input">Name</label for="name-input">
+          <input id="name-input" type="text" required>
         </div>
         <div class="input-container form-item-right">
-          <label>Email</label>
-          <input type="email">
+          <label for="email-input">Email</label>
+          <input id="email-input" type="email" required>
         </div>
       </div>
       <div class="form-section-2">
         <div class="input-container">
-          <label>Message</label>
-          <textarea name="message" id="" cols="30" rows="10"></textarea>
+          <label for="description-input">Message</label>
+          <textarea id="description-input" name="message" id="" cols="30" rows="10" required></textarea>
         </div>
       </div>
       <div class="container-input-submit">
