@@ -191,6 +191,25 @@ nav ul li {
   grid-row-start: 2;
   grid-row-end: 5;
 }
+.not-found-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  /* margin-top: 100px;  */
+  /* margin-bottom: 0px; */
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+.button-container{
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  margin-top: 0px;
+  /* margin-bottom: 100px; */
+  grid-row-start: 3;
+  grid-row-end: 5;
+}
 .section-aboutme,
 .section-portfolio {
   display: flex;
