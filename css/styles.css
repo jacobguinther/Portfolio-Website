@@ -526,8 +526,9 @@ footer {
     grid-template-columns: 1fr;
   }
   /* CONTACT PAGE */
+  .tagline{padding: 0 5% 0 5%;}
   form {
-    width: 100%;
+    width: 90%;
     font-size: 16px;
   }
   .form-item-left {
@@ -550,6 +551,10 @@ footer {
   .input-submit {
     background-color: #444;
     color: white;
+
+    width: 30%;
+    height: 50px;
+    padding: 6px 10px;
   }
   /* FOOTER */
   .tagline-footer {
@@ -565,6 +570,21 @@ footer {
   .monitor {
     width: 100px;
     height: 86.4px;
+  }
+  .input-submit {
+  width: 40%;
+  height: 50px;
+  padding: 6px 10px;
+  }
+  form .input-container input {
+    height: 50px;
+    padding: 6px 10px;
+  }
+  form .input-container textarea {
+    margin: 0;
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 50px;
   }
 }
 
