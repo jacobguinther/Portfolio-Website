@@ -547,6 +547,10 @@ footer {
     display: flex;
     flex-direction: column;
   }
+  .input-submit {
+    background-color: #444;
+    color: white;
+  }
   /* FOOTER */
   .tagline-footer {
     font-size: .8em;
