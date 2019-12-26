@@ -60,7 +60,7 @@ h1 {
   padding-left: 20px;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  font-size: 2.5em;
+  font-size: 2.3em;
   margin: 0;
 }
 h2 {
@@ -173,18 +173,14 @@ nav ul li {
 .container-success {
   margin-top: auto;
   margin-bottom: auto;
-  padding-top: 100px;
-  padding-bottom: 100px;
-  grid-row-start: 2;
-  grid-row-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 6;
 }
 .container-not-found {
   margin-top: auto;
   margin-bottom: auto;
-  padding-top: 100px;
-  padding-bottom: 100px;
-  grid-row-start: 2;
-  grid-row-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 6;
 }
 .padding-top-bottom {
   padding-top: 100px;
