@@ -14,6 +14,14 @@ document.addEventListener('DOMContentLoaded', function(){
     }
   });
   hamburgerContainer.addEventListener('click', () => {
+    console.log("fired")
+    let bars = document.querySelector('.burger-menu').children;
+    bars[0].classList.toggle('menu-bar-active')
+    bars[1].classList.toggle('menu-bar-active')
+    bars[2].classList.toggle('menu-bar-active')
+    bars[0].classList.toggle('menu-bar')
+    bars[1].classList.toggle('menu-bar')
+    bars[2].classList.toggle('menu-bar')
     document.querySelector('.menu').classList.toggle('menu-visible');
   });
 
@@ -94,7 +102,6 @@ document.addEventListener('DOMContentLoaded', function(){
     oldy = e.pageY;
   };
 
-  
   // AOS AND ChartJS
   AOS.init({
     duration: 1000,
@@ -160,7 +167,7 @@ document.addEventListener('DOMContentLoaded', function(){
   submit.addEventListener('click', submitToAPI);
   function submitToAPI(e){
     e.preventDefault();
-    if(!form.checkValidity()){
+    if (!form.checkValidity()) {
       return form.reportValidity();
     }
     var URL =
@@ -204,7 +211,7 @@ document.addEventListener('DOMContentLoaded', function(){
           // alert('Your message has been sent successfully!');
           // document.getElementById('contact-form').reset();
           // location.reload();
-          window.location.href = '../success.html'
+          window.location.href = '../success.html';
         } else {
           console.log('Error: ' + xhr.status); // An error occurred during the request.
           alert('Sorry, Form Submission Failed');
@@ -232,5 +239,4 @@ document.addEventListener('DOMContentLoaded', function(){
     //     },
     //   });
   }
-
 });
