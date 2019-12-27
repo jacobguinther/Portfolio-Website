@@ -13,17 +13,6 @@ document.addEventListener('DOMContentLoaded', function(){
       menu.classList.add('active');
     }
   });
-  hamburgerContainer.addEventListener('click', () => {
-    console.log("fired")
-    let bars = document.querySelector('.burger-menu').children;
-    bars[0].classList.toggle('menu-bar-active')
-    bars[1].classList.toggle('menu-bar-active')
-    bars[2].classList.toggle('menu-bar-active')
-    bars[0].classList.toggle('menu-bar')
-    bars[1].classList.toggle('menu-bar')
-    bars[2].classList.toggle('menu-bar')
-    document.querySelector('.menu').classList.toggle('menu-visible');
-  });
 
   logo.addEventListener('mouseenter', (e) => {
     var rect = logo.getBoundingClientRect();
@@ -73,12 +62,6 @@ document.addEventListener('DOMContentLoaded', function(){
   nav.addEventListener('mouseleave', (e) => {
     document.removeEventListener('mousemove', mousemovemethod);
   });
-  // document.querySelector('body').addEventListener('click', (e)=>{
-  // 	var x = event.clientX;     // Get the horizontal coordinate
-  // 	var y = event.clientY;     // Get the vertical coordinate
-  // 	var coor = "X : " + x + ", Y : " + y;
-  // 	console.log("Coor ",coor);
-  // });
 
   var direction = '';
   var oldx = 0;
@@ -168,26 +151,22 @@ document.addEventListener('DOMContentLoaded', function(){
   function submitToAPI(e){
     e.preventDefault();
     if (!form.checkValidity()) {
+      for (let i = 1; i < document.querySelectorAll('input').length; i++) {
+        if (!document.querySelectorAll('input')[i].checkValidity()) {
+          console.log("true on input")
+          document.querySelectorAll('input')[i].focus();
+          return;
+        }
+      }
+      if(!document.querySelectorAll('textarea')[0].checkValidity()){
+        console.log("true on textarea")
+        document.querySelectorAll('textarea')[0].focus();
+        return;
+      }
       return form.reportValidity();
     }
     var URL =
       'https://sa6nwuo697.execute-api.us-west-2.amazonaws.com/dev/contact';
-
-    // var Namere = /[A-Za-z]{1}[A-Za-z]/;
-    // if (!Namere.test(document.querySelector('#name-input').value)) {
-    //   alert('Name can not less than 2 char');
-    //   return;
-    // }
-    // if (document.querySelector('#email-input').value == '') {
-    //   alert('Please enter your email id');
-    //   return;
-    // }
-
-    // var reeamil = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,6})?$/;
-    // if (!reeamil.test(document.querySelector('#email-input').value)) {
-    //   alert('Please enter valid email address');
-    //   return;
-    // }
 
     var name = document.querySelector('#name-input').value;
     var email = document.querySelector('#email-input').value;
@@ -218,25 +197,59 @@ document.addEventListener('DOMContentLoaded', function(){
         }
       }
     };
-
-    //   $.ajax({
-    //     type: 'POST',
-    //     url: 'https://abc1234.execute-api.us-east-1.amazonaws.com/01/contact',
-    //     dataType: 'json',
-    //     crossDomain: 'true',
-    //     contentType: 'application/json; charset=utf-8',
-    //     data: JSON.stringify(data),
-
-    //     success: function(){
-    //       // clear form and show a success message
-    //       alert('Successfull');
-    //       document.getElementById('contact-form').reset();
-    //       location.reload();
-    //     },
-    //     error: function(){
-    //       // show an error message
-    //       alert('UnSuccessfull');
-    //     },
-    //   });
   }
+
+  const invalidClassName = 'invalid';
+  const validationErrorClass = 'validation-text';
+  const parentErrorClass = 'has-validation-error';
+  const inputs = document.querySelectorAll('input, textarea');
+  inputs.forEach(function(input){
+    function checkValidity(options){
+      const insertError = options.insertError;
+      const parent = input.parentNode;
+      // console.log(parent.firstElementChild)
+      const error =
+        parent.querySelector(`.${validationErrorClass}`) ||
+        document.createElement('div');
+
+      if (!input.validity.valid && input.validationMessage) {
+        error.className = validationErrorClass;
+        error.textContent = input.validationMessage;
+
+        if (insertError) {
+          parent.firstElementChild.append(error);
+          parent.firstElementChild.classList.add(parentErrorClass);
+        }
+      } else {
+        parent.classList.remove(parentErrorClass);
+        error.remove();
+      }
+    }
+    input.addEventListener('input', function(){
+      input.setCustomValidity('');
+      // Remove the class when the input becomes valid.
+      // 'input' will fire each time the user types
+      if (input.validity.valid) {
+        input.classList.remove(invalidClassName);
+      }
+      if (input.id === 'email-input' && input.validationMessage.length > 30) {
+        if (screen.width > 450) {
+          input.setCustomValidity('Enter an email address.');
+        } else {
+          input.setCustomValidity('Enter an email address');
+        }
+      }
+      // We can only update the error or hide it on input.
+      // Otherwise it will show when typing.
+      checkValidity({ insertError: false });
+    });
+    input.addEventListener('invalid', function(e){
+      // Add a css class on submit when the input is invalid.
+      input.classList.add(invalidClassName);
+      // prevent showing the default display
+      e.preventDefault();
+      // We can also create the error in invalid.
+      checkValidity({ insertError: true });
+    });
+  });
 });
