@@ -402,7 +402,7 @@ footer {
   height: 90px;
   width: 90px;
 }
-.footer-logo-inner{
+.footer-logo-inner {
   padding-right: 3px;
   color: #f4f4f4;
   text-decoration: none;
@@ -485,7 +485,7 @@ footer {
     border-radius: 50%;
   }
 
-  .footer-logo-inner{
+  .footer-logo-inner {
     padding-right: 3px;
     color: #f4f4f4;
     text-decoration: none;
@@ -586,6 +586,12 @@ footer {
   .form-section-1 {
     display: flex;
     flex-direction: column;
+  }
+
+  input,
+  select:focus,
+  textarea {
+    font-size: 16px;
   }
   .input-submit {
     background-color: #444;
