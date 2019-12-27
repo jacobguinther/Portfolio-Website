@@ -327,9 +327,16 @@ form .input-container textarea {
   width: 100%;
 }
 label {
+  
   color: grey;
   margin-bottom: 10px;
   font-size: 1.2em;
+}
+.validation-text {
+  margin-bottom: 10px;
+  font-size: .8em;
+  font-weight: 400;
+  color: red;
 }
 
 input,
@@ -339,6 +346,13 @@ textarea {
   border: 1px solid lightgrey;
   border-radius: 5px;
   line-height: 1.5;
+}
+input:focus,
+textarea:focus{
+  outline: none;
+}
+.invalid {
+  border: 1px solid rgb(220, 0, 0);
 }
 .container-input-submit {
   display: flex;
@@ -402,7 +416,7 @@ footer {
   height: 90px;
   width: 90px;
 }
-.footer-logo-inner{
+.footer-logo-inner {
   padding-right: 3px;
   color: #f4f4f4;
   text-decoration: none;
@@ -485,7 +499,7 @@ footer {
     border-radius: 50%;
   }
 
-  .footer-logo-inner{
+  .footer-logo-inner {
     padding-right: 3px;
     color: #f4f4f4;
     text-decoration: none;
@@ -587,6 +601,14 @@ footer {
     display: flex;
     flex-direction: column;
   }
+
+  /* Less than 16px will cause zoom on mobile */
+  input,
+  select:focus,
+  textarea {
+    font-size: 16px;
+  }
+
   .input-submit {
     background-color: #444;
     color: white;
@@ -673,3 +695,4 @@ footer {
 .burger-menu .menu-bar-2 {
   margin: 7px 0;
 }
+
