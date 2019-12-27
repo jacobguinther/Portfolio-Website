@@ -14,6 +14,18 @@ document.addEventListener('DOMContentLoaded', function(){
     }
   });
 
+  hamburgerContainer.addEventListener('click', () => {
+    console.log("fired")
+    let bars = document.querySelector('.burger-menu').children;
+    bars[0].classList.toggle('menu-bar-active')
+    bars[1].classList.toggle('menu-bar-active')
+    bars[2].classList.toggle('menu-bar-active')
+    bars[0].classList.toggle('menu-bar')
+    bars[1].classList.toggle('menu-bar')
+    bars[2].classList.toggle('menu-bar')
+    document.querySelector('.menu').classList.toggle('menu-visible');
+  });
+
   logo.addEventListener('mouseenter', (e) => {
     var rect = logo.getBoundingClientRect();
     var x = e.clientX; // Get the horizontal coordinate
