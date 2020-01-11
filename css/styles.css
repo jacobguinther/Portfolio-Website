@@ -68,7 +68,7 @@ h1 {
   margin: 0; }
 
 h2 {
-  color: #767676;
+  color: #707070;
   font-weight: 400;
   font-size: 2.5rem; }
 
@@ -78,7 +78,7 @@ p {
   line-height: 1.8em; }
 
 nav {
-  color: white;
+  color: #ffffff;
   padding-left: 10vw;
   padding-right: 10vw;
   display: flex;
@@ -153,7 +153,7 @@ nav ul li {
 
 .nav-link:link,
 .nav-link:visited {
-  color: white;
+  color: #ffffff;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -162,7 +162,7 @@ nav ul li {
 
 .nav-link:hover,
 .nav-link:active {
-  border-bottom: 2px solid white; }
+  border-bottom: 2px solid #ffffff; }
 
 .container {
   box-sizing: border-box;
@@ -172,9 +172,9 @@ nav ul li {
   padding-right: 10vw; }
 
 .container:nth-child(2n) {
-  background-color: white;
-  border-top: 1px solid lightgrey;
-  border-bottom: 1px solid lightgrey; }
+  background-color: #ffffff;
+  border-top: 1px solid #d3d3d3;
+  border-bottom: 1px solid #d3d3d3; }
 
 .flex-center {
   display: flex;
@@ -241,11 +241,11 @@ nav ul li {
   grid-gap: 20px; }
 
 .card {
-  border: 1px solid lightgrey;
-  background: white;
+  border: 1px solid #d3d3d3;
+  background: #ffffff;
   text-decoration: none;
   color: #444;
-  box-shadow: 0 2px 5px rgba(6, 5, 5, 0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   min-height: 100%;
@@ -267,7 +267,7 @@ nav ul li {
 .card h1 {
   font-size: 2rem;
   margin: 0;
-  color: #333; }
+  color: #444; }
 
 .card p {
   font-weight: 400;
@@ -280,7 +280,7 @@ nav ul li {
 .card span {
   font-size: 1rem;
   font-weight: bold;
-  color: #8c8c8c;
+  color: #707070;
   text-transform: uppercase;
   letter-spacing: .05em;
   margin: 2em 0 0 0; }
@@ -341,7 +341,7 @@ input,
 textarea {
   margin: 0px;
   padding: 10px;
-  border: 1px solid lightgrey;
+  border: 1px solid #d3d3d3;
   border-radius: 5px;
   line-height: 1.5;
   font-size: 1.6rem; }
@@ -357,7 +357,7 @@ textarea:focus {
   margin-bottom: 10px;
   font-size: 1.2rem;
   font-weight: 400;
-  color: red; }
+  color: #dc0000; }
 
 .container-input-submit {
   display: flex;
@@ -382,10 +382,10 @@ textarea:focus {
 
 .input-submit:hover {
   background-color: #444;
-  color: white; }
+  color: #ffffff; }
 
 .button-home {
-  color: white;
+  color: #ffffff;
   /*diff */
   border: 3px solid #444;
   background-color: #444;
@@ -404,7 +404,7 @@ footer {
   display: grid;
   grid-template-rows: 1fr 1fr 1fr 1fr;
   background-color: #242424;
-  color: white;
+  color: #ffffff;
   padding-left: 10vw;
   padding-right: 10vw;
   grid-row-start: 5;
@@ -459,7 +459,7 @@ footer {
   margin-right: 20px; }
 
 .copyright {
-  color: #8c8c8c;
+  color: #707070;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -469,10 +469,11 @@ footer {
   margin: 0; }
 
 .svg {
+  stroke: #707070;
   transition: .3s; }
 
 .svg:hover {
-  stroke: white; }
+  stroke: #ffffff; }
 
 /* ============================================================= */
 /*MEDIA QUERIES  MEDIA QUERIES  MEDIA QUERIES  MEDIA QUERIES  MEDIA QUERIES*/
@@ -521,15 +522,12 @@ footer {
     position: absolute;
     display: block;
     width: 100%;
-    background-color: gray;
+    background-color: #707070;
     max-height: 0px;
     overflow-y: hidden;
     transition: all 0.4s ease-in;
     top: 75px;
-    left: 0px;
-    -moz-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
-    -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4); }
+    left: 0px; }
   nav ul li {
     margin: 0;
     display: flex;
@@ -582,8 +580,8 @@ footer {
   textarea {
     font-size: 16px; }
   .input-submit {
-    background-color: #444;
-    color: white;
+    background-color: green;
+    color: #ffffff;
     width: 30%;
     height: 50px; }
   .button-home {
@@ -637,10 +635,9 @@ footer {
 .burger-menu .menu-bar {
   width: 100%;
   height: 2px;
-  background-color: #ddd;
+  background-color: #d3d3d3;
   border: none;
   border-radius: 3px;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
   margin: 0;
   padding: 0; }
 
@@ -648,7 +645,7 @@ footer {
 .menu-bar-active {
   width: 100%;
   height: 2px;
-  background-color: #8c8c8c;
+  background-color: #707070;
   border: none;
   border-radius: 3px;
   box-shadow: none;

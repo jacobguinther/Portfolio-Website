@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', function(){
         datasets: [
           {
             label: 'Pluralsight SkillsIQ',
-            backgroundColor: '#767676',
+            backgroundColor: '#707070',
             data: [ 212, 168, 197, 150, 156 ],
           },
         ],
