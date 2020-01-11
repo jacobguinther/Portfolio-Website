@@ -51,6 +51,16 @@
 html {
   height: 100%;
   overflow: none;
+  font-size: 62.5%; 
+  /* @include respond(tab-land) { // width < 1200?
+      font-size: 56.25%; //1 rem = 9px, 9/16 = 50%
+  }
+  @include respond(tab-port) { // width < 900?
+      font-size: 50%; //1 rem = 8px, 8/16 = 50%
+  }
+  @include respond(big-desktop) {
+      font-size: 75%; //1rem = 12, 12/16
+  } */
 }
 body {
   box-sizing: border-box;
@@ -60,7 +70,6 @@ body {
   min-height: 100%;
   display: grid;
   grid-template-rows: 100px auto auto auto 400px;
-  font-size: 1em;
   overflow-x: hidden;
 }
 h1 {
@@ -68,16 +77,16 @@ h1 {
   padding-left: 20px;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  font-size: 2.3em;
+  font-size: 4rem;
   margin: 0;
 }
 h2 {
   color: #767676;
   font-weight: 400;
-  font-size: 1.7em;
+  font-size: 2.5rem;
 }
 p {
-  font-size: 1.2em;
+  font-size: 1.8rem;
   text-align: center;
   line-height: 1.8em;
 }
@@ -152,7 +161,7 @@ nav ul li {
 }
 .nav-link {
   text-transform: uppercase;
-  font-size: 1.1em;
+  font-size: 2rem;
   letter-spacing: .1em;
   padding: 8px 0 8px 0;
 }
@@ -274,20 +283,20 @@ nav ul li {
   justify-content: space-between;
 }
 .card h1 {
-  font-size: 20px;
+  font-size: 2rem;
   margin: 0;
   color: #333;
 }
 .card p {
   font-weight: 400;
-  font-size: .8em;
+  font-size: 1.4rem;
   flex: 1;
   line-height: 1.4;
   text-align: left;
   margin-bottom: 0;
 }
 .card span {
-  font-size: .8em;
+  font-size: 1rem;
   font-weight: bold;
   color: #8c8c8c;
   text-transform: uppercase;
@@ -342,17 +351,11 @@ form .input-container textarea {
   width: 100%;
 }
 label {
-  
   color: grey;
   margin-bottom: 10px;
-  font-size: 1.2em;
+  font-size: 1.8rem;
 }
-.validation-text {
-  margin-bottom: 10px;
-  font-size: .8em;
-  font-weight: 400;
-  color: red;
-}
+
 
 input,
 textarea {
@@ -361,6 +364,7 @@ textarea {
   border: 1px solid lightgrey;
   border-radius: 5px;
   line-height: 1.5;
+  font-size: 1.6rem;
 }
 input:focus,
 textarea:focus{
@@ -368,6 +372,12 @@ textarea:focus{
 }
 .invalid {
   border: 1px solid rgb(220, 0, 0);
+}
+.validation-text {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: red;
 }
 .container-input-submit {
   display: flex;
@@ -382,7 +392,7 @@ textarea:focus{
   border: 3px solid #444;
   background-color: #f4f4f4;
   width: 25%;
-  font-size: 1.2em;
+  font-size: 2rem;
   border-radius: 30px;
   cursor: pointer;
   transition: all ease .3s;
@@ -404,7 +414,7 @@ textarea:focus{
   padding: .5em;
   text-decoration: none;
   text-align: center;
-  font-size: 1.2em;
+  font-size: 2rem;
   font-weight: 400;
   padding: 12px 10px;
 }
@@ -451,7 +461,7 @@ footer {
 }
 .tagline-footer h1 {
   text-transform: uppercase;
-  font-size: 2.5em;
+  font-size: 4rem;
   letter-spacing: 0.1em;
   margin: 0;
 }
@@ -492,12 +502,25 @@ footer {
 /*MEDIA QUERIES  MEDIA QUERIES  MEDIA QUERIES  MEDIA QUERIES  MEDIA QUERIES*/
 
 @media screen and (max-width: 750px) {
+  html {
+    font-size: 50%; 
+  }
   body {
-    font-size: .8em;
     grid-template-rows: 75px auto auto auto 300px;
   }
+  #logo {
+    color: #f4f4f4;
+    text-decoration: none;
+    box-sizing: border-box;
+    border: 2px solid #707070;
+    border-radius: 50%;
+    font-size: 24px;
+    text-align: center;
+    line-height: 46px;
+    height: 52px;
+    width: 52px;
+  }
   #footer-logo {
-    /* background: url(../img/images/new-logo-bordered-67.png) no-repeat; */
     position: relative;
     left: 50%;
     transform: translateX(-50%);
@@ -513,7 +536,7 @@ footer {
     color: #f4f4f4;
     text-decoration: none;
     box-sizing: border-box;
-    border: 3px solid #707070;
+    border: 2px solid #707070;
     border-radius: 50%;
     font-size: 24px;
     text-align: center;
@@ -522,19 +545,7 @@ footer {
     width: 52px;
     margin: 8px 0 0 8px;
   }
-  #logo {
-    /* background: url(../img/images/new-logo-52.png) no-repeat; */
-    color: #f4f4f4;
-    text-decoration: none;
-    box-sizing: border-box;
-    border: 2px solid #707070;
-    border-radius: 50%;
-    font-size: 24px;
-    text-align: center;
-    line-height: 46px;
-    height: 52px;
-    width: 52px;
-  }
+
   .menu {
     position: absolute;
     display: block;
@@ -554,7 +565,7 @@ footer {
     margin: 0;
     display: flex;
     justify-content: center;
-    font-size: 1.2em;
+    /* font-size: 1.2em; */
   }
   .menu-visible {
     padding-top: 20px;
@@ -632,11 +643,14 @@ footer {
 
   /* FOOTER */
   .tagline-footer {
-    font-size: .8em;
+    /* font-size: .8em; */
   }
 }
 
 @media screen and (max-width: 450px) {
+  html {
+    font-size: 44%; 
+  }
   .skills-bubbles {
     width: 280px;
     height: 169.4px;
@@ -662,6 +676,11 @@ footer {
     max-width: 100%;
     min-width: 100%;
     min-height: 50px;
+  }
+  input,
+  select:focus,
+  textarea {
+    font-size: 16px;
   }
 }
 
