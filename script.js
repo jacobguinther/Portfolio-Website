@@ -15,14 +15,14 @@ document.addEventListener('DOMContentLoaded', function(){
   });
 
   hamburgerContainer.addEventListener('click', () => {
-    console.log("fired")
+    console.log('fired');
     let bars = document.querySelector('.burger-menu').children;
-    bars[0].classList.toggle('menu-bar-active')
-    bars[1].classList.toggle('menu-bar-active')
-    bars[2].classList.toggle('menu-bar-active')
-    bars[0].classList.toggle('menu-bar')
-    bars[1].classList.toggle('menu-bar')
-    bars[2].classList.toggle('menu-bar')
+    bars[0].classList.toggle('menu-bar-active');
+    bars[1].classList.toggle('menu-bar-active');
+    bars[2].classList.toggle('menu-bar-active');
+    bars[0].classList.toggle('menu-bar');
+    bars[1].classList.toggle('menu-bar');
+    bars[2].classList.toggle('menu-bar');
     document.querySelector('.menu').classList.toggle('menu-visible');
   });
 
@@ -103,23 +103,22 @@ document.addEventListener('DOMContentLoaded', function(){
     once: true,
   });
   if (document.getElementById('myChart')) {
-    var ctx = document.getElementById('myChart').getContext('2d');
-    var chart = new Chart(ctx, {
-      // The type of chart we want to create
+    const style = getComputedStyle(document.body);
+    const colorGrayDark = style.getPropertyValue('--color-gray-dark');
+    const colorPrimary = style.getPropertyValue('--color-primary');
+    const ctx = document.getElementById('myChart').getContext('2d');
+    const chart = new Chart(ctx, {
       type: 'horizontalBar',
-
-      // The data for our dataset
       data: {
         labels: [ 'CSS', 'HTML', 'Javascript', 'React', 'MySQL' ],
         datasets: [
           {
             label: 'Pluralsight SkillsIQ',
-            backgroundColor: '#767676',
+            backgroundColor: colorGrayDark,
             data: [ 212, 168, 197, 150, 156 ],
           },
         ],
       },
-      // Configuration options go here
       options: {
         legend: {
           display: false,
@@ -131,7 +130,7 @@ document.addEventListener('DOMContentLoaded', function(){
               ticks: {
                 min: 0,
                 max: 300,
-                fontColor: '#242424',
+                fontColor: colorPrimary,
                 fontSize: 15,
               },
             },
@@ -139,7 +138,7 @@ document.addEventListener('DOMContentLoaded', function(){
           yAxes: [
             {
               ticks: {
-                fontColor: '#242424',
+                fontColor: colorPrimary,
                 fontSize: 15,
               },
             },
@@ -157,21 +156,24 @@ document.addEventListener('DOMContentLoaded', function(){
   }
 
   // Form
-  var form = document.getElementById('contact-form');
-  var submit = document.querySelector('.input-submit');
-  submit.addEventListener('click', submitToAPI);
+  const form = document.getElementById('contact-form');
+  const submit = document.querySelector('.input-submit');
+  if (submit) {
+    submit.addEventListener('click', submitToAPI);
+  }
+
   function submitToAPI(e){
     e.preventDefault();
     if (!form.checkValidity()) {
       for (let i = 1; i < document.querySelectorAll('input').length; i++) {
         if (!document.querySelectorAll('input')[i].checkValidity()) {
-          console.log("true on input")
+          console.log('true on input');
           document.querySelectorAll('input')[i].focus();
           return;
         }
       }
-      if(!document.querySelectorAll('textarea')[0].checkValidity()){
-        console.log("true on textarea")
+      if (!document.querySelectorAll('textarea')[0].checkValidity()) {
+        console.log('true on textarea');
         document.querySelectorAll('textarea')[0].focus();
         return;
       }
