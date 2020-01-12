@@ -109,6 +109,9 @@ body {
   margin: 0;
   color: $color-primary;
 }
+.header {
+  font-size: $font-size-h1;
+}
 h2 {
   color: $color-gray-dark;
   font-weight: 400;
@@ -215,11 +218,17 @@ nav ul li {
   padding-left: 10vw;
   padding-right: 10vw;
 }
-.container:nth-child(2n) {
+.container:nth-child(even) {
   background-color: $color-white;
+
+}
+.container:nth-child(odd) {
   border-top: 1px solid $color-gray-medium;
   border-bottom: 1px solid $color-gray-medium;
 }
+
+
+
 .flex-center {
   display: flex;
   flex-direction: column;
@@ -231,7 +240,7 @@ nav ul li {
   grid-row-start: 1;
   grid-row-end: 6;
 }
-.success-not-found--header1 {
+.success--not-found--header1 {
   color: #767676;
   padding-bottom: 35px;
 }
