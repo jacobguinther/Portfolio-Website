@@ -9,7 +9,7 @@
   <link rel="preload" as="font" type="font/woff2"
     href="./fonts/roboto-mono-v7-latin-300.woff2" crossorigin>
   <link rel="preload" as="font" type="font/woff2"
-    href="./fonts/roboto-mono-v7-latin-regular.woff2" crossorigin>  
+    href="./fonts/roboto-mono-v7-latin-regular.woff2" crossorigin>
   <link rel="stylesheet" type="text/css" href="./css/styles.css" />
   <link href="/node_modules/aos/dist/aos.css" rel="stylesheet">
   <title>JG Portfolio</title>
@@ -40,7 +40,7 @@
       <h1>About Me</h1>
       <img class="line-fancy" src="/img/icons/HR-short.svg" alt="#">
     </div>
-    <img src="/img/images/ProfilePicCircular-250.png" style="padding-top: 45px;">
+    <img class="profile-img" src="/img/images/ProfilePicCircular-250.png">
     <h2 class="tagline">I’m a web developer apprentice based in
       Boulder, Colorado.</h2>
     <p class="center-text">I'm Jacob Guinther. I am currently working at
@@ -67,13 +67,14 @@
 
 
     <canvas id="myChart"></canvas>
-    <div style="font-size: .6em; ">
-      <p style="text-align: left; margin-top: 10px; margin-bottom: 0px;">
+    <div class="chart--key">
+      <p>
         &nbsp;&nbsp;0 - 100 Novice</p>
-      <p style="text-align: left; margin: 0;">100 - 200 Proficient</p>
-      <p style="text-align: left; margin: 0;">200 - 300 Expert</p>
+      <p>100 - 200 Proficient</p>
+      <p>200 - 300 Expert</p>
     </div>
-    <p style="font-size: 1.2rem">* This is based on pluralsights skills IQ tests.
+    <p class="chart--annotation">* This is based on pluralsights skills IQ
+      tests.
     </p>
   </div>
 
@@ -89,26 +90,26 @@
     </div>
     <div class="social-icons-container">
       <a href="https://github.com/jacobguinther"><svg class="svg"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24" fill="none" stroke="#8C8C8C" stroke-width="1"
-          stroke-linecap="round" stroke-linejoin="round">
+          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+          stroke="#8C8C8C" stroke-width="1" stroke-linecap="round"
+          stroke-linejoin="round">
           <path
             d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
           </path>
         </svg></a>
       <a href="mailto:jacobgguinther@gmail.com"><svg class="svg"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24" fill="none" stroke="#8C8C8C" stroke-width="1"
-          stroke-linecap="round" stroke-linejoin="round">
+          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+          stroke="#8C8C8C" stroke-width="1" stroke-linecap="round"
+          stroke-linejoin="round">
           <path
             d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
           </path>
           <polyline points="22,6 12,13 2,6"></polyline>
         </svg></a>
       <a href="https://www.linkedin.com/in/jacobguinther/"><svg class="svg"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24" fill="none" stroke="#8C8C8C" stroke-width="1"
-          stroke-linecap="round" stroke-linejoin="round">
+          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+          stroke="#8C8C8C" stroke-width="1" stroke-linecap="round"
+          stroke-linejoin="round">
           <path
             d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
           </path>

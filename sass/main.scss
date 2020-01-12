@@ -224,11 +224,15 @@ nav ul li {
   flex-direction: column;
   align-items: center;
 }
-.container-success-not-found {
+.container--success-not-found {
   margin-top: auto;
   margin-bottom: auto;
   grid-row-start: 1;
   grid-row-end: 6;
+}
+.success-not-found--header1 {
+  color: #767676;
+  padding-bottom: 35px;
 }
 
 .padding-top-bottom {
@@ -246,6 +250,9 @@ nav ul li {
 .section-portfolio {
   display: flex;
   justify-content: center;
+}
+.profile-img {
+  padding-top: 45px;
 }
 
 .tagline {
@@ -277,6 +284,16 @@ nav ul li {
   width: 250px;
   height: 216px;
 }
+.chart--key > p {
+  text-align: left;
+  margin-bottom: 0px;
+}
+.chart--key > p:first-child {
+  margin-top: 10px;
+}
+.chart--annotation {
+  font-size: $font-size-annotation;
+}
 /* PORTFOLIO PAGE */
 .portfolio-grid {
   width: auto;
@@ -304,17 +321,18 @@ nav ul li {
   top: -2px;
   box-shadow: 0 4px 5px $color-shadow-dark;
 }
+.card--header {
+  padding: 0 0 10px 0;
+  font-size: $font-size-buttons-nav;
+  margin: 0;
+  color: $color-gray-darker;
+}
 .card article {
   padding: 20px;
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-.card h1 {
-  font-size: $font-size-buttons-nav;
-  margin: 0;
-  color: $color-gray-darker;
 }
 .card p {
   font-weight: 400;
@@ -340,6 +358,11 @@ nav ul li {
 /* CONTACT PAGE */
 form {
   width: 660px;
+}
+.contact-form__flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
 }
 .form-section-1 {
   display: flex;
