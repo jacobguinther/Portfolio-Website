@@ -77,6 +77,9 @@ body {
   margin: 0;
   color: #242424; }
 
+.header {
+  font-size: 4rem; }
+
 h2 {
   color: #707070;
   font-weight: 400;
@@ -200,7 +203,7 @@ nav ul li {
   grid-row-start: 1;
   grid-row-end: 6; }
 
-.success-not-found--header1 {
+.success--not-found--header1 {
   color: #767676;
   padding-bottom: 35px; }
 

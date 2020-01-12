@@ -109,6 +109,9 @@ body {
   margin: 0;
   color: $color-primary;
 }
+.header {
+  font-size: $font-size-h1;
+}
 h2 {
   color: $color-gray-dark;
   font-weight: 400;
@@ -237,7 +240,7 @@ nav ul li {
   grid-row-start: 1;
   grid-row-end: 6;
 }
-.success-not-found--header1 {
+.success--not-found--header1 {
   color: #767676;
   padding-bottom: 35px;
 }
