@@ -182,8 +182,10 @@ nav ul li {
   padding-left: 10vw;
   padding-right: 10vw; }
 
-.container:nth-child(2n) {
-  background-color: #ffffff;
+.container:nth-child(even) {
+  background-color: #ffffff; }
+
+.container:nth-child(odd) {
   border-top: 1px solid #d3d3d3;
   border-bottom: 1px solid #d3d3d3; }
 

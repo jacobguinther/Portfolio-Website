@@ -215,11 +215,17 @@ nav ul li {
   padding-left: 10vw;
   padding-right: 10vw;
 }
-.container:nth-child(2n) {
+.container:nth-child(even) {
   background-color: $color-white;
+
+}
+.container:nth-child(odd) {
   border-top: 1px solid $color-gray-medium;
   border-bottom: 1px solid $color-gray-medium;
 }
+
+
+
 .flex-center {
   display: flex;
   flex-direction: column;
