@@ -100,18 +100,19 @@ body {
   grid-template-rows: 100px auto auto auto 400px;
   overflow-x: hidden;
 }
-h1 {
+.main--header {
   padding-right: 20px;
   padding-left: 20px;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  font-size: 4rem;
+  font-size: $font-size-h1;
   margin: 0;
+  color: $color-primary;
 }
 h2 {
   color: $color-gray-dark;
   font-weight: 400;
-  font-size: 2.5rem;
+  font-size: $font-size-h2;
 }
 p {
   font-size: $font-size-base;
@@ -515,6 +516,7 @@ footer {
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin: 0;
+  font-size: $font-size-h1;
 }
 .social-icons-container {
   display: flex;
@@ -539,11 +541,11 @@ footer {
   margin: 0;
   color: $color-gray-dark;
 }
-.svg {
+.svg--social {
   stroke: $color-gray-dark;
   transition: .3s;
 }
-.svg:hover {
+.svg--social:hover {
   stroke: $color-white;
 }
 
@@ -632,7 +634,7 @@ footer {
     width: 150px;
     height: 129.6px;
   }
-  .line-fancy {
+  .svg--line {
     display: none;
   }
   /* PORTFOLIO PAGE */
@@ -680,6 +682,9 @@ footer {
 @media screen and (max-width: 450px) {
   html {
     font-size: 44%;
+  }
+  .tagline {
+    max-width: 100%;
   }
   .skills-bubbles {
     width: 280px;

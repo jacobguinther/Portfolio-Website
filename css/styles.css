@@ -68,13 +68,14 @@ body {
   grid-template-rows: 100px auto auto auto 400px;
   overflow-x: hidden; }
 
-h1 {
+.main--header {
   padding-right: 20px;
   padding-left: 20px;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-size: 4rem;
-  margin: 0; }
+  margin: 0;
+  color: #242424; }
 
 h2 {
   color: #707070;
@@ -476,7 +477,8 @@ footer {
 .tagline-footer h1 {
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  margin: 0; }
+  margin: 0;
+  font-size: 4rem; }
 
 .social-icons-container {
   display: flex;
@@ -501,11 +503,11 @@ footer {
   margin: 0;
   color: #707070; }
 
-.svg {
+.svg--social {
   stroke: #707070;
   transition: .3s; }
 
-.svg:hover {
+.svg--social:hover {
   stroke: #ffffff; }
 
 /* ============================================================= */
@@ -580,7 +582,7 @@ footer {
   .monitor {
     width: 150px;
     height: 129.6px; }
-  .line-fancy {
+  .svg--line {
     display: none; }
   /* PORTFOLIO PAGE */
   .portfolio-grid {
@@ -614,6 +616,8 @@ footer {
 @media screen and (max-width: 450px) {
   html {
     font-size: 44%; }
+  .tagline {
+    max-width: 100%; }
   .skills-bubbles {
     width: 280px;
     height: 169.4px; }
