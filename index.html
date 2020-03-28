@@ -5,74 +5,114 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="./normalize.css" />
-  <link rel="stylesheet" type="text/css" href="./styles.css" />
-  <title>Jacobs Portfolio Site</title>
+  <link rel="icon" href="./img/images/favicon-logo-32.png" type="image" />
+  <link rel="preload" as="font" type="font/woff2"
+    href="./fonts/roboto-mono-v7-latin-300.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2"
+    href="./fonts/roboto-mono-v7-latin-regular.woff2" crossorigin>
+  <link rel="stylesheet" type="text/css" href="./css/styles.css" />
+  <link href="/node_modules/aos/dist/aos.css" rel="stylesheet">
+  <title>JG Portfolio</title>
 </head>
 
 <body>
   <nav>
-    <a id="logo" href="#"></a>
-    <ul>
-      <li><a class="nav-link" href="#">About</a></li>
-      <li><a class="nav-link" href="#">Portfolio</a></li>
-      <li><a class="nav-link" href="#">Contact</a></li>
+    <input type="checkbox" id="nav-check">
+    <!-- <img id="logo" src="/img/images/jg-portfolio-logo.svg" alt="/index.html"> -->
+    <a id="logo" href="/index.html">JG</a>
+    <div class="hamburger-container">
+      <label for="nav-check" class="burger-menu">
+        <div class="menu-bar menu-bar-1 no-animation"></div>
+        <div class="menu-bar menu-bar-2 no-animation"></div>
+        <div class="menu-bar menu-bar-3 no-animation"></div>
+      </label>
+    </div>
+    <ul class="menu">
+      <li><a class="nav-link" href="/index.html">About</a></li>
+      <li><a class="nav-link" href="/portfolio.html">Portfolio</a></li>
+      <li><a class="nav-link" href="/contact.html">Contact</a>
+      </li>
     </ul>
   </nav>
-  <div class="container section flex">
+  <div class="container flex-center padding-top-bottom">
     <div class="section-aboutme">
-      <img src="icons/HR-short.svg" alt="#">
-      <h1>About Me</h1>
-      <img src="icons/HR-short.svg" alt="#">
+      <img class="svg--line" src="/img/icons/HR-short.svg" alt="#">
+      <h1 class="main--header">About Me</h1>
+      <img class="svg--line" src="/img/icons/HR-short.svg" alt="#">
     </div>
-    <h2 class="header-tagline">I’m a web developer apprentice based in Boulder, Colorado.</h2>
-    <p class="center-text">Lorem ipsum dolor amet vHS iceland farm-to-table flexitarian disrupt. Meh forage chillwave synth, mumblecore tilde williamsburg before they sold out umami. Chambray air plant edison bulb, cold-pressed coloring book VHS affogato cred. Activated charcoal sartorial kogi seitan cred, YOLO austin la croix messenger bag venmo. Vexillologist chambray slow-carb 8-bit hashtag copper mug.
+    <img class="profile-img" src="/img/images/ProfilePicCircular-250.png">
+    <h2 class="tagline">I’m a web developer apprentice based in
+      Boulder, Colorado.</h2>
+    <p class="center-text">I'm Jacob Guinther. I am currently working at
+      Techtonic as a Web Developer Apprentice in Boulder, CO. I have a diverse
+      set of skills ranging from HTML, CSS, Javascript to popular backend
+      technologies such as NodeJS, Express, Java, APIs and NoSQL Databases.
+      Check out my Portfolio which showcases some of my most recent projects.
     </p>
   </div>
-  <div class="container section no-bottom-padding">
+  <div class="container no-bottom-padding">
     <div class="section-skills">
-        <h2>My skills.</h2>
-        <img class="sills-bubbles" src="images/skills-bubbles.png" alt="">
-        <img class="monitor" src="images/monitor.png" alt="computer-icon">
+      <h2 class="header-skills">My Skills</h2>
+      <div data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+        <img class="skills-bubbles" src="/img/images/skills-bubbles.png" alt="">
+      </div>
+      <div data-aos="fade-left">
+        <img class="monitor" src="/img/images/monitor.png" alt="computer-icon">
+
+      </div>
     </div>
   </div>
-  <div class="container section flex">
-    <p><i data-feather="circle"></i>Doggo ipsum borkf ruff long bois you are doing me the shock, adorable doggo wrinkler
-      borking doggo pupper, corgo fluffer. Extremely cuuuuuute smol blep very good spot stop it fren, extremely
-      cuuuuuute big ol. Dat tungg tho most angery pupper I have ever seen I am bekom fat porgo shooberino, lotsa pats
-      you are doin me a concern wow such tempt. Wow very biscit thicc fat boi, puggo. Very jealous pupper doggorino I am
-      bekom fat tungg lotsa pats shoob, heckin super chub woofer shibe. Such treat noodle horse the neighborhood pupper
-      woofer, wow such tempt long woofer shooberino smol borking doggo with a long snoot for pats, sub woofer snoot. Dat
-      tungg tho such treat sub woofer vvv you are doing me the shock dat tungg tho very good spot smol, maximum
-      borkdrive heckin good boys much ruin diet boof aqua doggo. Blep woofer long water shoob h*ck blep, mlem maximum
-      borkdrive.
+  <div class="container flex-center padding-top-bottom">
+    <h2 class="header-chart">This is where im at</h2>
+
+
+    <canvas id="myChart"></canvas>
+    <div class="chart--key">
+      <p>
+        &nbsp;&nbsp;0 - 100 Novice</p>
+      <p>100 - 200 Proficient</p>
+      <p>200 - 300 Expert</p>
+    </div>
+    <p class="chart--annotation">* This is based on pluralsights skills IQ
+      tests.
     </p>
+  </div>
+
   </div>
   <footer>
-    <div id="footer-logo"></div>
-    <!-- <a id="footer-logo" href="#"></a> -->
-    <div class="footer-tagline">
+    <div id="footer-logo">
+      <div class="footer-logo-inner">
+        JG
+      </div>
+    </div>
+    <div class="tagline-footer">
       <h1>Get In Touch</h1>
     </div>
     <div class="social-icons-container">
-      <a href="https://github.com/jacobguinther"><svg class="svg" xmlns="http://www.w3.org/2000/svg" width="24"
-          height="24" viewBox="0 0 24 24" fill="none" stroke="#8C8C8C" stroke-width="1" stroke-linecap="round"
-          stroke-linejoin="round" class="feather feather-github">
+      <a href="https://github.com/jacobguinther"><svg class="svg--social"
+          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+          stroke="#8C8C8C" stroke-width="1" stroke-linecap="round"
+          stroke-linejoin="round">
           <path
             d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
           </path>
         </svg></a>
-      <a href="mailto:jacobgguinther@gmail.com"><svg class="svg" xmlns="http://www.w3.org/2000/svg" width="24"
-          height="24" viewBox="0 0 24 24" fill="none" stroke="#8C8C8C" stroke-width="1" stroke-linecap="round"
-          stroke-linejoin="round" class="feather feather-mail">
-          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+      <a href="mailto:jacobgguinther@gmail.com"><svg class="svg--social"
+          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+          stroke="#8C8C8C" stroke-width="1" stroke-linecap="round"
+          stroke-linejoin="round">
+          <path
+            d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+          </path>
           <polyline points="22,6 12,13 2,6"></polyline>
         </svg></a>
-      <a href="https://www.linkedin.com/in/jacobguinther/"><svg class="svg" xmlns="http://www.w3.org/2000/svg"
-          width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8C8C8C" stroke-width="1"
-          stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin">
-          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+      <a href="https://www.linkedin.com/in/jacobguinther/"><svg class="svg--social"
+          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+          stroke="#8C8C8C" stroke-width="1" stroke-linecap="round"
+          stroke-linejoin="round">
+          <path
+            d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+          </path>
           <rect x="2" y="9" width="4" height="12"></rect>
           <circle cx="4" cy="4" r="2"></circle>
         </svg></a>
@@ -81,8 +121,11 @@
       <p>Built by me copyright 2019</p>
     </div>
   </footer>
-  <script src="https://unpkg.com/feather-icons"></script>
-  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+  <script src="node_modules/aos/dist/aos.js"></script>
+  <script src="node_modules/chart.js/dist/Chart.bundle.min.js"></script>
+  <script
+    src="node_modules/chartjs-plugin-deferred/dist/chartjs-plugin-deferred.min.js"></script>
 </body>
 
 </html>
