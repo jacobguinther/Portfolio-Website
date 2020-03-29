@@ -1,0 +1,21 @@
+Tesla Homepage Image Assets as of June 14, 2019
+
+Model 3 (Top Card)
+(Desktop) https://www.tesla.com/content/dam/tesla-site/home-page/images/main-hero-desktop_compressed.jpg
+(Landscape) https://www.tesla.com/content/dam/tesla-site/home-page/images/main-hero-landscape_compressed.jpg
+(Mobile) https://www.tesla.com/content/dam/tesla-site/home-page/images/main-hero-mobile_compressed.jpg
+
+
+Power Everything (Second Card)
+(Desktop MP4) https://www.tesla.com/ns_videos/hp_2019/power-hero-desktop.mp4
+(Mobile MP4) https://www.tesla.com/ns_videos/hp_2019/power-hero-mobile.mp4
+
+
+Tesla Accessories (Third Card)
+(Desktop MP4) https://www.tesla.com/ns_videos/hp_2019/accessories-hero-desktop.mp4
+(Mobile MP4) https://www.tesla.com/ns_videos/hp_2019/accessories-hero-mobile.mp4
+
+
+Model Y (Last Card)
+(Desktop) https://www.tesla.com/content/dam/tesla-site/wolverine/homepage/blue-hero-desktop.jpg
+(Mobile) https://www.tesla.com/content/dam/tesla-site/wolverine/homepage/blue-hero-mobile.jpg
