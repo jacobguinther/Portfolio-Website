@@ -126,17 +126,26 @@ document.addEventListener('DOMContentLoaded', function(){
         scales: {
           xAxes: [
             {
+              gridLines: {
+                display: false
+              },
               type: 'linear',
               ticks: {
                 min: 0,
-                max: 300,
+                // max: 300,
+                max: 200,
+                stepSize: 100,
                 fontColor: colorPrimary,
                 fontSize: 15,
+                // display: false,
               },
             },
           ],
           yAxes: [
             {
+              gridLines: {
+                display: false
+              },
               ticks: {
                 fontColor: colorPrimary,
                 fontSize: 15,
