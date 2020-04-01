@@ -87,26 +87,26 @@ section {
     align-items: center;
 }
 .section__one {
-    background-image: url("https://www.tesla.com/ns_videos/homepage/main_hero_homepage_desktop.jpg");
+    background-image: url("./assets/main_hero_homepage_desktop.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     transition: all 0.7s ease;
 }
 .section__two{
-    background-image: url("https://www.tesla.com/ns_videos/homepage/homepage_energy_hero_desktop.jpg");
+    background-image: url("./assets/homepage_energy_hero_desktop.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 .section__three{
-    background-image: url("https://www.tesla.com/ns_videos/homepage/accessories_desktop_poster.jpg");
+    background-image: url("./assets/accessories_desktop_poster.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 .section__four {
-    background-image: url("https://www.tesla.com/sites/tesla/files/curatedmedia/blue-hero-desktop.jpg");
+    background-image: url("./assets/blue-hero-desktop.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
