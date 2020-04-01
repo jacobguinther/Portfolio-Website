@@ -23,6 +23,9 @@ button {
     text-transform: uppercase;
     font-size: 0.9em;
 }
+.offset {
+    margin-top: -52px;
+}
 .container--scroll-snap {
     overflow: scroll;
     height: 100vh;
@@ -48,13 +51,15 @@ button {
 .nav__sticky {
     position: -webkit-sticky;
     align-items: center;
+    position: -webkit-sticky;
     position: sticky;
+    /* position: absolute; */
     height: 52px;
     z-index: 5;
-    top: 0;
-    
-    
+    top: 0; 
 }
+
+
 .nav__logo a {
     padding-right: 33px;
     visibility: hidden;
