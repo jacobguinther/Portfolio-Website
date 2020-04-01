@@ -487,6 +487,7 @@ footer {
   font-size: 4rem; }
 
 .social-icons-container {
+  padding-top: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
