@@ -21,8 +21,11 @@ if [[ -d "./html_js_trimmed" ]] ; then
                 done
         fi
 
-				find . -type f ! -name '*.sh' -exec sed -i '' "s/\.html//" {} +
-        find . -type f ! -name '*.sh' -exec sed -i '' "s/\/index/\//" {} +
+# Should check if on mac or linux and conditionally do sed or gsed
+        find . -type f ! -name '*.sh' -exec gsed -i "/\/portfolio\//!s/\.html//" {} +
+        find . -type f ! -name '*.sh' -exec gsed -i "/\/portfolio\//!s/\/index/\//" {} +
+# 				find . -type f ! -name '*.sh' -exec sed -i '' "s/\.html//" {} +
+#         find . -type f ! -name '*.sh' -exec sed -i '' "s/\/index/\//" {} +
 fi
 
 echo "Dont forget to edit Portfolio urls that may have gotten removed with this script!"
