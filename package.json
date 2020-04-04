@@ -7,8 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "compile:sass": "node-sass sass/main.scss css/styles.css -w",
     "build": "npm prune --production && /bin/bash scripts/trim.sh",
-    "deploy-dr": "/bin/bash scripts/deploy_dryrun.sh",
-    "deploy": "/bin/bash scripts/deploy.sh"
+    "deploy": "/bin/bash scripts/deploy.sh",
+    "deploy-html": "/bin/bash scripts/deploy-html.sh",
+    "deploy-dryrun": "/bin/bash scripts/deploy_dryrun.sh",
+    "deploy-html-dryrun": "/bin/bash scripts/deploy-html_dryrun.sh"
   },
   "repository": {
     "type": "git",

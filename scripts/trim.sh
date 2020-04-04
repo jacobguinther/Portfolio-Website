@@ -21,7 +21,9 @@ if [[ -d "./html_js_trimmed" ]] ; then
                 done
         fi
 
-# Should check if on mac or linux and conditionally do sed or gsed
+# TODO: Should check if on mac or linux and conditionally do sed or gsed
+# These remove '.html' and 'index' from all files but ignore lines that include '/portfolio/'
+# Works on mac with gsed installed with brew
         find . -type f ! -name '*.sh' -exec gsed -i "/\/portfolio\//!s/\.html//" {} +
         find . -type f ! -name '*.sh' -exec gsed -i "/\/portfolio\//!s/\/index/\//" {} +
 # 				find . -type f ! -name '*.sh' -exec sed -i '' "s/\.html//" {} +
