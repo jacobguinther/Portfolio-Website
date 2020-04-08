@@ -5,7 +5,12 @@
   "main": "script.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "compile:sass": "node-sass sass/main.scss css/styles.css -w"
+    "compile:sass": "node-sass sass/main.scss css/styles.css -w",
+    "build": "npm prune --production && /bin/bash scripts/trim.sh",
+    "deploy": "/bin/bash scripts/deploy.sh",
+    "deploy-html": "/bin/bash scripts/deploy-html.sh",
+    "deploy-dryrun": "/bin/bash scripts/deploy_dryrun.sh",
+    "deploy-html-dryrun": "/bin/bash scripts/deploy-html_dryrun.sh"
   },
   "repository": {
     "type": "git",
@@ -18,11 +23,11 @@
   },
   "homepage": "https://github.com/jacobguinther/Portfolio-Website#readme",
   "dependencies": {
-    "aos": "2.3.1",
+    "aos": "2.3.4",
     "chart.js": "2.9.3",
     "chartjs-plugin-deferred": "1.0.1"
   },
   "devDependencies": {
-    "node-sass": "4.13.0"
+    "node-sass": "4.13.1"
   }
 }
