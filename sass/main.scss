@@ -333,10 +333,10 @@ nav ul li {
   box-shadow: 0 4px 5px $color-shadow-dark;
 }
 .card--header {
+  font-size: $font-size-h2;
+  color: $color-primary;
   padding: 0 0 10px 0;
-  font-size: $font-size-buttons-nav;
   margin: 0;
-  color: $color-gray-darker;
 }
 .card article {
   padding: 20px;
@@ -385,6 +385,7 @@ font-weight: 700;
   background-size: cover;
   background-position: center center;
 }
+
 /* CONTACT PAGE */
 form {
   width: 660px;
