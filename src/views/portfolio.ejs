@@ -1,6 +1,5 @@
 <%- include('partials/header') %>
 
-
 <div class="container padding-top-bottom">
     <div class="section-portfolio">
         <img class="svg--line" src="/img/icons/HR-short.svg" alt="#">
@@ -8,51 +7,27 @@
         <img class="svg--line" src="/img/icons/HR-short.svg" alt="#">
     </div>
     <div class="portfolio-grid">
+
+        <% for( let i = 0; i < projects.length; i++ ) { %>
+
         <div class="card">
             <a href="https://github.com/jacobguinther/Portfolio-Website"
                 class="thumb"
-                style="background-image: url('/img/images/Logo_JG.png');">
+                style="background-image: url('<%= projects[i].img %>');">
             </a>
             <article>
-                <h1 class="card--header">Portfolio Website</h1>
+                <h1 class="card--header"> <%= projects[i].name %> </h1>
                 <p class="card--topic"><span>Tech Stack:</span></p>
-                <p>HTML CSS JS</p>
+                <p> <%= projects[i].stack %> </p>
                 <p class="card--topic"><span>Github:</span></p>
-                <p><a
-                        href="https://github.com/jacobguinther/Portfolio-Website">jacobguinther/Portfolio-Website</a>
+                <p><a href="<%= projects[i].githubUrl %>">
+                        <%= projects[i].githubName %> </a>
                 </p>
             </article>
         </div>
-        <div class="card">
-            <a href="https://github.com/jacobguinther/Mac-Setup" class="thumb"
-                style="background-image: url('/img/images/macsetup.png');"></a>
-            <article>
-                <h1 class="card--header">Mac Setup Scripts</h1>
-                <p class="card--topic"><span>Tech Stack:</span></p>
-                <p>BASH</p>
-                <p class="card--topic"><span>Github:</span></p>
-                <p><a
-                        href="https://github.com/jacobguinther/Mac-Setup">jacobguinther/Mac-Setup</a>
-                </p>
-            </article>
-        </div>
-        <div class="card">
-            <a href="https://jg-yelpcamp.herokuapp.com/campgrounds/page-1"
-                class="thumb"
-                style="background-image: url('/img/images/yelpcamp.png'); border-bottom: 1px solid rgb(238, 238, 238)"></a>
-            <article>
-                <h1 class="card--header">YelpCamp</h1>
-                <p class="card--topic"><span>Tech Stack:</span></p>
-                <p>EJS Bootstrap Nodejs Express MongoDB Mongoose Passport</p>
-                <p class="card--topic"><span>Github:</span></p>
-                <p><a href="https://github.com/jacobguinther/yelpcamp">jacobguinther/yelpcamp
-                    </a></p>
-                <p class="card--topic"><span>Deployed:</span></p>
-                <p><a
-                        href="https://jg-yelpcamp.herokuapp.com/campgrounds/page-1">jg-yelpcamp.herokuapp.com/</a>
-                </p>
-            </article>
-        </div>
+
+        <% } %>
+
     </div>
 </div>
 
