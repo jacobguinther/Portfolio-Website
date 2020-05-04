@@ -1,0 +1,43 @@
+<%- include('partials/header') %>
+
+<div class="flex-center padding-top-bottom">
+    <div class="section-aboutme">
+        <img class="svg--line" src="/img/icons/HR-short.svg" alt="#">
+        <h1 class="main--header">Contact</h1 class="main--header">
+        <img class="svg--line" src="/img/icons/HR-short.svg" alt="#">
+    </div>
+    <div>
+        <h2 class="tagline">Thanks for taking the time to reach
+            out. How can I help you today?</h2>
+    </div>
+    <form id="contact-form">
+        <div class="form-section-1">
+            <div class="input-container form-item-left">
+                <div class="contact-form__flex">
+                    <label for="name-input">Name</label for="name-input">
+                </div>
+                <input id="name-input" type="text" required>
+            </div>
+            <div class="input-container form-item-right">
+                <div class="contact-form__flex">
+                    <label for="email-input">Email</label>
+                </div>
+                <input id="email-input" type="email" required>
+            </div>
+        </div>
+        <div class="form-section-2">
+            <div class="input-container">
+                <div class="contact-form__flex">
+                    <label for="description-input">Message</label>
+                </div>
+                <textarea id="description-input" name="message" id="" cols="30"
+                    rows="10" required></textarea>
+            </div>
+        </div>
+        <div class="container-input-submit">
+            <input class="input-submit" type="submit" value="Submit">
+        </div>
+    </form>
+</div>
+
+<%- include('partials/footer') %>
