@@ -1,4 +1,6 @@
 const gulp = require('gulp');
+var data = require('gulp-data');
+var fs = require('fs');
 const log = require('fancy-log');
 const ejs = require('gulp-ejs');
 const sass = require('gulp-sass');
@@ -6,23 +8,32 @@ const rename = require('gulp-rename');
 
 sass.compiler = require('node-sass');
 
+gulp.task('default', function (cb) {
+  console.log('it worked');
+  cb();
+});
 // function defaultTask(cb) {
 //     // place code for your default task here
 //     console.log("it worked")
 //     cb();
 //   }
 
-gulp.task('default', function (cb) {
-  console.log('it worked');
-  cb();
-});
 gulp.task('ejs', function () {
   return gulp
     .src('./src/views/*.ejs')
     .pipe(
-      ejs({
-        msg: 'Hello Gulp!',
-      }).on('error', log),
+      data(function () {
+        return JSON.parse(fs.readFileSync('./src/data/projects.json'));
+      }),
+    )
+    .pipe(
+      ejs(
+        data,
+        { name: 'john' },
+        {
+          msg: 'Hello Gulp!',
+        },
+      ).on('error', log),
     )
     .pipe(
       rename(function (path) {
@@ -46,5 +57,5 @@ gulp.task('sass', function () {
 
 gulp.task('watch', function () {
   gulp.watch('./src/sass/**/*.scss', gulp.series('sass'));
-  gulp.watch('./src/views/**/*.ejs', gulp.series('ejs'));
+  gulp.watch(['./src/views/**/*.ejs', './src/data/**/*.json'], gulp.series('ejs'));
 });
