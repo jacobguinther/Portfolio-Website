@@ -28,6 +28,9 @@
     "chartjs-plugin-deferred": "1.0.1"
   },
   "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-ejs": "^5.1.0",
+    "gulp-sass": "^4.1.0",
     "node-sass": "4.13.1"
   }
 }
