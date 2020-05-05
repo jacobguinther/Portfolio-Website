@@ -14,9 +14,20 @@ $color-black: #000000;
 
 $color-red: #dc0000;
 
-//FONT
+// Font Size
 $font-size-h1: 4rem;
 $font-size-h2: 2.5rem;
 $font-size-base: 1.8rem;
 $font-size-buttons-nav: 2rem;
 $font-size-annotation: 1.2rem;
+
+// Break Points
+$bp-medium: 750px;
+$bp-small: 450px;
+
+// Break Points
+// $bp-largest: 75em;     // 1200px
+// $bp-large: 68.75em;    // 1100px
+// $bp-medium: 56.25em;   // 900px
+// $bp-small: 37.5em;     // 600px
+// $bp-smallest: 31.25em; // 500px
