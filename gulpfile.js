@@ -56,6 +56,14 @@ gulp.task('sass', function () {
 });
 
 gulp.task('watch', function () {
-  gulp.watch('./src/sass/**/*.scss', gulp.series('sass'));
-  gulp.watch(['./src/views/**/*.ejs', './src/data/**/*.json'], gulp.series('ejs'));
+  gulp.watch(
+    './src/sass/**/*.scss',
+    { ignoreInitial: false },
+    gulp.series('sass'),
+  );
+  gulp.watch(
+    ['./src/views/**/*.ejs', './src/data/**/*.json'],
+    { ignoreInitial: false },
+    gulp.series('ejs'),
+  );
 });
