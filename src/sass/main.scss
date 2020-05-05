@@ -100,7 +100,7 @@ body {
   min-height: 100%;
   display: grid;
   grid-template-rows: 100px auto auto auto 350px;
-  overflow-x: hidden;
+  // overflow-x: hidden;
 }
 .main--header {
   padding-right: 20px;
@@ -178,15 +178,15 @@ nav {
 
 nav ul {
   margin: 0;
-  width: 80%;
+  // width: 80%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   padding-inline-start: 0;
 }
-nav ul li:first-child {
-  justify-self: flex-start;
-}
+// nav ul li:first-child {
+//   justify-self: flex-start;
+// }
 nav ul li {
   list-style-type: none;
   margin: 0 0 0 30px;
@@ -216,7 +216,7 @@ nav ul li {
 .container {
   box-sizing: border-box;
   background-color: $color-gray-light;
-  width: 100vw;
+  // width: 100%;
   padding-left: 10vw;
   padding-right: 10vw;
 }
@@ -357,17 +357,12 @@ nav ul li {
 }
 .card p a {
   text-decoration: none;
-
 }
 .card p a:visited {
   color: $color-primary;
 }
 .card p a:hover {
 font-weight: 700;
-  
-}
-.card p a:active {
-  
 }
 
 .card--topic{

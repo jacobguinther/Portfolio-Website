@@ -65,8 +65,7 @@ body {
   font-weight: 300;
   min-height: 100%;
   display: grid;
-  grid-template-rows: 100px auto auto auto 350px;
-  overflow-x: hidden; }
+  grid-template-rows: 100px auto auto auto 350px; }
 
 .main--header {
   padding-right: 20px;
@@ -143,14 +142,10 @@ nav {
 
 nav ul {
   margin: 0;
-  width: 80%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   padding-inline-start: 0; }
-
-nav ul li:first-child {
-  justify-self: flex-start; }
 
 nav ul li {
   list-style-type: none;
@@ -181,7 +176,6 @@ nav ul li {
 .container {
   box-sizing: border-box;
   background-color: #f4f4f4;
-  width: 100vw;
   padding-left: 10vw;
   padding-right: 10vw; }
 
