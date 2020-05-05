@@ -71,6 +71,7 @@ nav {
   color: #ffffff;
   padding-left: 10vw;
   padding-right: 10vw;
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
