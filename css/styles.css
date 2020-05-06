@@ -365,7 +365,8 @@ p {
   margin-bottom: 0; }
 
 .card p a {
-  text-decoration: none; }
+  text-decoration: none;
+  color: #242424; }
 
 .card p a:visited {
   color: #242424; }
