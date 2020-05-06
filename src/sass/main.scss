@@ -1,5 +1,4 @@
-
-@import "./base";
+@import './base';
 
 @font-face {
   font-family: 'Roboto Mono';
@@ -86,7 +85,7 @@ body {
   grid-template-rows: 100px auto auto auto 350px;
   overflow-x: hidden;
 }
-@import "./header";
+@import './header';
 
 .main--header {
   padding-right: 20px;
@@ -97,7 +96,7 @@ body {
   margin: 0;
   color: $color-primary;
 }
-.header {
+.container--message-header {
   font-size: $font-size-h1;
 }
 h2 {
@@ -112,7 +111,6 @@ p {
   color: $color-primary;
 }
 
-
 .container {
   box-sizing: border-box;
   background-color: $color-gray-light;
@@ -122,7 +120,6 @@ p {
 }
 .container:nth-child(even) {
   background-color: $color-white;
-
 }
 .container:nth-child(odd) {
   border-top: 1px solid $color-gray-medium;
@@ -134,13 +131,13 @@ p {
   flex-direction: column;
   align-items: center;
 }
-.container--success-not-found {
+.container--message {
   margin-top: auto;
   margin-bottom: auto;
   grid-row-start: 1;
   grid-row-end: 6;
 }
-.success--not-found--header1 {
+.container--message-error {
   color: #767676;
   padding-bottom: 35px;
 }
@@ -177,7 +174,7 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 40px
+  padding-top: 40px;
 }
 .header-skills {
   color: $color-primary;
@@ -226,7 +223,7 @@ p {
   height: 100%;
   position: relative;
   top: 0;
-  transition: all .1s ease-in;
+  transition: all 0.1s ease-in;
 }
 .card:hover {
   top: -2px;
@@ -256,16 +253,15 @@ p {
 .card p a {
   text-decoration: none;
   color: $color-primary;
-
 }
 .card p a:visited {
   color: $color-primary;
 }
 .card p a:hover {
-font-weight: 700;
+  font-weight: 700;
 }
 
-.card--topic{
+.card--topic {
   margin-top: 10px;
 }
 
@@ -274,7 +270,7 @@ font-weight: 700;
   font-weight: 400;
   color: $color-gray-dark;
   text-transform: uppercase;
-  letter-spacing: .05em;
+  letter-spacing: 0.05em;
   margin: 2em 0 0 0;
 }
 .card .thumb {
@@ -372,7 +368,7 @@ textarea:focus {
   font-size: $font-size-buttons-nav;
   border-radius: 30px;
   cursor: pointer;
-  transition: all ease .3s;
+  transition: all ease 0.3s;
   transition-property: all;
   transition-duration: 0.3s;
   transition-timing-function: ease;
@@ -391,7 +387,7 @@ textarea:focus {
   background-color: $color-gray-darker; /*diff */
   width: 25%;
   border-radius: 30px;
-  padding: .5em;
+  padding: 0.5em;
   text-decoration: none;
   text-align: center;
   font-size: $font-size-buttons-nav;
@@ -399,8 +395,7 @@ textarea:focus {
   padding: 12px 10px;
 }
 
-@import "./footer";
-
+@import './footer';
 
 /*MEDIA QUERIES  MEDIA QUERIES  MEDIA QUERIES  MEDIA QUERIES  MEDIA QUERIES*/
 
@@ -498,5 +493,3 @@ textarea:focus {
     min-height: 50px;
   }
 }
-
-

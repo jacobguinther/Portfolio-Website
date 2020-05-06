@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', function(){
   });
 
   hamburgerContainer.addEventListener('click', () => {
-    console.log('fired');
     let bars = document.querySelector('.nav__burger').children;
     bars[0].classList.toggle('nav__burger-bar--active');
     bars[1].classList.toggle('nav__burger-bar--active');
