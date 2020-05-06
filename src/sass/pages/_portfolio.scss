@@ -1,0 +1,71 @@
+.portfolio-grid {
+  width: auto;
+  max-width: 1240px;
+  margin: 65px auto 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 20px;
+}
+.card {
+  border: 1px solid $color-gray-medium;
+  background: $color-white;
+  text-decoration: none;
+  color: $color-gray-darker;
+  box-shadow: 0 2px 5px $color-shadow-light;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  top: 0;
+  transition: all 0.1s ease-in;
+  &:hover {
+    top: -2px;
+    box-shadow: 0 4px 5px $color-shadow-dark;
+  }
+  &__thumb {
+    padding-bottom: 60%;
+    background-size: cover;
+    background-position: center center;
+  }
+  &__header {
+    font-size: $font-size-h2;
+    color: $color-primary;
+    padding: 0 0 10px 0;
+    margin: 0;
+  }
+  &__content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  &__p {
+    font-weight: 400;
+    font-size: $font-size-base;
+    line-height: 1.4;
+    text-align: left;
+    margin-bottom: 0;
+  }
+  &__topic {
+    margin-top: 10px;
+  }
+  &__link {
+    text-decoration: none;
+    color: $color-primary;
+  }
+  &__link:visited {
+    color: $color-primary;
+  }
+  &__link:hover {
+    font-weight: 700;
+  }
+  &__span {
+    font-size: $font-size-base;
+    font-weight: 400;
+    color: $color-gray-dark;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 2em 0 0 0;
+  }
+}

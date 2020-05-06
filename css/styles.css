@@ -317,7 +317,6 @@ p {
 .chart--annotation {
   font-size: 1.2rem; }
 
-/* PORTFOLIO PAGE */
 .portfolio-grid {
   width: auto;
   max-width: 1240px;
@@ -339,58 +338,46 @@ p {
   position: relative;
   top: 0;
   transition: all 0.1s ease-in; }
+  .card:hover {
+    top: -2px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2); }
+  .card__thumb {
+    padding-bottom: 60%;
+    background-size: cover;
+    background-position: center center; }
+  .card__header {
+    font-size: 2.5rem;
+    color: #242424;
+    padding: 0 0 10px 0;
+    margin: 0; }
+  .card__content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; }
+  .card__p {
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 1.4;
+    text-align: left;
+    margin-bottom: 0; }
+  .card__topic {
+    margin-top: 10px; }
+  .card__link {
+    text-decoration: none;
+    color: #242424; }
+  .card__link:visited {
+    color: #242424; }
+  .card__link:hover {
+    font-weight: 700; }
+  .card__span {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #707070;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 2em 0 0 0; }
 
-.card:hover {
-  top: -2px;
-  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2); }
-
-.card--header {
-  font-size: 2.5rem;
-  color: #242424;
-  padding: 0 0 10px 0;
-  margin: 0; }
-
-.card article {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start; }
-
-.card p {
-  font-weight: 400;
-  font-size: 1.8rem;
-  flex: 1;
-  line-height: 1.4;
-  text-align: left;
-  margin-bottom: 0; }
-
-.card p a {
-  text-decoration: none;
-  color: #242424; }
-
-.card p a:visited {
-  color: #242424; }
-
-.card p a:hover {
-  font-weight: 700; }
-
-.card--topic {
-  margin-top: 10px; }
-
-.card span {
-  font-size: 1.8rem;
-  font-weight: 400;
-  color: #707070;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin: 2em 0 0 0; }
-
-.card .thumb {
-  padding-bottom: 60%;
-  background-size: cover;
-  background-position: center center; }
-
-/* CONTACT PAGE */
 .form {
   width: 660px; }
   .form__section-1 {
