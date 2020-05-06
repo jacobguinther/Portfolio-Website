@@ -67,7 +67,7 @@ body {
   grid-template-rows: 100px auto auto auto 350px;
   overflow-x: hidden; }
 
-nav {
+.nav {
   color: #ffffff;
   padding-left: 10vw;
   padding-right: 10vw;
@@ -76,12 +76,63 @@ nav {
   align-items: center;
   justify-content: space-between;
   background-color: #242424; }
+  .nav__menu {
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-inline-start: 0; }
+    @media screen and (max-width: 750px) {
+      .nav__menu {
+        position: absolute;
+        display: block;
+        width: 100%;
+        background-color: #707070;
+        max-height: 0px;
+        overflow-y: hidden;
+        transition: all 0.4s ease-in;
+        top: 75px;
+        left: 0px; } }
+    .nav__menu li {
+      list-style-type: none;
+      margin: 0 0 0 30px; }
+    @media screen and (max-width: 750px) {
+      .nav__menu--visible {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        max-height: 200px;
+        overflow-y: auto; } }
+    @media screen and (max-width: 750px) {
+      .nav__menu--visible::-webkit-scrollbar {
+        width: 0px;
+        /* Remove scrollbar space */
+        background: transparent;
+        /* Optional: just make scrollbar invisible */ } }
+  .nav__menu-link {
+    text-transform: uppercase;
+    font-size: 2rem;
+    letter-spacing: 0.1em;
+    padding: 8px 0 8px 0; }
+    .nav__menu-link:link, .nav__menu-link:visited {
+      color: #ffffff;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      border-bottom: 2px solid transparent;
+      transition: border-bottom 0.2s; }
+    .nav__menu-link:hover, .nav__menu-link:active {
+      border-bottom: 2px solid #ffffff; }
+  .nav__container-hamburger {
+    display: none; }
+    @media screen and (max-width: 750px) {
+      .nav__container-hamburger {
+        display: unset;
+        width: 35px; } }
 
 #nav-check {
   display: none; }
 
 #logo {
-  /* background: url(../img/images/new-logo-70.png) no-repeat; */
   padding-right: 3px;
   color: #f4f4f4;
   text-decoration: none;
@@ -93,6 +144,18 @@ nav {
   line-height: 64px;
   height: 70px;
   width: 70px; }
+  @media screen and (max-width: 750px) {
+    #logo {
+      color: #f4f4f4;
+      text-decoration: none;
+      box-sizing: border-box;
+      border: 2px solid #707070;
+      border-radius: 50%;
+      font-size: 24px;
+      text-align: center;
+      line-height: 46px;
+      height: 52px;
+      width: 52px; } }
 
 .rotateRight {
   transition: 1.5s;
@@ -118,110 +181,32 @@ nav {
   -ms-transform: rotate(-360deg);
   transform: rotate(-360deg); }
 
-nav ul {
-  margin: 0;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding-inline-start: 0; }
-
-nav ul li {
-  list-style-type: none;
-  margin: 0 0 0 30px; }
-
-.hamburger-container {
-  display: none; }
-
-.nav-link {
-  text-transform: uppercase;
-  font-size: 2rem;
-  letter-spacing: 0.1em;
-  padding: 8px 0 8px 0; }
-
-.nav-link:link,
-.nav-link:visited {
-  color: #ffffff;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  border-bottom: 2px solid transparent;
-  transition: border-bottom 0.2s; }
-
-.nav-link:hover,
-.nav-link:active {
-  border-bottom: 2px solid #ffffff; }
-
-@media screen and (max-width: 750px) {
-  #logo {
-    color: #f4f4f4;
-    text-decoration: none;
-    box-sizing: border-box;
-    border: 2px solid #707070;
-    border-radius: 50%;
-    font-size: 24px;
-    text-align: center;
-    line-height: 46px;
-    height: 52px;
-    width: 52px; }
-  .menu {
-    position: absolute;
-    display: block;
-    width: 100%;
-    background-color: #707070;
-    max-height: 0px;
-    overflow-y: hidden;
-    transition: all 0.4s ease-in;
-    top: 75px;
-    left: 0px; }
-  .menu-visible {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    max-height: 200px;
-    overflow-y: auto; }
-  .menu-visible::-webkit-scrollbar {
-    width: 0px;
-    /* Remove scrollbar space */
-    background: transparent;
-    /* Optional: just make scrollbar invisible */ }
-  .hamburger-container {
-    display: unset;
-    width: 35px; } }
-
-/* FOR HAMBURGER MENU */
-.no-animation {
-  -webkit-animation: none !important;
-  animation: none !important; }
-
-.burger-menu {
+.nav__burger {
   box-sizing: border-box;
   width: 35px;
   height: 26px;
   cursor: pointer;
   margin: 0;
   padding: 0; }
+  .nav__burger-bar {
+    height: 2px;
+    background-color: #d3d3d3;
+    border-radius: 3px;
+    margin: 0;
+    padding: 0; }
+  .nav__burger-bar--active {
+    height: 2px;
+    background-color: #707070;
+    border-radius: 3px;
+    box-shadow: none;
+    margin: 0;
+    padding: 0; }
+  .nav__burger-bar-2 {
+    margin: 7px 0; }
 
-.burger-menu .menu-bar {
-  width: 100%;
-  height: 2px;
-  background-color: #d3d3d3;
-  border: none;
-  border-radius: 3px;
-  margin: 0;
-  padding: 0; }
-
-/* CLICKED */
-.menu-bar-active {
-  width: 100%;
-  height: 2px;
-  background-color: #707070;
-  border: none;
-  border-radius: 3px;
-  box-shadow: none;
-  margin: 0;
-  padding: 0; }
-
-.burger-menu .menu-bar-2 {
-  margin: 7px 0; }
+.no-animation {
+  -webkit-animation: none !important;
+  animation: none !important; }
 
 .main--header {
   padding-right: 20px;

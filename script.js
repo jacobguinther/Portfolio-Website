@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', function(){
   const logo = document.getElementById('logo');
-  const menu = document.querySelector('.burger-menu');
-  const menuBars = document.querySelectorAll('.menu-bar');
-  const hamburgerContainer = document.querySelector('.hamburger-container');
+  const menu = document.querySelector('.nav__burger');
+  const menuBars = document.querySelectorAll('.nav__burger-bar');
+  const hamburgerContainer = document.querySelector('.nav__container-hamburger');
   const nav = document.querySelector('nav');
 
   menu.addEventListener('click', () => {
@@ -16,14 +16,14 @@ document.addEventListener('DOMContentLoaded', function(){
 
   hamburgerContainer.addEventListener('click', () => {
     console.log('fired');
-    let bars = document.querySelector('.burger-menu').children;
-    bars[0].classList.toggle('menu-bar-active');
-    bars[1].classList.toggle('menu-bar-active');
-    bars[2].classList.toggle('menu-bar-active');
-    bars[0].classList.toggle('menu-bar');
-    bars[1].classList.toggle('menu-bar');
-    bars[2].classList.toggle('menu-bar');
-    document.querySelector('.menu').classList.toggle('menu-visible');
+    let bars = document.querySelector('.nav__burger').children;
+    bars[0].classList.toggle('nav__burger-bar--active');
+    bars[1].classList.toggle('nav__burger-bar--active');
+    bars[2].classList.toggle('nav__burger-bar--active');
+    bars[0].classList.toggle('nav__burger-bar');
+    bars[1].classList.toggle('nav__burger-bar');
+    bars[2].classList.toggle('nav__burger-bar');
+    document.querySelector('.nav__menu').classList.toggle('nav__menu--visible');
   });
 
   logo.addEventListener('mouseenter', (e) => {
