@@ -164,7 +164,7 @@ document.addEventListener('DOMContentLoaded', function(){
   }
 
   // Form
-  const form = document.getElementById('contact-form');
+  const form = document.getElementById('form__contact');
   const submit = document.querySelector('.input-submit');
   if (submit) {
     submit.addEventListener('click', submitToAPI);
@@ -190,13 +190,13 @@ document.addEventListener('DOMContentLoaded', function(){
     var URL =
       'https://sa6nwuo697.execute-api.us-west-2.amazonaws.com/dev/contact';
 
-    var name = document.querySelector('#name-input').value;
-    var email = document.querySelector('#email-input').value;
-    var desc = document.querySelector('#description-input').value;
+    var name = document.querySelector('#name').value;
+    var email = document.querySelector('#email').value;
+    var message = document.querySelector('#message').value;
     var data = {
-      name: name,
-      email: email,
-      desc: desc,
+      name,
+      email,
+      message,
     };
 
     var xhr = new XMLHttpRequest();
@@ -210,7 +210,7 @@ document.addEventListener('DOMContentLoaded', function(){
         if (xhr.status === OK) {
           console.log(xhr.responseText); // 'This is the returned text.'
           // alert('Your message has been sent successfully!');
-          // document.getElementById('contact-form').reset();
+          // document.getElementById('form__contact').reset();
           // location.reload();
           window.location.href = '../success.html';
         } else {
@@ -254,7 +254,7 @@ document.addEventListener('DOMContentLoaded', function(){
       if (input.validity.valid) {
         input.classList.remove(invalidClassName);
       }
-      if (input.id === 'email-input' && input.validationMessage.length > 30) {
+      if (input.id === 'email' && input.validationMessage.length > 30) {
         if (screen.width > 450) {
           input.setCustomValidity('Enter an email address.');
         } else {
