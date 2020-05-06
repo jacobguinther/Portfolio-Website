@@ -1,104 +1,104 @@
 .form {
-    width: 660px;
-  
-    &__section-1 {
+  width: 660px;
+
+  &__section-1 {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__section-2 {
+    display: flex;
+    padding-top: 50px;
+  }
+  &__container {
+    &--left {
+      width: 50%;
+      margin-right: 10px;
+    }
+    &--right {
+      width: 50%;
+      margin-left: 10px;
+    }
+    &--left input,
+    &--right input {
+      width: 100%;
+    }
+    &--flex {
       display: flex;
       justify-content: space-between;
-    }
-    &__section-2 {
-      display: flex;
-      padding-top: 50px;
-    }
-    &__container {
-      &--left {
-        width: 50%;
-        margin-right: 10px;
-      }
-      &--right {
-        width: 50%;
-        margin-left: 10px;
-      }
-      &--left input,
-      &--right input {
-        width: 100%;
-      }
-      &--flex {
-        display: flex;
-        justify-content: space-between;
-        align-items: baseline;
-      }
-      &--submit {
-        display: flex;
-        padding-top: 50px;
-        width: 100%;
-        overflow: none;
-        justify-content: center;
-      }
-      input {
-        height: 60px;
-        padding: 6px 10px;
-      }
-      textarea {
-        margin: 0;
-        max-width: 100%;
-        min-width: 100%;
-        min-height: 60px;
-      }
-      label {
-        color: grey;
-        margin-bottom: 10px;
-        font-size: $font-size-base;
-      }
+      align-items: baseline;
     }
     &--submit {
-      color: $color-gray-darker;
-      border: 3px solid $color-gray-darker;
-      background-color: $color-gray-light;
-      width: 25%;
-      font-size: $font-size-buttons-nav;
-      border-radius: 30px;
-      cursor: pointer;
-      transition: all ease 0.3s;
-      transition-property: all;
-      transition-duration: 0.3s;
-      transition-timing-function: ease;
-      transition-delay: 0s;
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      appearance: none;
-      &:hover {
-        background-color: $color-gray-darker;
-        color: $color-white;
-      }
+      display: flex;
+      padding-top: 50px;
+      width: 100%;
+      overflow: none;
+      justify-content: center;
+    }
+    input {
+      height: 60px;
+      padding: 6px 10px;
+    }
+    textarea {
+      margin: 0;
+      max-width: 100%;
+      min-width: 100%;
+      min-height: 60px;
+    }
+    input,
+    textarea {
+      /* Less than 16px will cause zoom on mobile */
+      font-size: 16px;
+      margin: 0px;
+      padding: 10px;
+      border: 1px solid $color-gray-medium;
+      border-radius: 5px;
+      line-height: 1.5;
+    }
+    input:focus,
+    textarea:focus {
+      outline: none;
+    }
+    label {
+      color: grey;
+      margin-bottom: 10px;
+      font-size: $font-size-base;
     }
   }
-  
-  .form__section-2 .form__container {
+  &__section-2,
+  &__container {
     width: 100%;
     overflow: none;
   }
-  
-  input,
-  select:focus,
-  textarea {
-    /* Less than 16px will cause zoom on mobile */
-    font-size: 16px;
-    margin: 0px;
+  &--submit {
     padding: 10px;
-    border: 1px solid $color-gray-medium;
-    border-radius: 5px;
-    line-height: 1.5;
+    color: $color-gray-darker;
+    border: 3px solid $color-gray-darker;
+    background-color: $color-gray-light;
+    width: 25%;
+    font-size: $font-size-buttons-nav;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all ease 0.3s;
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    &:hover {
+      background-color: $color-gray-darker;
+      color: $color-white;
+    }
   }
-  input:focus,
-  textarea:focus {
-    outline: none;
-  }
-  .invalid {
-    border: 1px solid $color-red;
-  }
-  .validation-text {
-    margin-bottom: 10px;
-    font-size: $font-size-annotation;
-    font-weight: 400;
-    color: $color-red;
-  }
+}
+
+.invalid {
+  border: 1px solid $color-red;
+}
+.validation-text {
+  margin-bottom: 10px;
+  font-size: $font-size-annotation;
+  font-weight: 400;
+  color: $color-red;
+}
