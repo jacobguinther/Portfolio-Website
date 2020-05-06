@@ -280,107 +280,9 @@ p {
 }
 
 /* CONTACT PAGE */
-form {
-  width: 660px;
-}
-.form__container--flex {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-}
-.form__section-1 {
-  display: flex;
-  justify-content: space-between;
-}
-.form__section-2 {
-  display: flex;
-  padding-top: 50px;
-}
-.form__section-2 .form__container {
-  width: 100%;
-  overflow: none;
-}
-form .form__container input {
-  height: 60px;
-  padding: 6px 10px;
-}
-form .form__container textarea {
-  margin: 0;
-  max-width: 100%;
-  min-width: 100%;
-  min-height: 60px;
-}
-.form__container--left {
-  width: 50%;
-  margin-right: 10px;
-}
-.form__container--right {
-  width: 50%;
-  margin-left: 10px;
-}
-.form__container--left input,
-.form__container--right input {
-  width: 100%;
-}
-label {
-  color: grey;
-  margin-bottom: 10px;
-  font-size: $font-size-base;
-}
+@import './pages/contact';
 
-input,
-select:focus,
-textarea {
-  /* Less than 16px will cause zoom on mobile */
-  font-size: 16px;
-  margin: 0px;
-  padding: 10px;
-  border: 1px solid $color-gray-medium;
-  border-radius: 5px;
-  line-height: 1.5;
-}
-input:focus,
-textarea:focus {
-  outline: none;
-}
-.invalid {
-  border: 1px solid $color-red;
-}
-.validation-text {
-  margin-bottom: 10px;
-  font-size: $font-size-annotation;
-  font-weight: 400;
-  color: $color-red;
-}
-.form__container--submit {
-  display: flex;
-  padding-top: 50px;
-  width: 100%;
-  overflow: none;
-  justify-content: center;
-}
 
-.form--submit {
-  color: $color-gray-darker;
-  border: 3px solid $color-gray-darker;
-  background-color: $color-gray-light;
-  width: 25%;
-  font-size: $font-size-buttons-nav;
-  border-radius: 30px;
-  cursor: pointer;
-  transition: all ease 0.3s;
-  transition-property: all;
-  transition-duration: 0.3s;
-  transition-timing-function: ease;
-  transition-delay: 0s;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-.form--submit:hover {
-  background-color: $color-gray-darker;
-  color: $color-white;
-}
 .button-home {
   color: $color-white; /*diff */
   border: 3px solid $color-gray-darker;
@@ -426,7 +328,7 @@ textarea:focus {
     padding: 0 5% 0 5%;
   }
 
-  form {
+  .form {
     width: 90%;
   }
   .form__container--left {
@@ -453,6 +355,7 @@ textarea:focus {
     width: 30%;
     height: 50px;
   }
+
   .button-home {
     width: 25%;
     padding: 13px 10px;
@@ -482,11 +385,11 @@ textarea:focus {
   .button-home {
     width: 40%;
   }
-  form .form__container input {
+  .form__container input {
     height: 50px;
     padding: 6px 10px;
   }
-  form .form__container textarea {
+  .form__container textarea {
     margin: 0;
     max-width: 100%;
     min-width: 100%;
