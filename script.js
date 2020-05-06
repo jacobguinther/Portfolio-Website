@@ -165,7 +165,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
   // Form
   const form = document.getElementById('form__contact');
-  const submit = document.querySelector('.input-submit');
+  const submit = document.querySelector('.form--submit');
   if (submit) {
     submit.addEventListener('click', submitToAPI);
   }

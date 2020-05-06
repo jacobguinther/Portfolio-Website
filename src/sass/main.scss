@@ -283,7 +283,7 @@ p {
 form {
   width: 660px;
 }
-.form__contact--flex {
+.form__container--flex {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
@@ -296,30 +296,30 @@ form {
   display: flex;
   padding-top: 50px;
 }
-.form__section-2 .container__input {
+.form__section-2 .form__container {
   width: 100%;
   overflow: none;
 }
-form .container__input input {
+form .form__container input {
   height: 60px;
   padding: 6px 10px;
 }
-form .container__input textarea {
+form .form__container textarea {
   margin: 0;
   max-width: 100%;
   min-width: 100%;
   min-height: 60px;
 }
-.container__input--left {
+.form__container--left {
   width: 50%;
   margin-right: 10px;
 }
-.container__input--right {
+.form__container--right {
   width: 50%;
   margin-left: 10px;
 }
-.container__input--left input,
-.container__input--right input {
+.form__container--left input,
+.form__container--right input {
   width: 100%;
 }
 label {
@@ -352,7 +352,7 @@ textarea:focus {
   font-weight: 400;
   color: $color-red;
 }
-.container-input-submit {
+.form__container--submit {
   display: flex;
   padding-top: 50px;
   width: 100%;
@@ -360,7 +360,7 @@ textarea:focus {
   justify-content: center;
 }
 
-.input-submit {
+.form--submit {
   color: $color-gray-darker;
   border: 3px solid $color-gray-darker;
   background-color: $color-gray-light;
@@ -377,7 +377,7 @@ textarea:focus {
   -moz-appearance: none;
   appearance: none;
 }
-.input-submit:hover {
+.form--submit:hover {
   background-color: $color-gray-darker;
   color: $color-white;
 }
@@ -429,11 +429,11 @@ textarea:focus {
   form {
     width: 90%;
   }
-  .container__input--left {
+  .form__container--left {
     width: 100%;
     margin-right: 0;
   }
-  .container__input--right {
+  .form__container--right {
     width: 100%;
     margin-left: 0;
     margin-top: 25px;
@@ -446,7 +446,7 @@ textarea:focus {
     display: flex;
     flex-direction: column;
   }
-  .input-submit {
+  .form--submit {
     background-color: $color-gray-darker;
     color: $color-white;
 
@@ -474,7 +474,7 @@ textarea:focus {
     width: 100px;
     height: 86.4px;
   }
-  .input-submit {
+  .form--submit {
     width: 45%;
     height: 50px;
     padding: 6px 10px;
@@ -482,11 +482,11 @@ textarea:focus {
   .button-home {
     width: 40%;
   }
-  form .container__input input {
+  form .form__container input {
     height: 50px;
     padding: 6px 10px;
   }
-  form .container__input textarea {
+  form .form__container textarea {
     margin: 0;
     max-width: 100%;
     min-width: 100%;
