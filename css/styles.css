@@ -275,16 +275,31 @@ p {
   display: flex;
   justify-content: center; }
 
-.profile-img {
-  padding-top: 45px; }
-
 .tagline {
   margin-top: 50px;
   margin-bottom: 50px;
   text-align: center;
   max-width: 660px; }
 
+.button-home {
+  color: #ffffff;
+  /*diff */
+  border: 3px solid #444;
+  background-color: #444;
+  /*diff */
+  width: 25%;
+  border-radius: 30px;
+  padding: 0.5em;
+  text-decoration: none;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 400;
+  padding: 12px 10px; }
+
 /* ABOUT PAGE */
+.profile-img {
+  padding-top: 45px; }
+
 .section-skills {
   display: flex;
   flex-direction: column;
@@ -593,21 +608,6 @@ p {
     .footer__container-copyright p {
       margin: 0;
       color: #707070; }
-
-.button-home {
-  color: #ffffff;
-  /*diff */
-  border: 3px solid #444;
-  background-color: #444;
-  /*diff */
-  width: 25%;
-  border-radius: 30px;
-  padding: 0.5em;
-  text-decoration: none;
-  text-align: center;
-  font-size: 2rem;
-  font-weight: 400;
-  padding: 12px 10px; }
 
 @media screen and (max-width: 750px) {
   html {

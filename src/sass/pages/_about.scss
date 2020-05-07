@@ -1,0 +1,36 @@
+/* ABOUT PAGE */
+.profile-img {
+    padding-top: 45px;
+  }
+  .section-skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+  }
+  .header-skills {
+    color: $color-primary;
+    margin: 20px 0 20px 0;
+  }
+  .header-chart {
+    color: $color-primary;
+    margin: 0 0 20px 0;
+  }
+  .skills-bubbles {
+    width: 700px;
+    height: 423.5px;
+  }
+  .monitor {
+    width: 250px;
+    height: 216px;
+  }
+  .chart--key > p {
+    text-align: left;
+    margin-bottom: 0px;
+  }
+  .chart--key > p:first-child {
+    margin-top: 10px;
+  }
+  .chart--annotation {
+    font-size: $font-size-annotation;
+  }
