@@ -43,6 +43,7 @@
 }
 
 :root {
+  // For CartJS colors
   // #{} syntax required to work
   // https://sass-lang.com/documentation/breaking-changes/css-vars
   --color-primary: #{$color-primary};
@@ -50,41 +51,10 @@
   --color-gray-medium: #{$color-gray-medium};
   --color-gray-dark: #{$color-gray-dark};
   --color-gray-darker: #{$color-gray-darker};
-
   --color-white: #{$color-white};
   --color-black: #{$color-black};
 }
-*,
-::before,
-::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit;
-}
-html {
-  height: 100%;
-  overflow: none;
-  font-size: 62.5%;
-  /* @include respond(tab-land) { // width < 1200?
-      font-size: 56.25%; //1 rem = 9px, 9/16 = 50%
-  }
-  @include respond(tab-port) { // width < 900?
-      font-size: 50%; //1 rem = 8px, 8/16 = 50%
-  }
-  @include respond(big-desktop) {
-      font-size: 75%; //1rem = 12, 12/16
-  } */
-}
-body {
-  box-sizing: border-box;
-  background-color: $color-gray-light;
-  font-family: 'Roboto Mono', monospace;
-  font-weight: 300;
-  min-height: 100%;
-  display: grid;
-  grid-template-rows: 100px auto auto auto 350px;
-  overflow-x: hidden;
-}
+
 @import './header';
 
 .main--header {
@@ -188,12 +158,6 @@ p {
 @import './footer';
 
 @media screen and (max-width: 750px) {
-  html {
-    font-size: 50%;
-  }
-  body {
-    grid-template-rows: 75px auto auto auto 300px;
-  }
   .skills-bubbles {
     width: 420px;
     height: 254.1px;
@@ -212,9 +176,6 @@ p {
 }
 
 @media screen and (max-width: 450px) {
-  html {
-    font-size: 44%;
-  }
   .tagline {
     max-width: 100%;
   }
