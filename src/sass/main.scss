@@ -57,18 +57,6 @@
 
 @import './header';
 
-.main--header {
-  padding-right: 20px;
-  padding-left: 20px;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-size: $font-size-h1;
-  margin: 0;
-  color: $color-primary;
-}
-.container--message-header {
-  font-size: $font-size-h1;
-}
 h2 {
   color: $color-gray-dark;
   font-weight: 400;
@@ -79,6 +67,25 @@ p {
   text-align: center;
   line-height: 3.4rem;
   color: $color-primary;
+}
+
+.page-heading {
+  display: flex;
+  justify-content: center;
+}
+
+.page-heading__text {
+  padding-right: 20px;
+  padding-left: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: $font-size-h1;
+  margin: 0;
+  color: $color-primary;
+}
+
+.container--message-header {
+  font-size: $font-size-h1;
 }
 
 .container {
@@ -123,12 +130,6 @@ p {
   grid-row-start: 3;
   grid-row-end: 5;
 }
-.section-aboutme,
-.section-portfolio {
-  display: flex;
-  justify-content: center;
-}
-
 
 .tagline {
   margin-top: 50px;
@@ -166,7 +167,7 @@ p {
     width: 150px;
     height: 129.6px;
   }
-  .svg--line {
+  .page-heading__line {
     display: none;
   }
   .button-home {

@@ -208,18 +208,6 @@ body {
   -webkit-animation: none !important;
   animation: none !important; }
 
-.main--header {
-  padding-right: 20px;
-  padding-left: 20px;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-size: 4rem;
-  margin: 0;
-  color: #242424; }
-
-.container--message-header {
-  font-size: 4rem; }
-
 h2 {
   color: #707070;
   font-weight: 400;
@@ -230,6 +218,22 @@ p {
   text-align: center;
   line-height: 3.4rem;
   color: #242424; }
+
+.page-heading {
+  display: flex;
+  justify-content: center; }
+
+.page-heading__text {
+  padding-right: 20px;
+  padding-left: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 4rem;
+  margin: 0;
+  color: #242424; }
+
+.container--message-header {
+  font-size: 4rem; }
 
 .container {
   box-sizing: border-box;
@@ -269,11 +273,6 @@ p {
   margin-bottom: auto;
   grid-row-start: 3;
   grid-row-end: 5; }
-
-.section-aboutme,
-.section-portfolio {
-  display: flex;
-  justify-content: center; }
 
 .tagline {
   margin-top: 50px;
@@ -615,7 +614,7 @@ p {
   .monitor {
     width: 150px;
     height: 129.6px; }
-  .svg--line {
+  .page-heading__line {
     display: none; }
   .button-home {
     width: 45%;
