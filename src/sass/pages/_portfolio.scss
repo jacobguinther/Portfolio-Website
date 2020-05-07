@@ -6,12 +6,15 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
   grid-gap: 20px;
+  @media screen and (max-width: 780px) {
+    grid-template-columns: 1fr;
+}
 }
 .card {
-  border: 1px solid $color-gray-medium;
+  color: $color-gray-darker;
   background: $color-white;
   text-decoration: none;
-  color: $color-gray-darker;
+  border: 1px solid $color-gray-medium;
   box-shadow: 0 2px 5px $color-shadow-light;
   display: flex;
   flex-direction: column;
@@ -27,18 +30,20 @@
     padding-bottom: 60%;
     background-size: cover;
     background-position: center center;
+    // height: 100%;
+  }
+  &__content {
+    // height: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
   }
   &__header {
     font-size: $font-size-h2;
     color: $color-primary;
     padding: 0 0 10px 0;
     margin: 0;
-  }
-  &__content {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
   }
   &__p {
     font-weight: 400;
@@ -69,3 +74,4 @@
     margin: 2em 0 0 0;
   }
 }
+
