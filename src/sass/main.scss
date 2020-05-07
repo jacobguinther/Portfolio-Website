@@ -205,7 +205,7 @@ p {
 
 @import './pages/portfolio';
 @import './pages/contact';
-
+@import './footer';
 .button-home {
   color: $color-white; /*diff */
   border: 3px solid $color-gray-darker;
@@ -219,9 +219,6 @@ p {
   font-weight: 400;
   padding: 12px 10px;
 }
-@import './footer';
-
-/*MEDIA QUERIES  MEDIA QUERIES  MEDIA QUERIES  MEDIA QUERIES  MEDIA QUERIES*/
 
 @media screen and (max-width: 750px) {
   html {
@@ -242,7 +239,7 @@ p {
     display: none;
   }
   .button-home {
-    width: 25%;
+    width: 45%;
     padding: 13px 10px;
   }
 }
@@ -263,6 +260,6 @@ p {
     height: 86.4px;
   }
   .button-home {
-    width: 40%;
+    width: 60%;
   }
 }
