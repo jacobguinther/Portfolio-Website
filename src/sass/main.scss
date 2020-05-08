@@ -84,10 +84,6 @@ p {
   color: $color-primary;
 }
 
-.container--message-header {
-  font-size: $font-size-h1;
-}
-
 .container {
   box-sizing: border-box;
   background-color: $color-gray-light;
@@ -108,27 +104,24 @@ p {
   flex-direction: column;
   align-items: center;
 }
-.container--message {
+
+.container__message {
   margin-top: auto;
   margin-bottom: auto;
   grid-row-start: 1;
   grid-row-end: 6;
-}
-.container--message-error {
-  color: #767676;
-  padding-bottom: 35px;
+  &--header {
+    font-size: $font-size-h1;
+  }
+  &--error {
+    color: #767676;
+    padding-bottom: 35px;
+  }
 }
 
 .padding-top-bottom {
   padding-top: 100px;
   padding-bottom: 100px;
-}
-
-.button-container {
-  padding-bottom: 100px;
-  margin-bottom: auto;
-  grid-row-start: 3;
-  grid-row-end: 5;
 }
 
 .tagline {
@@ -159,14 +152,6 @@ p {
 @import './footer';
 
 @media screen and (max-width: 750px) {
-  .skills-bubbles {
-    width: 420px;
-    height: 254.1px;
-  }
-  .monitor {
-    width: 150px;
-    height: 129.6px;
-  }
   .page-heading__line {
     display: none;
   }
@@ -179,14 +164,6 @@ p {
 @media screen and (max-width: 450px) {
   .tagline {
     max-width: 100%;
-  }
-  .skills-bubbles {
-    width: 280px;
-    height: 169.4px;
-  }
-  .monitor {
-    width: 100px;
-    height: 86.4px;
   }
   .button-home {
     width: 60%;
