@@ -25,12 +25,18 @@ $font-size-annotation: 1.2rem;
 $bp-medium: 750px;
 $bp-small: 450px;
 
-// Break Points
-// $bp-largest: 75em;     // 1200px
-// $bp-large: 68.75em;    // 1100px
-// $bp-medium: 56.25em;   // 900px
-// $bp-small: 37.5em;     // 600px
-// $bp-smallest: 31.25em; // 500px
+:root {
+  // For CartJS colors
+  // #{} syntax required to work
+  // https://sass-lang.com/documentation/breaking-changes/css-vars
+  --color-primary: #{$color-primary};
+  --color-gray-light: #{$color-gray-light};
+  --color-gray-medium: #{$color-gray-medium};
+  --color-gray-dark: #{$color-gray-dark};
+  --color-gray-darker: #{$color-gray-darker};
+  --color-white: #{$color-white};
+  --color-black: #{$color-black};
+}
 
 *,
 ::before,
