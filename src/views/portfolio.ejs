@@ -1,10 +1,10 @@
 <%- include('partials/header') %>
 
 <div class="container padding-top-bottom">
-    <div class="section-portfolio">
-        <img class="svg--line" src="/img/icons/HR-short.svg" alt="#">
-        <h1 class="main--header">Portfolio</h1 class="main--header">
-        <img class="svg--line" src="/img/icons/HR-short.svg" alt="#">
+    <div class="page-heading">
+        <img class="page-heading__line" src="/img/icons/HR-short.svg" alt="#">
+        <h1 class="page-heading__text">Portfolio</h1>
+        <img class="page-heading__line" src="/img/icons/HR-short.svg" alt="#">
     </div>
     <div class="portfolio-grid">
 
@@ -12,17 +12,23 @@
 
         <div class="card">
             <a href="https://github.com/jacobguinther/Portfolio-Website"
-                class="thumb"
+                class="card__thumb"
                 style="background-image: url('<%= projects[i].img %>');">
             </a>
-            <article>
-                <h1 class="card--header"> <%= projects[i].name %> </h1>
-                <p class="card--topic"><span>Tech Stack:</span></p>
-                <p> <%= projects[i].stack %> </p>
-                <p class="card--topic"><span>Github:</span></p>
-                <p><a href="<%= projects[i].githubUrl %>">
+            <article class="card__content">
+                <h1 class="card__header"> <%= projects[i].name %> </h1>
+                <p class="card__p card__topic"><span class="card__span">Tech Stack:</span></p>
+                <p class="card__p"> <%= projects[i].stack %> </p>
+                <p class="card__p card__topic"><span class="card__span">Github:</span></p>
+                <p class="card__p"><a class="card__link" href="<%= projects[i].githubUrl %>">
                         <%= projects[i].githubName %> </a>
                 </p>
+                <% if (projects[i].deployedName) { %>
+                <p class="card__p card__topic"><span class="card__span">Deployed:</span></p>
+                <p class="card__p"><a class="card__link" href="<%= projects[i].deployedUrl %>">
+                        <%= projects[i].deployedName %> </a>
+                </p>
+                <% } %>
             </article>
         </div>
 

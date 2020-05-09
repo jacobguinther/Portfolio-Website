@@ -1,10 +1,10 @@
 <%- include('partials/header') %>
 
 <div class="container flex-center padding-top-bottom">
-    <div class="section-aboutme">
-        <img class="svg--line" src="/img/icons/HR-short.svg" alt="#">
-        <h1 class="main--header">About Me</h1>
-        <img class="svg--line" src="/img/icons/HR-short.svg" alt="#">
+    <div class="page-heading">
+        <img class="page-heading__line" src="/img/icons/HR-short.svg" alt="#">
+        <h1 class="page-heading__text">About Me</h1>
+        <img class="page-heading__line" src="/img/icons/HR-short.svg" alt="#">
     </div>
     <img class="profile-img" src="/img/images/ProfilePicCircular-250.png">
     <h2 class="tagline">I’m a web developer based in
@@ -24,26 +24,25 @@
     </p>
 </div>
 <div class="container no-bottom-padding">
-    <div class="section-skills">
+    <div class="section__skills">
         <div data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-            <img class="skills-bubbles" src="/img/images/skills-bubbles.png"
+            <img class="section__skills--bubbles" src="/img/images/skills-bubbles.png"
                 alt="">
         </div>
         <div data-aos="fade-left">
-            <img class="monitor" src="/img/images/monitor.png"
+            <img class="section__skills--monitor" src="/img/images/monitor.png"
                 alt="computer-icon">
         </div>
     </div>
 </div>
 <div class="container flex-center padding-top-bottom">
-    <h2 class="header-chart">Pluralsight Skill IQ</h2>
-    <canvas id="myChart" style="max-width: 1288px;"></canvas>
-    <div class="chart--key">
-        <p>
-            &nbsp;&nbsp;0 - 100 Novice</p>
+    <h2 class="chartjs__header">Pluralsight Skill IQ</h2>
+    <canvas class="chartjs__chart" id="myChart"></canvas>
+    <div class="chartjs__key">
+        <p>&nbsp;&nbsp;0 - 100 Novice</p>
         <p>100 - 200 Proficient</p>
     </div>
-    <p class="chart--annotation">* This is based on pluralsights skills IQ
+    <p class="chartjs__annotation">* This is based on pluralsights skills IQ
         tests.
     </p>
 </div>
