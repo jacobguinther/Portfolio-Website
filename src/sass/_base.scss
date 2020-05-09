@@ -1,0 +1,71 @@
+// Color
+$color-primary: #242424;
+
+$color-gray-light: #f4f4f4;
+$color-gray-medium: #d3d3d3;
+$color-gray-dark: #707070;
+$color-gray-darker: #444;
+
+$color-shadow-light: rgba(0, 0, 0, 0.1);
+$color-shadow-dark: rgba(0, 0, 0, 0.2);
+
+$color-white: #ffffff;
+$color-black: #000000;
+
+$color-red: #dc0000;
+
+// Font Size
+$font-size-h1: 4rem;
+$font-size-h2: 2.5rem;
+$font-size-base: 1.8rem;
+$font-size-buttons-nav: 2rem;
+$font-size-annotation: 1.2rem;
+
+// Break Points
+$bp-medium: 750px;
+$bp-small: 450px;
+
+:root {
+  // For CartJS colors
+  // #{} syntax required to work
+  // https://sass-lang.com/documentation/breaking-changes/css-vars
+  --color-primary: #{$color-primary};
+  --color-gray-light: #{$color-gray-light};
+  --color-gray-medium: #{$color-gray-medium};
+  --color-gray-dark: #{$color-gray-dark};
+  --color-gray-darker: #{$color-gray-darker};
+  --color-white: #{$color-white};
+  --color-black: #{$color-black};
+}
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  height: 100%;
+  overflow: none;
+  font-size: 62.5%;
+  @media screen and (max-width: $bp-medium) {
+    font-size: 50%;
+  }
+  @media screen and (max-width: $bp-small) {
+    font-size: 44%;
+  }
+}
+body {
+  box-sizing: border-box;
+  background-color: $color-gray-light;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 300;
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: 100px auto auto auto 350px;
+  overflow-x: hidden;
+  @media screen and (max-width: $bp-medium) {
+    grid-template-rows: 75px auto auto auto 300px;
+  }
+}

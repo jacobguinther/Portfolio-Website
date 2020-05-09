@@ -1,138 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="icon" href="/img/images/favicon-logo-32.png" type="image" />
-  <link rel="preload" as="font" type="font/woff2" href="/fonts/roboto-mono-v7-latin-300.woff2" crossorigin>
-  <link rel="preload" as="font" type="font/woff2" href="/fonts/roboto-mono-v7-latin-regular.woff2" crossorigin>
-  <link rel="stylesheet" type="text/css" href="/css/styles.css" />
-  <link href="/node_modules/aos/dist/aos.css" rel="stylesheet">
-  <title>JG Portfolio</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async
+        src="https://www.googletagmanager.com/gtag/js?id=G-S9E1L6BP8E"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-S9E1L6BP8E');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="/img/images/favicon-logo-32.png" type="image" />
+    <link rel="preload" as="font" type="font/woff2"
+        href="/fonts/roboto-mono-v7-latin-300.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2"
+        href="/fonts/roboto-mono-v7-latin-regular.woff2" crossorigin>
+    <link rel="stylesheet" type="text/css" href="./css/styles.css" />
+    <link href="/node_modules/aos/dist/aos.css" rel="stylesheet">
+    <title>JG Portfolio</title>
 </head>
 
 <body>
-  <nav>
-    <input type="checkbox" id="nav-check">
-    <a id="logo" href="/index.html">JG</a>
-    <div class="hamburger-container">
-      <label for="nav-check" class="burger-menu">
-        <div class="menu-bar menu-bar-1 no-animation"></div>
-        <div class="menu-bar menu-bar-2 no-animation"></div>
-        <div class="menu-bar menu-bar-3 no-animation"></div>
-      </label>
-    </div>
-    <ul class="menu">
-      <li><a class="nav-link" href="/index.html">About</a></li>
-      <li><a class="nav-link" href="/portfolio.html">Portfolio</a></li>
-      <li><a class="nav-link" href="/contact.html">Contact</a>
-      </li>
-    </ul>
-  </nav>
-  <div class="container padding-top-bottom">
-    <div class="section-portfolio">
-      <img class="svg--line" src="/img/icons/HR-short.svg" alt="#">
-      <h1 class="main--header">Portfolio</h1 class="main--header">
-      <img class="svg--line" src="/img/icons/HR-short.svg" alt="#">
+    <nav class="nav">
+        <input type="checkbox" id="nav-check">
+        <a id="logo" href="/index.html">JG</a>
+        <div class="nav__container-hamburger">
+            <label for="nav-check" class="nav__burger">
+                <div class="nav__burger-bar no-animation"></div>
+                <div class="nav__burger-bar no-animation nav__burger-bar-2"></div>
+                <div class="nav__burger-bar no-animation"></div>
+            </label>
+        </div>
+        <ul class="nav__menu">
+            <li><a class="nav__menu-link" href="./index.html">About</a></li>
+            <li><a class="nav__menu-link" href="./portfolio.html">Portfolio</a></li>
+            <li><a class="nav__menu-link" href="./contact.html">Contact</a>
+            </li>
+        </ul>
+    </nav>
+
+<div class="container padding-top-bottom">
+    <div class="page-heading">
+        <img class="page-heading__line" src="/img/icons/HR-short.svg" alt="#">
+        <h1 class="page-heading__text">Portfolio</h1>
+        <img class="page-heading__line" src="/img/icons/HR-short.svg" alt="#">
     </div>
     <div class="portfolio-grid">
-      <div class="card">
-        <a href="https://github.com/jacobguinther/Portfolio-Website" class="thumb"
-          style="background-image: url('/img/images/Logo_JG.png');">
-        </a>
-        <article>
-          <h1 class="card--header">Portfolio Website</h1>
-          <p class="card--topic"><span>Tech Stack:</span></p>
-          <p>HTML CSS JS</p>
-          <p class="card--topic"><span>Github:</span></p>
-          <p><a href="https://github.com/jacobguinther/Portfolio-Website">jacobguinther/Portfolio-Website</a></p>
-        </article>
-      </div>
-      <div class="card">
-        <a href="https://github.com/jacobguinther/Mac-Setup" class="thumb"
-          style="background-image: url('/img/images/macsetup.png');"></a>
-        <article>
-          <h1 class="card--header">Mac Setup Scripts</h1>
-          <p class="card--topic"><span>Tech Stack:</span></p>
-          <p>BASH</p>
-          <p class="card--topic"><span>Github:</span></p>
-          <p><a href="https://github.com/jacobguinther/Mac-Setup">jacobguinther/Mac-Setup</a></p>
-        </article>
-      </div>
-      <div class="card">
-        <a href="https://jg-yelpcamp.herokuapp.com/campgrounds/page-1" class="thumb"
-          style="background-image: url('/img/images/yelpcamp.png'); border-bottom: 1px solid rgb(238, 238, 238)"></a>
-        <article>
-          <h1 class="card--header">YelpCamp</h1>
-          <p class="card--topic"><span>Tech Stack:</span></p>
-          <p>EJS Bootstrap Nodejs Express MongoDB Mongoose Passport</p>
-          <p class="card--topic"><span>Github:</span></p>
-          <p><a href="https://github.com/jacobguinther/yelpcamp">jacobguinther/yelpcamp
-            </a></p>
-          <p class="card--topic"><span>Deployed:</span></p>
-          <p><a href="https://jg-yelpcamp.herokuapp.com/campgrounds/page-1">jg-yelpcamp.herokuapp.com/</a></p>
-        </article>
-      </div>
-      <div class="card">
-        <a href="/portfolio/tesla-website/index.html" class="thumb"
-          style="background-image: url('/img/images/TeslaSite.png');"></a>
-        <article>
-          <h1 class="card--header">Tesla Site</h1>
-          <p class="card--topic"><span>Tech Stack:</span></p>
-          <p>HTML CSS</p>
-          <p class="card--topic"><span>Github:</span></p>
-          <p><a
-              href="https://github.com/jacobguinther/Portfolio-Website/tree/develop/portfolio/tesla-website">portfolio/tesla-website/</a>
-          </p>
-          <p class="card--topic"><span>Deployed:</span></p>
-          <p><a href="/portfolio/tesla-website/index.html">tesla-website/index.html</a></p>
-        </article>
-      </div>
+
+        
+
+        <div class="card">
+            <a href="https://github.com/jacobguinther/Portfolio-Website"
+                class="card__thumb"
+                style="background-image: url('/img/images/Logo_JG.png');">
+            </a>
+            <article class="card__content">
+                <h1 class="card__header"> Portfolio Website </h1>
+                <p class="card__p card__topic"><span class="card__span">Tech Stack:</span></p>
+                <p class="card__p"> HTML CSS JS </p>
+                <p class="card__p card__topic"><span class="card__span">Github:</span></p>
+                <p class="card__p"><a class="card__link" href="https://github.com/jacobguinther/Portfolio-Website">
+                        jacobguinther/Portfolio-Website </a>
+                </p>
+                
+            </article>
+        </div>
+
+        
+
+        <div class="card">
+            <a href="https://github.com/jacobguinther/Portfolio-Website"
+                class="card__thumb"
+                style="background-image: url('/img/images/macsetup.png');">
+            </a>
+            <article class="card__content">
+                <h1 class="card__header"> Mac Setup Scripts </h1>
+                <p class="card__p card__topic"><span class="card__span">Tech Stack:</span></p>
+                <p class="card__p"> BASH </p>
+                <p class="card__p card__topic"><span class="card__span">Github:</span></p>
+                <p class="card__p"><a class="card__link" href="https://github.com/jacobguinther/Mac-Setup">
+                        jacobguinther/Mac-Setup </a>
+                </p>
+                
+            </article>
+        </div>
+
+        
+
+        <div class="card">
+            <a href="https://github.com/jacobguinther/Portfolio-Website"
+                class="card__thumb"
+                style="background-image: url('/img/images/yelpcamp.png');">
+            </a>
+            <article class="card__content">
+                <h1 class="card__header"> YelpCamp </h1>
+                <p class="card__p card__topic"><span class="card__span">Tech Stack:</span></p>
+                <p class="card__p"> EJS Bootstrap Nodejs Express MongoDB Mongoose Passport </p>
+                <p class="card__p card__topic"><span class="card__span">Github:</span></p>
+                <p class="card__p"><a class="card__link" href="https://github.com/jacobguinther/yelpcamp">
+                        jacobguinther/yelpcamp </a>
+                </p>
+                
+                <p class="card__p card__topic"><span class="card__span">Deployed:</span></p>
+                <p class="card__p"><a class="card__link" href="https://jg-yelpcamp.herokuapp.com/campgrounds/page-1">
+                        jg-yelpcamp.herokuapp.com </a>
+                </p>
+                
+            </article>
+        </div>
+
+        
+
     </div>
-  </div>
-  <footer>
-    <div id="footer-logo">
-      <div class="footer-logo-inner">
-        JG
-      </div>
+</div>
+
+
+<footer class="footer">
+    <div class="footer__logo">
+        <div class="footer__logo-inner">
+            JG
+        </div>
     </div>
-    <div class="tagline-footer">
-      <h1>Get In Touch</h1>
+    <div class="footer__tagline">
+        <h1>Get In Touch</h1>
     </div>
-    <div class="social-icons-container">
-      <a href="https://github.com/jacobguinther"><svg class="svg--social" xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24" fill="none" stroke="#8C8C8C" stroke-width="1" stroke-linecap="round"
-          stroke-linejoin="round">
-          <path
-            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-          </path>
-        </svg></a>
-      <a href="mailto:jacobgguinther@gmail.com"><svg class="svg--social" xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24" fill="none" stroke="#8C8C8C" stroke-width="1" stroke-linecap="round"
-          stroke-linejoin="round">
-          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
-          </path>
-          <polyline points="22,6 12,13 2,6"></polyline>
-        </svg></a>
-      <a href="https://www.linkedin.com/in/jacobguinther/"><svg class="svg--social" xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24" fill="none" stroke="#8C8C8C" stroke-width="1" stroke-linecap="round"
-          stroke-linejoin="round">
-          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
-          </path>
-          <rect x="2" y="9" width="4" height="12"></rect>
-          <circle cx="4" cy="4" r="2"></circle>
-        </svg></a>
+    <div class="footer__container-social">
+        <a class="social-link" href="https://github.com/jacobguinther"><svg
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                fill="none" stroke="#8C8C8C" stroke-width="1"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path
+                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                </path>
+            </svg></a>
+        <a class="social-link" href="mailto:jacobgguinther@gmail.com"><svg
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                fill="none" stroke="#8C8C8C" stroke-width="1"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path
+                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                </path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+            </svg></a>
+        <a class="social-link"
+            href="https://www.linkedin.com/in/jacobguinther/"><svg
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                fill="none" stroke="#8C8C8C" stroke-width="1"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path
+                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                </path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+            </svg></a>
     </div>
-    <div class="copyright">
-      <p>Built by me copyright 2019</p>
+    <div class="footer__container-copyright">
+        <p>Built by me copyright 2019</p>
     </div>
-  </footer>
-  <script type="text/javascript" src="script.js"></script>
-  <script src="node_modules/aos/dist/aos.js"></script>
-  <script src="node_modules/chart.js/dist/Chart.bundle.min.js"></script>
-  <script src="node_modules/chartjs-plugin-deferred/dist/chartjs-plugin-deferred.min.js"></script>
+</footer>
+<script type="text/javascript" src="/script.js"></script>
+<script src="/node_modules/aos/dist/aos.js"></script>
+<script src="/node_modules/chart.js/dist/Chart.bundle.min.js"></script>
+<script
+    src="/node_modules/chartjs-plugin-deferred/dist/chartjs-plugin-deferred.min.js"></script>
 </body>
 
 </html>

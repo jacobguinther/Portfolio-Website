@@ -1,0 +1,43 @@
+<%- include('partials/header') %>
+
+<div class="flex-center padding-top-bottom">
+    <div class="page-heading">
+        <img class="page-heading__line" src="/img/icons/HR-short.svg" alt="#">
+        <h1 class="page-heading__text">Contact</h1>
+        <img class="page-heading__line" src="/img/icons/HR-short.svg" alt="#">
+    </div>
+    <div>
+        <h2 class="tagline">Thanks for taking the time to reach
+            out. How can I help you today?</h2>
+    </div>
+    <form class="form" id="form__contact">
+        <div class="form__section-1">
+            <div class="form__container form__container--left">
+                <div class="form__container--flex">
+                    <label for="name">Name</label>
+                </div>
+                <input id="name" type="text" required>
+            </div>
+            <div class="form__container form__container--right">
+                <div class="form__container--flex">
+                    <label for="email">Email</label>
+                </div>
+                <input id="email" type="email" required>
+            </div>
+        </div>
+        <div class="form__section-2">
+            <div class="form__container">
+                <div class="form__container--flex">
+                    <label for="message">Message</label>
+                </div>
+                <textarea id="message" name="message" id="message" cols="30"
+                    rows="10" required></textarea>
+            </div>
+        </div>
+        <div class="form__container--submit">
+            <input class="form--submit" type="submit" value="Submit">
+        </div>
+    </form>
+</div>
+
+<%- include('partials/footer') %>

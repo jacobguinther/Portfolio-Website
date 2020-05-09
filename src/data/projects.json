@@ -1,0 +1,33 @@
+{
+  "projects": [
+    {
+      "name": "Portfolio Website",
+      "img": "/img/images/Logo_JG.png",
+      "stack": "HTML CSS JS",
+      "githubName": "jacobguinther/Portfolio-Website",
+      "githubUrl": "https://github.com/jacobguinther/Portfolio-Website",
+      "deployedName": "",
+      "deployedUrl": ""
+    },
+    {
+      "name": "Mac Setup Scripts",
+      "img": "/img/images/macsetup.png",
+      "stack": "BASH",
+      "githubName": "jacobguinther/Mac-Setup",
+      "githubUrl": "https://github.com/jacobguinther/Mac-Setup",
+      "deployedName": "",
+      "deployedUrl": ""
+    },
+    {
+      "name": "YelpCamp",
+      "img": "/img/images/yelpcamp.png",
+      "stack": "EJS Bootstrap Nodejs Express MongoDB Mongoose Passport",
+      "githubName": "jacobguinther/yelpcamp",
+      "githubUrl": "https://github.com/jacobguinther/yelpcamp",
+      "deployedName": "jg-yelpcamp.herokuapp.com",
+      "deployedUrl": "https://jg-yelpcamp.herokuapp.com/campgrounds/page-1"
+    }
+  ]
+}
+
+
