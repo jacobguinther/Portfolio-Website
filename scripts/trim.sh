@@ -10,7 +10,7 @@ fi
 if [[ -d "./html_js_trimmed" ]] ; then
         rm -rf ./html_js_trimmed/*
         cp ./*.html ./html_js_trimmed/
-        cp ./*.js ./html_js_trimmed/
+        cp ./script.js ./html_js_trimmed/
 
         cd ./html_js_trimmed
 
@@ -26,8 +26,8 @@ if [[ -d "./html_js_trimmed" ]] ; then
 # Works on mac with gsed installed with brew
         find . -type f ! -name '*.sh' -exec gsed -i "/\/portfolio\//!s/\.html//" {} +
         find . -type f ! -name '*.sh' -exec gsed -i "/\/portfolio\//!s/\/index/\//" {} +
-# 				find . -type f ! -name '*.sh' -exec sed -i '' "s/\.html//" {} +
-#         find . -type f ! -name '*.sh' -exec sed -i '' "s/\/index/\//" {} +
+# 	find . -type f ! -name '*.sh' -exec sed -i '' "s/\.html//" {} +
+#       find . -type f ! -name '*.sh' -exec sed -i '' "s/\/index/\//" {} +
 fi
 
 echo "Dont forget to edit Portfolio urls that may have gotten removed with this script!"
