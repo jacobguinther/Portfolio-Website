@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async
+        src="https://www.googletagmanager.com/gtag/js?id=G-S9E1L6BP8E"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-S9E1L6BP8E');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="/img/images/favicon-logo-32.png" type="image" />
+    <link rel="preload" as="font" type="font/woff2"
+        href="/fonts/roboto-mono-v7-latin-300.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2"
+        href="/fonts/roboto-mono-v7-latin-regular.woff2" crossorigin>
+    <link rel="stylesheet" type="text/css" href="./css/styles.css" />
+    <link href="/node_modules/aos/dist/aos.css" rel="stylesheet">
+    <title>JG Portfolio</title>
+</head>
+
+<body>
+    <nav class="nav">
+        <input type="checkbox" id="nav-check">
+        <a id="logo" href="/">JG</a>
+        <div class="nav__container-hamburger">
+            <label for="nav-check" class="nav__burger">
+                <div class="nav__burger-bar no-animation"></div>
+                <div class="nav__burger-bar no-animation nav__burger-bar-2"></div>
+                <div class="nav__burger-bar no-animation"></div>
+            </label>
+        </div>
+        <ul class="nav__menu">
+            <li><a class="nav__menu-link" href="./">About</a></li>
+            <li><a class="nav__menu-link" href="./portfolio">Portfolio</a></li>
+            <li><a class="nav__menu-link" href="./contact">Contact</a>
+            </li>
+        </ul>
+    </nav>
+
+<div class="flex-center padding-top-bottom">
+    <div class="page-heading">
+        <img class="page-heading__line" src="/img/icons/HR-short.svg" alt="#">
+        <h1 class="page-heading__text">Contact</h1>
+        <img class="page-heading__line" src="/img/icons/HR-short.svg" alt="#">
+    </div>
+    <div>
+        <h2 class="tagline">Thanks for taking the time to reach
+            out. How can I help you today?</h2>
+    </div>
+    <form class="form" id="form__contact">
+        <div class="form__section-1">
+            <div class="form__container form__container--left">
+                <div class="form__container--flex">
+                    <label for="name">Name</label>
+                </div>
+                <input id="name" type="text" required>
+            </div>
+            <div class="form__container form__container--right">
+                <div class="form__container--flex">
+                    <label for="email">Email</label>
+                </div>
+                <input id="email" type="email" required>
+            </div>
+        </div>
+        <div class="form__section-2">
+            <div class="form__container">
+                <div class="form__container--flex">
+                    <label for="message">Message</label>
+                </div>
+                <textarea id="message" name="message" id="message" cols="30"
+                    rows="10" required></textarea>
+            </div>
+        </div>
+        <div class="form__container--submit">
+            <input class="form--submit" type="submit" value="Submit">
+        </div>
+    </form>
+</div>
+
+<footer class="footer">
+    <div class="footer__logo">
+        <div class="footer__logo-inner">
+            JG
+        </div>
+    </div>
+    <div class="footer__tagline">
+        <h1>Get In Touch</h1>
+    </div>
+    <div class="footer__container-social">
+        <a class="social-link" href="https://github.com/jacobguinther"><svg
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                fill="none" stroke="#8C8C8C" stroke-width="1"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path
+                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                </path>
+            </svg></a>
+        <a class="social-link" href="mailto:jacobgguinther@gmail.com"><svg
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                fill="none" stroke="#8C8C8C" stroke-width="1"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path
+                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                </path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+            </svg></a>
+        <a class="social-link"
+            href="https://www.linkedin.com/in/jacobguinther/"><svg
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                fill="none" stroke="#8C8C8C" stroke-width="1"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path
+                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                </path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+            </svg></a>
+    </div>
+    <div class="footer__container-copyright">
+        <p>Built by me copyright 2019</p>
+    </div>
+</footer>
+<script type="text/javascript" src="/script.js"></script>
+<script src="/node_modules/aos/dist/aos.js"></script>
+<script src="/node_modules/chart.js/dist/Chart.bundle.min.js"></script>
+<script
+    src="/node_modules/chartjs-plugin-deferred/dist/chartjs-plugin-deferred.min.js"></script>
+</body>
+
+</html>

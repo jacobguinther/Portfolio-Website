@@ -3,16 +3,16 @@
 # The purpose of this script is to make file paths look better in address bar
 # Removes all .html file extensions and changes '/index' to '/'
 # Just make sure to edit metadata for all .html in S3 bucket
-if [[ ! -d "./html_js_trimmed" ]] ; then
-        mkdir ./html_js_trimmed
+if [[ ! -d "./dist" ]] ; then
+        mkdir ./dist
 fi
 
-if [[ -d "./html_js_trimmed" ]] ; then
-        rm -rf ./html_js_trimmed/*
-        cp ./*.html ./html_js_trimmed/
-        cp ./script.js ./html_js_trimmed/
+if [[ -d "./dist" ]] ; then
+        rm -rf ./dist/*
+        cp ./*.html ./dist/
+        cp ./script.js ./dist/
 
-        cd ./html_js_trimmed
+        cd ./dist
 
         htmlfiles=(`find ./ -maxdepth 1 -name "*.html"`)
         if [[ ${#htmlfiles[@]} -gt 0 ]]; then
@@ -22,15 +22,8 @@ if [[ -d "./html_js_trimmed" ]] ; then
         fi
 
 # TODO: Should check if on mac or linux and conditionally do sed or gsed
-# These remove '.html' and 'index' from all files but ignore lines that include '/portfolio/'
+# These remove '.html' and 'index' from all files
 # Works on mac with gsed installed with brew
-        find . -type f ! -name '*.sh' -exec gsed -i "/\/portfolio\//!s/\.html//" {} +
-        find . -type f ! -name '*.sh' -exec gsed -i "/\/portfolio\//!s/\/index/\//" {} +
-# 	find . -type f ! -name '*.sh' -exec sed -i '' "s/\.html//" {} +
-#       find . -type f ! -name '*.sh' -exec sed -i '' "s/\/index/\//" {} +
+        find . -type f ! -name '*.sh' -exec gsed -i "s/\.html//" {} +
+        find . -type f ! -name '*.sh' -exec gsed -i "s/\/index/\//" {} +
 fi
-
-echo "Dont forget to edit Portfolio urls that may have gotten removed with this script!"
-# href="./portfolio/tesla-website/index.html"
-# href="/index.html"
-# href="/index"
