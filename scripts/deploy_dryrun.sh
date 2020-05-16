@@ -1,7 +1,7 @@
 #!/bin/bash
 
-if [[ ! -d "./html_js_trimmed" ]]; then
-	echo "./html_js_trimmed doesn not exist"
+if [[ ! -d "./dist" ]]; then
+	echo "./dist doesn not exist"
 	echo "Try: npm run build"
 	exit 1
 fi
@@ -14,7 +14,7 @@ aws s3 sync . s3://jacobguinther.com \
 	--exclude "*.html" \
 	--exclude "*.js" \
 	--exclude "scripts/*" \
-	--exclude "html_js_trimmed/*" \
+	--exclude "dist/*" \
 	--dryrun &&
-	aws s3 sync ./html_js_trimmed/ s3://jacobguinther.com \
+	aws s3 sync ./dist/ s3://jacobguinther.com \
 	--dryrun
