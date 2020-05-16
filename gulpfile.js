@@ -12,11 +12,6 @@ gulp.task('default', function (cb) {
   console.log('it worked');
   cb();
 });
-// function defaultTask(cb) {
-//     // place code for your default task here
-//     console.log("it worked")
-//     cb();
-//   }
 
 gulp.task('ejs', function () {
   return gulp
@@ -29,10 +24,6 @@ gulp.task('ejs', function () {
     .pipe(
       ejs(
         data,
-        { name: 'john' },
-        {
-          msg: 'Hello Gulp!',
-        },
       ).on('error', log),
     )
     .pipe(
