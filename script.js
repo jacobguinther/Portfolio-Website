@@ -119,6 +119,7 @@ document.addEventListener('DOMContentLoaded', function(){
         ],
       },
       options: {
+        events: [],
         legend: {
           display: false,
         },
