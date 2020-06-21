@@ -19,13 +19,13 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  position: relative;
-  top: 0;
-  transition: all 0.1s ease-in;
-  &:hover {
-    top: -2px;
-    box-shadow: 0 4px 5px $color-shadow-dark;
-  }
+  // position: relative;
+  // top: 0;
+  // transition: all 0.1s ease-in;
+  // &:hover {
+  //   top: -2px;
+  //   box-shadow: 0 4px 5px $color-shadow-dark;
+  // }
   &__thumb {
     padding-bottom: 60%;
     background-size: cover;
@@ -75,3 +75,91 @@
   }
 }
 
+a.postlink {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 100px;
+  overflow: hidden;
+  background: #222;
+  .title {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 1;
+    h2 {
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 50px;
+      padding-bottom: 0.75em;
+      height: 100%;
+      color: #fff;
+
+      span {
+        transition: all 0.25s ease;
+        transition-delay: 0.2s;
+        opacity: 0;
+        transform: translateY(10px);
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 50px;
+        margin-left: -25px;
+        height: 2px;
+        background: #fff;
+        background: rgba(255, 255, 255, 0.5);
+        transition: all 200ms ease;
+        width: 0;
+        margin-left: 0;
+      }
+    }
+  }
+  .overlay {
+    background: #242424;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+  }
+  img {
+    display: block;
+    width: 100%;
+    height: auto !important;
+  }
+  img,
+  .overlay {
+    transition: opacity 1s, transform 1s;
+  }
+  &:hover {
+    .overlay {
+      opacity: 0.85;
+    }
+    img {
+      transform: scale3d(1.1, 1.1, 1);
+    }
+    .title {
+      h2 {
+        span {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        &:after {
+          width: 50px;
+          margin-left: -25px;
+        }
+      }
+    }
+  }
+  .overlay {
+    opacity: 0;
+  }
+}

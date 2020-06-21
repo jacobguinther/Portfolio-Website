@@ -456,13 +456,7 @@ p {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  height: 100%;
-  position: relative;
-  top: 0;
-  transition: all 0.1s ease-in; }
-  .card:hover {
-    top: -2px;
-    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2); }
+  height: 100%; }
   .card__thumb {
     padding-bottom: 60%;
     background-size: cover;
@@ -499,6 +493,74 @@ p {
     text-transform: uppercase;
     letter-spacing: 0.05em;
     margin: 2em 0 0 0; }
+
+a.postlink {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 100px;
+  overflow: hidden;
+  background: #222; }
+  a.postlink .title {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 1; }
+    a.postlink .title h2 {
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 50px;
+      padding-bottom: 0.75em;
+      height: 100%;
+      color: #fff; }
+      a.postlink .title h2 span {
+        transition: all 0.25s ease;
+        transition-delay: 0.2s;
+        opacity: 0;
+        transform: translateY(10px); }
+      a.postlink .title h2:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 50px;
+        margin-left: -25px;
+        height: 2px;
+        background: #fff;
+        background: rgba(255, 255, 255, 0.5);
+        transition: all 200ms ease;
+        width: 0;
+        margin-left: 0; }
+  a.postlink .overlay {
+    background: #242424;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center; }
+  a.postlink img {
+    display: block;
+    width: 100%;
+    height: auto !important; }
+  a.postlink img,
+  a.postlink .overlay {
+    transition: opacity 1s, transform 1s; }
+  a.postlink:hover .overlay {
+    opacity: 0.85; }
+  a.postlink:hover img {
+    transform: scale3d(1.1, 1.1, 1); }
+  a.postlink:hover .title h2 span {
+    opacity: 1;
+    transform: translateY(0); }
+  a.postlink:hover .title h2:after {
+    width: 50px;
+    margin-left: -25px; }
+  a.postlink .overlay {
+    opacity: 0; }
 
 .form {
   width: 660px; }
