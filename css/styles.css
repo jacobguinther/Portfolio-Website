@@ -67,6 +67,14 @@ body {
   src: local("Roboto Mono Medium"), local("RobotoMono-Medium"), url("../fonts/roboto-mono-v7-latin-500.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto-mono-v7-latin-500.woff2") format("woff2"), url("../fonts/roboto-mono-v7-latin-500.woff") format("woff"), url("../fonts/roboto-mono-v7-latin-500.ttf") format("truetype"), url("../fonts/roboto-mono-v7-latin-500.svg#RobotoMono") format("svg");
   /* Legacy iOS */ }
 
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: italic;
+  font-weight: 200;
+  src: url("../fonts/RobotoMono-LightItalic.ttf");
+  /* IE9 Compat Modes */
+  src: local("Roboto Mono Medium"), local("RobotoMono-Medium"), url("../fonts/roboto-mono-v7-latin-500.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoMono-LightItalic.ttf") format("truetype"); }
+
 h2 {
   color: #707070;
   font-weight: 400;
@@ -457,44 +465,8 @@ p {
   display: flex;
   flex-direction: column;
   height: 100%; }
-  .card__thumb {
-    padding-bottom: 60%;
-    background-size: cover;
-    background-position: center center; }
-  .card__content {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; }
-  .card__header {
-    font-size: 2.5rem;
-    color: #242424;
-    padding: 0 0 10px 0;
-    margin: 0; }
-  .card__p {
-    font-weight: 400;
-    font-size: 1.8rem;
-    line-height: 1.4;
-    text-align: left;
-    margin-bottom: 0; }
-  .card__topic {
-    margin-top: 10px; }
-  .card__link {
-    text-decoration: none;
-    color: #242424; }
-  .card__link:visited {
-    color: #242424; }
-  .card__link:hover {
-    font-weight: 700; }
-  .card__span {
-    font-size: 1.8rem;
-    font-weight: 400;
-    color: #707070;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin: 2em 0 0 0; }
 
-a.postlink {
+.project {
   display: block;
   position: relative;
   width: 100%;
@@ -502,7 +474,7 @@ a.postlink {
   min-height: 100px;
   overflow: hidden;
   background: #222; }
-  a.postlink .title {
+  .project .project--info {
     position: absolute;
     width: 100%;
     text-align: center;
@@ -510,57 +482,71 @@ a.postlink {
     left: 0;
     transform: translateY(-50%);
     z-index: 1; }
-    a.postlink .title h2 {
-      display: inline-block;
-      vertical-align: middle;
-      margin: 0 50px;
-      padding-bottom: 0.75em;
-      height: 100%;
-      color: #fff; }
-      a.postlink .title h2 span {
-        transition: all 0.25s ease;
-        transition-delay: 0.2s;
-        opacity: 0;
-        transform: translateY(10px); }
-      a.postlink .title h2:after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        width: 50px;
-        margin-left: -25px;
-        height: 2px;
-        background: #fff;
-        background: rgba(255, 255, 255, 0.5);
-        transition: all 200ms ease;
-        width: 0;
-        margin-left: 0; }
-  a.postlink .overlay {
+    .project .project--info .project--title {
+      position: relative; }
+      .project .project--info .project--title h2 {
+        display: inline-block;
+        padding-bottom: .4em;
+        color: #fff; }
+        .project .project--info .project--title h2 span {
+          transition: all 0.25s ease;
+          transition-delay: 0.25s;
+          opacity: 0;
+          transform: translateY(10px); }
+        .project .project--info .project--title h2::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          height: 2px;
+          background: #fff;
+          transition: all 200ms ease;
+          width: 0;
+          margin-left: 0; }
+  .project .overlay {
     background: #242424;
     position: absolute;
     top: 0;
     width: 100%;
     height: 100%;
-    text-align: center; }
-  a.postlink img {
+    text-align: center;
+    opacity: 0; }
+  .project img {
     display: block;
     width: 100%;
     height: auto !important; }
-  a.postlink img,
-  a.postlink .overlay {
+  .project img,
+  .project .overlay {
     transition: opacity 1s, transform 1s; }
-  a.postlink:hover .overlay {
+  .project:hover .overlay {
     opacity: 0.85; }
-  a.postlink:hover img {
+  .project:hover img {
     transform: scale3d(1.1, 1.1, 1); }
-  a.postlink:hover .title h2 span {
+  .project:hover .project--info .project--title h2 span {
     opacity: 1;
     transform: translateY(0); }
-  a.postlink:hover .title h2:after {
-    width: 50px;
-    margin-left: -25px; }
-  a.postlink .overlay {
-    opacity: 0; }
+  .project:hover .project--info .project--title h2::after {
+    width: 100px;
+    margin-left: -50px; }
+  .project:hover .project--info .project--summary,
+  .project:hover .project--info .project--stack {
+    opacity: 1;
+    transform: translateY(0); }
+
+.project--summary,
+.project--stack {
+  color: #ffffff;
+  transition: all 0.4s ease;
+  transition-delay: 0.7s;
+  opacity: 0;
+  line-height: 1em;
+  padding-top: .5em; }
+
+.project--summary {
+  font-style: italic; }
+
+.project--stack {
+  line-height: 1.4em; }
 
 .form {
   width: 660px; }

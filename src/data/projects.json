@@ -3,6 +3,7 @@
     {
       "name": "Portfolio Website",
       "img": "/img/images/Logo_JG.png",
+      "summary": "Static S3 Website",
       "stack": "HTML CSS JS",
       "githubName": "jacobguinther/Portfolio-Website",
       "githubUrl": "https://github.com/jacobguinther/Portfolio-Website",
@@ -12,6 +13,7 @@
     {
       "name": "Mac Setup Scripts",
       "img": "/img/images/macsetup.png",
+      "summary": "Automated Mac Setup Solution",
       "stack": "BASH",
       "githubName": "jacobguinther/Mac-Setup",
       "githubUrl": "https://github.com/jacobguinther/Mac-Setup",
@@ -21,6 +23,7 @@
     {
       "name": "YelpCamp",
       "img": "/img/images/yelpcamp.png",
+      "summary": "Full Stack Web Application",
       "stack": "EJS Bootstrap Nodejs Express MongoDB Mongoose Passport",
       "githubName": "jacobguinther/yelpcamp",
       "githubUrl": "https://github.com/jacobguinther/yelpcamp",
