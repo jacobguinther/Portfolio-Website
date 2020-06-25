@@ -486,7 +486,7 @@ p {
       position: relative; }
       .project .project--info .project--title h2 {
         display: inline-block;
-        padding-bottom: .4em;
+        padding-bottom: 0.4em;
         color: #fff; }
         .project .project--info .project--title h2 span {
           transition: all 0.25s ease;
@@ -503,6 +503,18 @@ p {
           transition: all 200ms ease;
           width: 0;
           margin-left: 0; }
+    .project .project--info .project--summary,
+    .project .project--info .project--stack {
+      color: #ffffff;
+      transition: all 0.4s ease;
+      transition-delay: 0.7s;
+      opacity: 0;
+      line-height: 1em;
+      padding: 0.5em 0.5em 0 0.5em; }
+    .project .project--info .project--summary {
+      font-style: italic; }
+    .project .project--info .project--stack {
+      line-height: 1.4em; }
   .project .overlay {
     background: #242424;
     position: absolute;
@@ -518,35 +530,21 @@ p {
   .project img,
   .project .overlay {
     transition: opacity 1s, transform 1s; }
-  .project:hover .overlay {
+  .project:hover .overlay, .project:active .overlay {
     opacity: 0.85; }
-  .project:hover img {
+  .project:hover img, .project:active img {
     transform: scale3d(1.1, 1.1, 1); }
-  .project:hover .project--info .project--title h2 span {
+  .project:hover .project--info .project--title h2 span, .project:active .project--info .project--title h2 span {
     opacity: 1;
     transform: translateY(0); }
-  .project:hover .project--info .project--title h2::after {
+  .project:hover .project--info .project--title h2::after, .project:active .project--info .project--title h2::after {
     width: 100px;
     margin-left: -50px; }
   .project:hover .project--info .project--summary,
-  .project:hover .project--info .project--stack {
+  .project:hover .project--info .project--stack, .project:active .project--info .project--summary,
+  .project:active .project--info .project--stack {
     opacity: 1;
     transform: translateY(0); }
-
-.project--summary,
-.project--stack {
-  color: #ffffff;
-  transition: all 0.4s ease;
-  transition-delay: 0.7s;
-  opacity: 0;
-  line-height: 1em;
-  padding-top: .5em; }
-
-.project--summary {
-  font-style: italic; }
-
-.project--stack {
-  line-height: 1.4em; }
 
 .form {
   width: 660px; }

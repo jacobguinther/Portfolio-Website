@@ -30,7 +30,6 @@
   overflow: hidden;
   background: #222;
   .project--info {
-    // border: 1px solid red;
     position: absolute;
     width: 100%;
     text-align: center;
@@ -38,19 +37,12 @@
     left: 0;
     transform: translateY(-50%);
     z-index: 1;
-
     .project--title {
       position: relative;
       h2 {
         display: inline-block;
-        // vertical-align: middle;
-        // margin: 0 50px;
-        // padding-bottom: 0.5em;
-        padding-bottom: .4em;
-        // height: 100%;
+        padding-bottom: 0.4em;
         color: #fff;
-        // border: 1px solid green;
-
         span {
           transition: all 0.25s ease;
           transition-delay: 0.25s;
@@ -64,12 +56,26 @@
           left: 50%;
           height: 2px;
           background: #fff;
-          // background: rgba(255, 255, 255, 0.5);
           transition: all 200ms ease;
           width: 0;
           margin-left: 0;
         }
       }
+    }
+    .project--summary,
+    .project--stack {
+      color: $color-white;
+      transition: all 0.4s ease;
+      transition-delay: 0.7s;
+      opacity: 0;
+      line-height: 1em;
+      padding: 0.5em 0.5em 0 0.5em;
+    }
+    .project--summary {
+      font-style: italic;
+    }
+    .project--stack {
+      line-height: 1.4em;
     }
   }
   .overlay {
@@ -90,7 +96,8 @@
   .overlay {
     transition: opacity 1s, transform 1s;
   }
-  &:hover {
+  &:hover,
+  &:active {
     .overlay {
       opacity: 0.85;
     }
@@ -117,31 +124,4 @@
       }
     }
   }
-}
-
-.project--summary,
-.project--stack {
-  color: $color-white;
-  transition: all 0.4s ease;
-  transition-delay: 0.7s;
-  opacity: 0;
-  line-height: 1em;
-  padding-top: .5em;
-
-  // line-height: 1.1em;
-  // padding-top: .4em;
-
-  // transform: translateY(10px);
-  // font-family: 'Roboto Mono', monospace;
-  // font-weight: 300;
-}
-
-.project--summary{
-  // padding: .6em 0 .8em 0;
-  // font-size: $font-size-annotation;
-  font-style: italic;
-}
-.project--stack {
-  // font-weight: 400;
-  line-height: 1.4em;  
 }

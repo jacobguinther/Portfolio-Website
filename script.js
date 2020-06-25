@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function(){
   menu.addEventListener('click', () => {
     menuBars.forEach((bar) => bar.classList.remove('no-animation'));
     if (menu.classList.contains('active')) {
+      console.log(event)
       menu.classList.remove('active');
     } else {
       menu.classList.add('active');
@@ -275,4 +276,6 @@ document.addEventListener('DOMContentLoaded', function(){
       checkValidity({ insertError: true });
     });
   });
+
+
 });
