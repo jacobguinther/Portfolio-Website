@@ -4,6 +4,19 @@ document.addEventListener('DOMContentLoaded', function(){
   const menuBars = document.querySelectorAll('.nav__burger-bar');
   const hamburgerContainer = document.querySelector('.nav__container-hamburger');
   const nav = document.querySelector('nav');
+  const snowmen = document.querySelectorAll('.project--snowman');
+  const closeXs = document.querySelectorAll('.project--close');
+
+  snowmen.forEach((snowman) => {
+    snowman.addEventListener('click', (e)=>{
+      snowman.parentElement.parentElement.classList.toggle('card__active')
+    })
+  })
+  closeXs.forEach((x) => {
+    x.addEventListener('click', (e)=>{
+      x.parentElement.parentElement.classList.toggle('card__active')
+    })
+  })
 
   menu.addEventListener('click', () => {
     menuBars.forEach((bar) => bar.classList.remove('no-animation'));
@@ -14,6 +27,8 @@ document.addEventListener('DOMContentLoaded', function(){
       menu.classList.add('active');
     }
   });
+
+
 
   hamburgerContainer.addEventListener('click', () => {
     let bars = document.querySelector('.nav__burger').children;

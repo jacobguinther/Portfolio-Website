@@ -474,6 +474,19 @@ p {
   min-height: 100px;
   overflow: hidden;
   background: #222; }
+  .project .project--snowman {
+    position: absolute;
+    right: 0;
+    margin-top: 10px;
+    margin-right: 5px;
+    z-index: 2; }
+  .project .project--close {
+    position: absolute;
+    right: 0;
+    margin-top: 10px;
+    margin-right: 5px;
+    z-index: -1;
+    transition: all 0.25s ease; }
   .project .project--info {
     position: absolute;
     width: 100%;
@@ -522,7 +535,8 @@ p {
     width: 100%;
     height: 100%;
     text-align: center;
-    opacity: 0; }
+    opacity: 0;
+    z-index: -1; }
   .project img {
     display: block;
     width: 100%;
@@ -530,21 +544,34 @@ p {
   .project img,
   .project .overlay {
     transition: opacity 1s, transform 1s; }
-  .project:hover .overlay, .project:active .overlay {
-    opacity: 0.85; }
-  .project:hover img, .project:active img {
-    transform: scale3d(1.1, 1.1, 1); }
-  .project:hover .project--info .project--title h2 span, .project:active .project--info .project--title h2 span {
-    opacity: 1;
-    transform: translateY(0); }
-  .project:hover .project--info .project--title h2::after, .project:active .project--info .project--title h2::after {
-    width: 100px;
-    margin-left: -50px; }
-  .project:hover .project--info .project--summary,
-  .project:hover .project--info .project--stack, .project:active .project--info .project--summary,
-  .project:active .project--info .project--stack {
-    opacity: 1;
-    transform: translateY(0); }
+
+.card__active .project .project--snowman {
+  z-index: -1;
+  opacity: 10; }
+
+.card__active .project .project--close {
+  z-index: 2;
+  opacity: 10; }
+
+.card__active .overlay {
+  opacity: 0.85;
+  z-index: 1; }
+
+.card__active img {
+  transform: scale3d(1.1, 1.1, 1); }
+
+.card__active .project--info .project--title h2 span {
+  opacity: 10;
+  transform: translateY(0); }
+
+.card__active .project--info .project--title h2::after {
+  width: 100px;
+  margin-left: -50px; }
+
+.card__active .project--info .project--summary,
+.card__active .project--info .project--stack {
+  opacity: 1;
+  transform: translateY(0); }
 
 .form {
   width: 660px; }
