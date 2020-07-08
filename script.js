@@ -1,34 +1,41 @@
-document.addEventListener('DOMContentLoaded', function(){
+document.addEventListener('DOMContentLoaded', function () {
   const logo = document.getElementById('logo');
   const menu = document.querySelector('.nav__burger');
   const menuBars = document.querySelectorAll('.nav__burger-bar');
-  const hamburgerContainer = document.querySelector('.nav__container-hamburger');
+  const hamburgerContainer = document.querySelector(
+    '.nav__container-hamburger',
+  );
   const nav = document.querySelector('nav');
   const snowmen = document.querySelectorAll('.project--snowman');
   const closeXs = document.querySelectorAll('.project--close');
 
   snowmen.forEach((snowman) => {
-    snowman.addEventListener('click', (e)=>{
-      snowman.parentElement.parentElement.classList.toggle('card__active')
-    })
-  })
+    snowman.addEventListener('click', (e) => {
+      snowman.parentElement.parentElement
+        .querySelector('.overlay')
+        .classList.add('overlay__active');
+        snowmen.forEach((snowman) => {
+          snowman.parentElement.parentElement.classList.remove('card__active');
+        })
+      snowman.parentElement.parentElement.classList.toggle('card__active');
+    });
+  });
+
   closeXs.forEach((x) => {
-    x.addEventListener('click', (e)=>{
-      x.parentElement.parentElement.classList.toggle('card__active')
-    })
-  })
+    x.addEventListener('click', (e) => {
+      x.parentElement.parentElement.classList.toggle('card__active');
+    });
+  });
 
   menu.addEventListener('click', () => {
     menuBars.forEach((bar) => bar.classList.remove('no-animation'));
     if (menu.classList.contains('active')) {
-      console.log(event)
+      console.log(event);
       menu.classList.remove('active');
     } else {
       menu.classList.add('active');
     }
   });
-
-
 
   hamburgerContainer.addEventListener('click', () => {
     let bars = document.querySelector('.nav__burger').children;
@@ -93,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function(){
   var direction = '';
   var oldx = 0;
   var oldy = 0;
-  mousemovemethod = function(e){
+  mousemovemethod = function (e) {
     if (e.pageX > oldx && e.pageY == oldy) {
       direction = 'East';
       // console.log(direction);
@@ -125,12 +132,12 @@ document.addEventListener('DOMContentLoaded', function(){
     const chart = new Chart(ctx, {
       type: 'horizontalBar',
       data: {
-        labels: [ 'CSS', 'HTML', 'Javascript', 'React', 'MySQL' ],
+        labels: ['CSS', 'HTML', 'Javascript', 'React', 'MySQL'],
         datasets: [
           {
             label: 'Pluralsight SkillsIQ',
             backgroundColor: colorGrayDark,
-            data: [ 212, 168, 197, 150, 156 ],
+            data: [212, 168, 197, 150, 156],
           },
         ],
       },
@@ -143,7 +150,7 @@ document.addEventListener('DOMContentLoaded', function(){
           xAxes: [
             {
               gridLines: {
-                display: false
+                display: false,
               },
               type: 'linear',
               ticks: {
@@ -160,7 +167,7 @@ document.addEventListener('DOMContentLoaded', function(){
           yAxes: [
             {
               gridLines: {
-                display: false
+                display: false,
               },
               ticks: {
                 fontColor: colorPrimary,
@@ -187,7 +194,7 @@ document.addEventListener('DOMContentLoaded', function(){
     submit.addEventListener('click', submitToAPI);
   }
 
-  function submitToAPI(e){
+  function submitToAPI(e) {
     e.preventDefault();
     if (!form.checkValidity()) {
       for (let i = 1; i < document.querySelectorAll('input').length; i++) {
@@ -220,7 +227,7 @@ document.addEventListener('DOMContentLoaded', function(){
     xhr.open('POST', URL);
     xhr.send(JSON.stringify(data));
 
-    xhr.onreadystatechange = function(){
+    xhr.onreadystatechange = function () {
       var DONE = 4; // readyState 4 means the request is done.
       var OK = 200; // status 200 is a successful return.
       if (xhr.readyState === DONE) {
@@ -242,8 +249,8 @@ document.addEventListener('DOMContentLoaded', function(){
   const validationErrorClass = 'validation-text';
   const parentErrorClass = 'has-validation-error';
   const inputs = document.querySelectorAll('input, textarea');
-  inputs.forEach(function(input){
-    function checkValidity(options){
+  inputs.forEach(function (input) {
+    function checkValidity(options) {
       const insertError = options.insertError;
       const parent = input.parentNode;
       // console.log(parent.firstElementChild)
@@ -264,7 +271,7 @@ document.addEventListener('DOMContentLoaded', function(){
         error.remove();
       }
     }
-    input.addEventListener('input', function(){
+    input.addEventListener('input', function () {
       input.setCustomValidity('');
       // Remove the class when the input becomes valid.
       // 'input' will fire each time the user types
@@ -282,7 +289,7 @@ document.addEventListener('DOMContentLoaded', function(){
       // Otherwise it will show when typing.
       checkValidity({ insertError: false });
     });
-    input.addEventListener('invalid', function(e){
+    input.addEventListener('invalid', function (e) {
       // Add a css class on submit when the input is invalid.
       input.classList.add(invalidClassName);
       // prevent showing the default display
@@ -291,6 +298,4 @@ document.addEventListener('DOMContentLoaded', function(){
       checkValidity({ insertError: true });
     });
   });
-
-
 });

@@ -517,32 +517,42 @@ p {
           width: 0;
           margin-left: 0; }
     .project .project--info .project--summary,
-    .project .project--info .project--stack {
+    .project .project--info .project--stack,
+    .project .project--info .project--svg {
       color: #ffffff;
       transition: all 0.4s ease;
       transition-delay: 0.7s;
       opacity: 0;
       line-height: 1em;
-      padding: 0.5em 0.5em 0 0.5em; }
+      padding-top: 0.5em;
+      pointer-events: none; }
     .project .project--info .project--summary {
-      font-style: italic; }
+      font-style: italic;
+      padding-right: 0.5em;
+      padding-left: 0.5em; }
     .project .project--info .project--stack {
-      line-height: 1.4em; }
-  .project .overlay {
+      line-height: 1.4em;
+      padding-right: 0.5em;
+      padding-left: 0.5em; }
+    .project .project--info .project--link {
+      text-decoration: none; }
+  .project .overlay__active {
     background: #242424;
     position: absolute;
     top: 0;
     width: 100%;
     height: 100%;
     text-align: center;
-    opacity: 0;
-    z-index: -1; }
+    animation: 2s ease 0s normal forwards 1 fadeout;
+    -webkit-animation: 2s ease 0s normal forwards 1 fadeout;
+    z-index: 1; }
   .project img {
     display: block;
     width: 100%;
-    height: auto !important; }
+    height: auto !important;
+    z-index: 1; }
   .project img,
-  .project .overlay {
+  .project .overlay__active {
     transition: opacity 1s, transform 1s; }
 
 .card__active .project .project--snowman {
@@ -553,12 +563,17 @@ p {
   z-index: 2;
   opacity: 10; }
 
-.card__active .overlay {
-  opacity: 0.85;
+.card__active .overlay__active {
+  animation: 1s ease 0s normal forwards 1 fadein;
+  -webkit-animation: 1s ease 0s normal forwards 1 fadein;
   z-index: 1; }
 
 .card__active img {
   transform: scale3d(1.1, 1.1, 1); }
+
+.card__active img,
+.card__active .overlay__active {
+  transition: opacity 1s, transform 1s; }
 
 .card__active .project--info .project--title h2 span {
   opacity: 10;
@@ -569,9 +584,42 @@ p {
   margin-left: -50px; }
 
 .card__active .project--info .project--summary,
-.card__active .project--info .project--stack {
+.card__active .project--info .project--stack,
+.card__active .project--info .project--svg {
   opacity: 1;
   transform: translateY(0); }
+
+@keyframes fadein {
+  0% {
+    opacity: 0; }
+  75% {
+    opacity: 0.85; }
+  100% {
+    opacity: 0.85; } }
+
+@-webkit-keyframes fadein {
+  0% {
+    opacity: 0; }
+  75% {
+    opacity: 0.85; }
+  100% {
+    opacity: 0.85; } }
+
+@keyframes fadeout {
+  0% {
+    opacity: 0.85; }
+  25% {
+    opacity: 0.85; }
+  100% {
+    opacity: 0; } }
+
+@-webkit-keyframes fadeout {
+  0% {
+    opacity: 0.85; }
+  25% {
+    opacity: 0.85; }
+  100% {
+    opacity: 0; } }
 
 .form {
   width: 660px; }
