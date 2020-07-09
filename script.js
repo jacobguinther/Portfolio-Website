@@ -6,24 +6,25 @@ document.addEventListener('DOMContentLoaded', function () {
     '.nav__container-hamburger',
   );
   const nav = document.querySelector('nav');
-  const snowmen = document.querySelectorAll('.project--snowman');
-  const closeXs = document.querySelectorAll('.project--close');
+  const projects = document.querySelectorAll('.project');
 
-  snowmen.forEach((snowman) => {
-    snowman.addEventListener('click', (e) => {
-      snowman.parentElement.parentElement
-        .querySelector('.overlay')
-        .classList.add('overlay__active');
-        snowmen.forEach((snowman) => {
-          snowman.parentElement.parentElement.classList.remove('card__active');
-        })
-      snowman.parentElement.parentElement.classList.toggle('card__active');
-    });
+  document.addEventListener('click', (e) => {
+    projects.forEach((project)=>{
+      if(!project.contains(e.target)){
+        project.parentElement.classList.remove('card__active');
+      }
+    })
   });
 
-  closeXs.forEach((x) => {
-    x.addEventListener('click', (e) => {
-      x.parentElement.parentElement.classList.toggle('card__active');
+  projects.forEach((project) => {
+    project.addEventListener('click', (e) => {
+      if (!e.target.classList.contains('project--close')) {
+        project.querySelector('.overlay').classList.add('overlay__active');
+        projects.forEach((project) => {
+          project.parentElement.classList.remove('card__active');
+        });
+      }
+      project.parentElement.classList.toggle('card__active');
     });
   });
 

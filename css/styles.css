@@ -479,7 +479,8 @@ p {
     right: 0;
     margin-top: 10px;
     margin-right: 5px;
-    z-index: 2; }
+    z-index: 2;
+    cursor: pointer; }
   .project .project--close {
     position: absolute;
     right: 0;
@@ -535,7 +536,8 @@ p {
       padding-right: 0.5em;
       padding-left: 0.5em; }
     .project .project--info .project--link {
-      text-decoration: none; }
+      text-decoration: none;
+      pointer-events: none; }
   .project .overlay__active {
     background: #242424;
     position: absolute;
@@ -561,7 +563,8 @@ p {
 
 .card__active .project .project--close {
   z-index: 2;
-  opacity: 10; }
+  opacity: 10;
+  cursor: pointer; }
 
 .card__active .overlay__active {
   animation: 1s ease 0s normal forwards 1 fadein;
@@ -587,7 +590,11 @@ p {
 .card__active .project--info .project--stack,
 .card__active .project--info .project--svg {
   opacity: 1;
-  transform: translateY(0); }
+  transform: translateY(0);
+  pointer-events: auto; }
+
+.card__active .project--info .project--link {
+  pointer-events: auto; }
 
 @keyframes fadein {
   0% {

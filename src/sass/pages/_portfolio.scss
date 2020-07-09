@@ -35,6 +35,7 @@
     margin-top: 10px;
     margin-right: 5px;
     z-index: 2;
+    cursor: pointer;
   }
   .project--close {
     position: absolute;
@@ -100,6 +101,7 @@
     }
     .project--link {
       text-decoration: none;
+      pointer-events: none;
     }
   }
   .overlay__active {
@@ -134,12 +136,12 @@
     .project--close {
       z-index: 2;
       opacity: 10;
+      cursor: pointer;
     }
   }
   .overlay__active {
     animation: 1s ease 0s normal forwards 1 fadein;
     -webkit-animation: 1s ease 0s normal forwards 1 fadein;
-    // opacity: 1;
     z-index: 1;
   }
   img {
@@ -167,6 +169,10 @@
     .project--svg {
       opacity: 1;
       transform: translateY(0);
+      pointer-events: auto;
+    }
+    .project--link {
+      pointer-events: auto;
     }
   }
 }
