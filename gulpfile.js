@@ -1,6 +1,6 @@
 const gulp = require('gulp');
-var data = require('gulp-data');
-var fs = require('fs');
+const data = require('gulp-data');
+const fs = require('fs');
 const log = require('fancy-log');
 const ejs = require('gulp-ejs');
 const sass = require('gulp-sass');
@@ -12,11 +12,6 @@ gulp.task('default', function (cb) {
   console.log('it worked');
   cb();
 });
-// function defaultTask(cb) {
-//     // place code for your default task here
-//     console.log("it worked")
-//     cb();
-//   }
 
 gulp.task('ejs', function () {
   return gulp
@@ -29,10 +24,6 @@ gulp.task('ejs', function () {
     .pipe(
       ejs(
         data,
-        { name: 'john' },
-        {
-          msg: 'Hello Gulp!',
-        },
       ).on('error', log),
     )
     .pipe(

@@ -29,7 +29,7 @@
 <body>
     <nav class="nav">
         <input type="checkbox" id="nav-check">
-        <a id="logo" href="/index.html">JG</a>
+        <a id="logo" href="/">JG</a>
         <div class="nav__container-hamburger">
             <label for="nav-check" class="nav__burger">
                 <div class="nav__burger-bar no-animation"></div>
@@ -38,61 +38,88 @@
             </label>
         </div>
         <ul class="nav__menu">
-            <li><a class="nav__menu-link" href="./index.html">About</a></li>
-            <li><a class="nav__menu-link" href="./portfolio.html">Portfolio</a></li>
-            <li><a class="nav__menu-link" href="./contact.html">Contact</a>
+            <li><a class="nav__menu-link" href="./">About</a></li>
+            <li><a class="nav__menu-link" href="./portfolio">Portfolio</a></li>
+            <li><a class="nav__menu-link" href="./contact">Contact</a>
             </li>
         </ul>
     </nav>
 
-<div class="container flex-center padding-top-bottom">
+<div class="container padding-top-bottom">
     <div class="page-heading">
         <img class="page-heading__line" src="/img/icons/HR-short.svg" alt="#">
-        <h1 class="page-heading__text">About Me</h1>
+        <h1 class="page-heading__text">Portfolio</h1>
         <img class="page-heading__line" src="/img/icons/HR-short.svg" alt="#">
     </div>
-    <img class="profile-img" src="/img/images/ProfilePicCircular-250.png">
-    <h2 class="tagline">I’m a web developer based in
-        Boulder, Colorado.</h2>
-    <p style="max-width: 1288px;">I have spent the past year building web
-        applications, working across the entire stack.
-        I have experience working with HTML, CSS, Javascript, Node.js, Express,
-        SQL/NoSQL Databases, Java, Bash, Docker,
-        Kubernetes and both GCP and AWS Cloud Providers. Since making the
-        transition into DevOps, I have acquired my AWS
-        Certified Cloud Practitioner Certificate, set up a development
-        environment
-        in Kubernetes and implemented a CI/CD
-        pipeline using AWS CodeDeploy and GitHub Actions. I am currently open to
-        opportunities in Web Development as well
-        as DevOps roles.
-    </p>
-</div>
-<div class="container no-bottom-padding">
-    <div class="section__skills">
-        <div data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-            <img class="section__skills--bubbles" src="/img/images/skills-bubbles.png"
-                alt="">
+    <div class="portfolio-grid">
+
+        
+
+        <div class="card">
+            <a href="https://github.com/jacobguinther/Portfolio-Website"
+                class="card__thumb"
+                style="background-image: url('/img/images/Logo_JG.png');">
+            </a>
+            <article class="card__content">
+                <h1 class="card__header"> Portfolio Website </h1>
+                <p class="card__p card__topic"><span class="card__span">Tech Stack:</span></p>
+                <p class="card__p"> HTML CSS JS </p>
+                <p class="card__p card__topic"><span class="card__span">Github:</span></p>
+                <p class="card__p"><a class="card__link" href="https://github.com/jacobguinther/Portfolio-Website">
+                        jacobguinther/Portfolio-Website </a>
+                </p>
+                
+            </article>
         </div>
-        <div data-aos="fade-left">
-            <img class="section__skills--monitor" src="/img/images/monitor.png"
-                alt="computer-icon">
+
+        
+
+        <div class="card">
+            <a href="https://github.com/jacobguinther/Mac-Setup"
+                class="card__thumb"
+                style="background-image: url('/img/images/macsetup.png');">
+            </a>
+            <article class="card__content">
+                <h1 class="card__header"> Mac Setup Scripts </h1>
+                <p class="card__p card__topic"><span class="card__span">Tech Stack:</span></p>
+                <p class="card__p"> BASH </p>
+                <p class="card__p card__topic"><span class="card__span">Github:</span></p>
+                <p class="card__p"><a class="card__link" href="https://github.com/jacobguinther/Mac-Setup">
+                        jacobguinther/Mac-Setup </a>
+                </p>
+                
+            </article>
         </div>
+
+        
+
+        <div class="card">
+            <a href="https://jg-yelpcamp.herokuapp.com/campgrounds/page-1"
+                class="card__thumb"
+                style="background-image: url('/img/images/yelpcamp.png');">
+            </a>
+            <article class="card__content">
+                <h1 class="card__header"> YelpCamp </h1>
+                <p class="card__p card__topic"><span class="card__span">Tech Stack:</span></p>
+                <p class="card__p"> EJS Bootstrap Nodejs Express MongoDB Mongoose Passport </p>
+                <p class="card__p card__topic"><span class="card__span">Github:</span></p>
+                <p class="card__p"><a class="card__link" href="https://github.com/jacobguinther/yelpcamp">
+                        jacobguinther/yelpcamp </a>
+                </p>
+                
+                <p class="card__p card__topic"><span class="card__span">Deployed:</span></p>
+                <p class="card__p"><a class="card__link" href="https://jg-yelpcamp.herokuapp.com/campgrounds/page-1">
+                        jg-yelpcamp.herokuapp.com </a>
+                </p>
+                
+            </article>
+        </div>
+
+        
+
     </div>
-</div>
-<div class="container flex-center padding-top-bottom">
-    <h2 class="chartjs__header">Pluralsight Skill IQ</h2>
-    <canvas class="chartjs__chart" id="myChart"></canvas>
-    <div class="chartjs__key">
-        <p>&nbsp;&nbsp;0 - 100 Novice</p>
-        <p>100 - 200 Proficient</p>
-    </div>
-    <p class="chartjs__annotation">* This is based on pluralsights skills IQ
-        tests.
-    </p>
 </div>
 
-</div>
 
 <footer class="footer">
     <div class="footer__logo">
@@ -134,7 +161,7 @@
             </svg></a>
     </div>
     <div class="footer__container-copyright">
-        <p>Built by me copyright 2020</p>
+        <p>Built by me copyright 2019</p>
     </div>
 </footer>
 <script type="text/javascript" src="/script.js"></script>
