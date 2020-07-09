@@ -9,6 +9,9 @@
   @media screen and (max-width: 780px) {
     grid-template-columns: 1fr;
   }
+  @media screen and (max-width: $bp-small) {
+    margin-top: 50px;
+  }
 }
 .card {
   color: $color-gray-darker;

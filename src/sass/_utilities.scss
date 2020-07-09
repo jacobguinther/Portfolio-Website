@@ -7,4 +7,8 @@
   .padding-top-bottom {
     padding-top: 100px;
     padding-bottom: 100px;
+    @media screen and (max-width: $bp-small) {
+      padding-top: 50px;
+      padding-bottom: 75px;
+    }
   }
