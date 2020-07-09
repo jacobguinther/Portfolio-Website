@@ -51,16 +51,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
   logo.addEventListener('mouseenter', (e) => {
     var rect = logo.getBoundingClientRect();
-    var x = e.clientX; // Get the horizontal coordinate
+    var x = e.clientX;
     var y = e.clientY;
     rightOrLeft = x > (rect.left + rect.right) / 2 ? 'Right' : 'Left';
     topOrBottom = y > (rect.top + rect.bottom) / 2 ? 'Bottom' : 'Top';
-    // console.log(rightOrLeft,topOrBottom)
     if (
       !logo.classList.contains('rotateRight') &&
       !logo.classList.contains('rotateLeft')
     ) {
-      // console.log('THIS IS DIREECTION: ', direction);
       switch (direction) {
         case 'North':
           rightOrLeft === 'Left'
@@ -104,18 +102,13 @@ document.addEventListener('DOMContentLoaded', function () {
   mousemovemethod = function (e) {
     if (e.pageX > oldx && e.pageY == oldy) {
       direction = 'East';
-      // console.log(direction);
     } else if (e.pageX == oldx && e.pageY > oldy) {
       direction = 'South';
-      // console.log(direction);
     } else if (e.pageX == oldx && e.pageY < oldy) {
       direction = 'North';
-      // console.log(direction);
     } else if (e.pageX < oldx && e.pageY == oldy) {
       direction = 'West';
-      // console.log(direction);
     }
-    // document.body.innerHTML = direction;
     oldx = e.pageX;
     oldy = e.pageY;
   };
@@ -156,12 +149,10 @@ document.addEventListener('DOMContentLoaded', function () {
               type: 'linear',
               ticks: {
                 min: 0,
-                // max: 300,
                 max: 200,
                 stepSize: 100,
                 fontColor: colorPrimary,
                 fontSize: 15,
-                // display: false,
               },
             },
           ],
@@ -179,9 +170,9 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         plugins: {
           deferred: {
-            xOffset: 150, // defer until 150px of the canvas width are inside the viewport
-            yOffset: '50%', // defer until 50% of the canvas height are inside the viewport
-            delay: 500, // delay of 500 ms after the canvas is considered inside the viewport
+            xOffset: 150,
+            yOffset: '50%',
+            delay: 500,
           },
         },
       },
@@ -229,17 +220,14 @@ document.addEventListener('DOMContentLoaded', function () {
     xhr.send(JSON.stringify(data));
 
     xhr.onreadystatechange = function () {
-      var DONE = 4; // readyState 4 means the request is done.
-      var OK = 200; // status 200 is a successful return.
+      var DONE = 4;
+      var OK = 200;
       if (xhr.readyState === DONE) {
         if (xhr.status === OK) {
-          console.log(xhr.responseText); // 'This is the returned text.'
-          // alert('Your message has been sent successfully!');
-          // document.getElementById('form__contact').reset();
-          // location.reload();
+          console.log(xhr.responseText);
           window.location.href = '../success.html';
         } else {
-          console.log('Error: ' + xhr.status); // An error occurred during the request.
+          console.log('Error: ' + xhr.status);
           alert('Sorry, Form Submission Failed');
         }
       }
@@ -254,7 +242,6 @@ document.addEventListener('DOMContentLoaded', function () {
     function checkValidity(options) {
       const insertError = options.insertError;
       const parent = input.parentNode;
-      // console.log(parent.firstElementChild)
       const error =
         parent.querySelector(`.${validationErrorClass}`) ||
         document.createElement('div');
@@ -274,8 +261,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     input.addEventListener('input', function () {
       input.setCustomValidity('');
-      // Remove the class when the input becomes valid.
-      // 'input' will fire each time the user types
       if (input.validity.valid) {
         input.classList.remove(invalidClassName);
       }
@@ -286,16 +271,11 @@ document.addEventListener('DOMContentLoaded', function () {
           input.setCustomValidity('Enter an email address');
         }
       }
-      // We can only update the error or hide it on input.
-      // Otherwise it will show when typing.
       checkValidity({ insertError: false });
     });
     input.addEventListener('invalid', function (e) {
-      // Add a css class on submit when the input is invalid.
       input.classList.add(invalidClassName);
-      // prevent showing the default display
       e.preventDefault();
-      // We can also create the error in invalid.
       checkValidity({ insertError: true });
     });
   });
