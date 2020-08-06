@@ -23,8 +23,14 @@
       "stack": "EJS Bootstrap Nodejs Express MongoDB Mongoose",
       "githubUrl": "https://github.com/jacobguinther/yelpcamp",
       "deployedUrl": "https://jg-yelpcamp.herokuapp.com/campgrounds/page-1"
+    },
+    {
+      "name": "Habitica Contributor",
+      "img": "/img/images/habitica.png",
+      "summary": "Open Source Web Application",
+      "stack": "Vue.js Bootstrap Nodejs Express MongoDB Passport",
+      "githubUrl": "https://github.com/HabitRPG/habitica",
+      "deployedUrl": "https://habitica.com/"
     }
   ]
 }
-
-
