@@ -1,8 +1,11 @@
 #! /bin/bash
 
-# The purpose of this script is to make file paths look better in address bar
-# Removes all .html file extensions and changes '/index' to '/'
-# Just make sure to edit metadata for all .html in S3 bucket
+# The purpose of this script is to make file paths look better in the address bar when statically hosted on S3
+# - Removes all .html file extensions
+# - changes '/index' to '/'
+
+# IMPORTANT: Be sure to edit metadata for all html files in S3 bucket
+
 if [[ ! -d "./dist" ]] ; then
         mkdir ./dist
 fi
