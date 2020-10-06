@@ -9,8 +9,8 @@ document.addEventListener('DOMContentLoaded', function () {
   const projects = document.querySelectorAll('.project');
 
   document.addEventListener('click', (e) => {
-    projects.forEach((project)=>{
-      if(!project.contains(e.target)){
+    projects.forEach((project) => {
+      if (!project.contains(e.target)) {
         project.parentElement.classList.remove('card__active');
       }
     })
@@ -28,73 +28,82 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  menu.addEventListener('click', () => {
-    menuBars.forEach((bar) => bar.classList.remove('no-animation'));
-    if (menu.classList.contains('active')) {
-      console.log(event);
-      menu.classList.remove('active');
-    } else {
-      menu.classList.add('active');
-    }
-  });
-
-  hamburgerContainer.addEventListener('click', () => {
-    let bars = document.querySelector('.nav__burger').children;
-    bars[0].classList.toggle('nav__burger-bar--active');
-    bars[1].classList.toggle('nav__burger-bar--active');
-    bars[2].classList.toggle('nav__burger-bar--active');
-    bars[0].classList.toggle('nav__burger-bar');
-    bars[1].classList.toggle('nav__burger-bar');
-    bars[2].classList.toggle('nav__burger-bar');
-    document.querySelector('.nav__menu').classList.toggle('nav__menu--visible');
-  });
-
-  logo.addEventListener('mouseenter', (e) => {
-    var rect = logo.getBoundingClientRect();
-    var x = e.clientX;
-    var y = e.clientY;
-    rightOrLeft = x > (rect.left + rect.right) / 2 ? 'Right' : 'Left';
-    topOrBottom = y > (rect.top + rect.bottom) / 2 ? 'Bottom' : 'Top';
-    if (
-      !logo.classList.contains('rotateRight') &&
-      !logo.classList.contains('rotateLeft')
-    ) {
-      switch (direction) {
-        case 'North':
-          rightOrLeft === 'Left'
-            ? logo.classList.add('rotateRight')
-            : logo.classList.add('rotateLeft');
-          break;
-        case 'South':
-          rightOrLeft === 'Left'
-            ? logo.classList.add('rotateLeft')
-            : logo.classList.add('rotateRight');
-          break;
-        case 'East':
-          topOrBottom === 'Top'
-            ? logo.classList.add('rotateRight')
-            : logo.classList.add('rotateLeft');
-          break;
-        case 'West':
-          topOrBottom === 'Top'
-            ? logo.classList.add('rotateLeft')
-            : logo.classList.add('rotateRight');
-          break;
+  if (menu) {
+    menu.addEventListener('click', () => {
+      menuBars.forEach((bar) => bar.classList.remove('no-animation'));
+      if (menu.classList.contains('active')) {
+        console.log(event);
+        menu.classList.remove('active');
+      } else {
+        menu.classList.add('active');
       }
-      setTimeout(() => {
-        logo.classList.remove('rotateRight', 'rotateLeft');
-      }, 1500);
-    } else {
-      console.log('NOOOO');
-    }
-  });
-  nav.addEventListener('mouseenter', () => {
-    document.addEventListener('mousemove', mousemovemethod);
-  });
+    });
+  }
 
-  nav.addEventListener('mouseleave', (e) => {
-    document.removeEventListener('mousemove', mousemovemethod);
-  });
+  if (hamburgerContainer) {
+    hamburgerContainer.addEventListener('click', () => {
+      let bars = document.querySelector('.nav__burger').children;
+      bars[0].classList.toggle('nav__burger-bar--active');
+      bars[1].classList.toggle('nav__burger-bar--active');
+      bars[2].classList.toggle('nav__burger-bar--active');
+      bars[0].classList.toggle('nav__burger-bar');
+      bars[1].classList.toggle('nav__burger-bar');
+      bars[2].classList.toggle('nav__burger-bar');
+      document.querySelector('.nav__menu').classList.toggle('nav__menu--visible');
+    });
+  }
+
+  if (logo) {
+    logo.addEventListener('mouseenter', (e) => {
+      var rect = logo.getBoundingClientRect();
+      var x = e.clientX;
+      var y = e.clientY;
+      rightOrLeft = x > (rect.left + rect.right) / 2 ? 'Right' : 'Left';
+      topOrBottom = y > (rect.top + rect.bottom) / 2 ? 'Bottom' : 'Top';
+      if (
+        !logo.classList.contains('rotateRight') &&
+        !logo.classList.contains('rotateLeft')
+      ) {
+        switch (direction) {
+          case 'North':
+            rightOrLeft === 'Left'
+              ? logo.classList.add('rotateRight')
+              : logo.classList.add('rotateLeft');
+            break;
+          case 'South':
+            rightOrLeft === 'Left'
+              ? logo.classList.add('rotateLeft')
+              : logo.classList.add('rotateRight');
+            break;
+          case 'East':
+            topOrBottom === 'Top'
+              ? logo.classList.add('rotateRight')
+              : logo.classList.add('rotateLeft');
+            break;
+          case 'West':
+            topOrBottom === 'Top'
+              ? logo.classList.add('rotateLeft')
+              : logo.classList.add('rotateRight');
+            break;
+        }
+        setTimeout(() => {
+          logo.classList.remove('rotateRight', 'rotateLeft');
+        }, 1500);
+      } else {
+        console.log('NOOOO');
+      }
+    });
+  }
+  if (nav) {
+    nav.addEventListener('mouseenter', () => {
+      document.addEventListener('mousemove', mousemovemethod);
+    });
+
+    nav.addEventListener('mouseleave', (e) => {
+      document.removeEventListener('mousemove', mousemovemethod);
+    });
+  }
+
 
   var direction = '';
   var oldx = 0;
@@ -114,10 +123,13 @@ document.addEventListener('DOMContentLoaded', function () {
   };
 
   // AOS AND ChartJS
-  AOS.init({
-    duration: 1000,
-    once: true,
-  });
+  if(AOS){
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }
+
   if (document.getElementById('myChart')) {
     const style = getComputedStyle(document.body);
     const colorGrayDark = style.getPropertyValue('--color-gray-dark');
@@ -224,7 +236,6 @@ document.addEventListener('DOMContentLoaded', function () {
       var OK = 200;
       if (xhr.readyState === DONE) {
         if (xhr.status === OK) {
-          console.log(xhr.responseText);
           window.location.href = '../success.html';
         } else {
           console.log('Error: ' + xhr.status);
