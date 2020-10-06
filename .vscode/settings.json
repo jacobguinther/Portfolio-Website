@@ -1,5 +1,5 @@
 {
-  // This is so the html in the dist folder is recognised as html
+  // This is so the html in the dist folder is recognised by VSCode as html
   // https://stackoverflow.com/questions/49410524/assign-file-with-no-extension-to-a-language-on-vs-code-as-default
   "files.associations": {
       "**/dist/[!.]": "html",
