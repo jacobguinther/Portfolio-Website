@@ -5,7 +5,7 @@
   "main": "script.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "compile:sass": "node-sass sass/main.scss css/styles.css -w",
+    "develop": "gulp watch",
     "build": "npm prune --production && /bin/bash scripts/clean_url.sh",
     "deploy": "/bin/bash scripts/deploy.sh",
     "deploy-html": "/bin/bash scripts/deploy-html.sh",
@@ -34,6 +34,6 @@
     "gulp": "^4.0.2",
     "gulp-ejs": "^5.1.0",
     "gulp-sass": "^4.1.0",
-    "node-sass": "4.13.1"
+    "node-sass": "4.14.1"
   }
 }
