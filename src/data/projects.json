@@ -4,7 +4,7 @@
       "name": "Portfolio Website",
       "img": "/img/images/Logo_JG.png",
       "summary": "Static S3 Website",
-      "stack": "HTML CSS JS",
+      "stack": "EJS SASS JS AWS S3 API Gateway Lambda",
       "githubUrl": "https://github.com/jacobguinther/Portfolio-Website",
       "deployedUrl": ""
     },
