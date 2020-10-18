@@ -13,7 +13,6 @@ fi
 if [[ -d "./dist" ]] ; then
         rm -rf ./dist/*
         cp ./*.html ./dist/
-        cp ./script.js ./dist/
 
         cd ./dist
 
