@@ -14,5 +14,7 @@ aws s3 sync . s3://jacobguinther.com \
 	--exclude "*.html" \
 	--exclude "*.js" \
 	--exclude "scripts/*" \
-	--exclude "dist/*" &&
+	--exclude "dist/*" \
+	--exclude ".DS_Store/*" \
+	--exclude ".vscode/*" &&
 	aws s3 sync ./dist/ s3://jacobguinther.com
