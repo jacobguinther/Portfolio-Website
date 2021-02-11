@@ -2,32 +2,35 @@
   "projects": [
     {
       "name": "Portfolio Website",
-      "img": "/img/images/Logo_JG.png",
-      "stack": "HTML CSS JS",
-      "githubName": "jacobguinther/Portfolio-Website",
+      "img": "/static/portfolio-cards/Logo_JG.png",
+      "summary": "Static S3 Website",
+      "stack": "EJS SASS JS AWS S3 API Gateway Lambda",
       "githubUrl": "https://github.com/jacobguinther/Portfolio-Website",
-      "deployedName": "",
       "deployedUrl": ""
     },
     {
       "name": "Mac Setup Scripts",
-      "img": "/img/images/macsetup.png",
+      "img": "/static/portfolio-cards/macsetup.png",
+      "summary": "Automated Mac Setup Solution",
       "stack": "BASH",
-      "githubName": "jacobguinther/Mac-Setup",
       "githubUrl": "https://github.com/jacobguinther/Mac-Setup",
-      "deployedName": "",
       "deployedUrl": ""
     },
     {
-      "name": "YelpCamp",
-      "img": "/img/images/yelpcamp.png",
-      "stack": "EJS Bootstrap Nodejs Express MongoDB Mongoose Passport",
-      "githubName": "jacobguinther/yelpcamp",
-      "githubUrl": "https://github.com/jacobguinther/yelpcamp",
-      "deployedName": "jg-yelpcamp.herokuapp.com",
-      "deployedUrl": "https://jg-yelpcamp.herokuapp.com/campgrounds/page-1"
+      "name": "CampReviews",
+      "img": "/static/portfolio-cards/campreviews.png",
+      "summary": "Full Stack Web Application",
+      "stack": "EJS Bootstrap Nodejs Express MongoDB Mongoose",
+      "githubUrl": "https://github.com/jacobguinther/camp-reviews",
+      "deployedUrl": "https://jg-camp-reviews.herokuapp.com/campgrounds/page-1"
+    },
+    {
+      "name": "Habitica Contributor",
+      "img": "/static/portfolio-cards/habitica.png",
+      "summary": "Open Source Web Application",
+      "stack": "Vue.js Bootstrap Nodejs Express MongoDB Passport",
+      "githubUrl": "https://github.com/HabitRPG/habitica",
+      "deployedUrl": "https://habitica.com/"
     }
   ]
 }
-
-
