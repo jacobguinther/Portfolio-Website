@@ -5,7 +5,6 @@
 
 Go to [jacobguinther.com](https://jacobguinther.com/)
 
-## Technologies Used
 ### Developed with
 * **EJS**
 * **SASS**
