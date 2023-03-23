@@ -3,13 +3,11 @@ const data = require('gulp-data');
 const fs = require('fs');
 const log = require('fancy-log');
 const ejs = require('gulp-ejs');
-const sass = require('gulp-sass');
 var cssnano = require('gulp-cssnano');
 let uglify = require('gulp-uglify-es').default;
 var pipeline = require('readable-stream').pipeline;
 const rename = require('gulp-rename');
-
-sass.compiler = require('node-sass');
+const sass = require('gulp-sass')(require('sass'));
 
 gulp.task('default', function (cb) {
   console.log('it worked');
@@ -52,9 +50,9 @@ gulp.task('sass', function () {
 
 gulp.task("uglifyjs", function () {
   return gulp.src("script.js")
-      .pipe(rename("script.js"))
-      .pipe(uglify(/* options */))
-      .pipe(gulp.dest("dist/"));
+    .pipe(rename("script.js"))
+    .pipe(uglify(/* options */))
+    .pipe(gulp.dest("dist/"));
 });
 
 gulp.task('watch', function () {
